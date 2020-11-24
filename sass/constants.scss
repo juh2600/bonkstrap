@@ -1,0 +1,24 @@
+@use 'sass:color';
+
+@function safe-rgba($color, $alpha: 1.0) {
+    @return unquote("rgba(#{red($color)}, #{green($color)}, #{blue($color)}, #{$alpha})");
+}
+
+$bg: #202020 !default;
+$fg: #eeeeee !default;
+$off-bg-tint: color.adjust($fg, $alpha: -0.95) !default;
+$off-fg-tint: color.adjust($bg, $alpha: -0.95) !default;
+$off-bg: color.mix($bg, $fg, 95%) !default;
+$off-fg: color.mix($fg, $bg, 95%) !default;
+$accent: #0091ff !default;
+
+$heading-font: 'Roboto' !default;
+$body-font: 'Roboto' !default;
+$body-font-size: 1.25em !default;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+$columns: 6;
+$breakpoint-two-column: 40em;
+$breakpoint-three-column: 50em;
+$breakpoint-full-column: 60em;

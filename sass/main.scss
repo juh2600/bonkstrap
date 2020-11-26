@@ -1,5 +1,12 @@
 @use 'reset';
-@use 'constants';
+@use 'constants' // uncomment the below to override color scheme
+//with (
+//	$fg: #222,
+//	$bg: #eee,
+//	$accent: #ff0091
+//)
+;
+@use 'roots';
 @use 'basic';
 @use 'hierarchy';
 @use 'nav';

@@ -1,0 +1,9 @@
+@use 'constants' as c;
+
+body {
+	background-color: c.$bg;
+	color: c.$fg;
+	font-family: c.$body-font;
+	font-size: 1rem;
+	word-wrap: break-word;
+}

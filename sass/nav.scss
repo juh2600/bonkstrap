@@ -8,6 +8,7 @@ $borgar-height: 2.5rem;
 //$borgar-bg: color.mix(c.$bg, c.$fg, 70%);
 $borgar-bg: c.$off-bg;
 $borgar-plate-radius: 0.5rem;
+$fade-depth: 1rem;
 
 $sidebar-width: 15rem;
 $shade: color.adjust(c.$bg, $alpha: -0.45);
@@ -33,7 +34,7 @@ main {
 		right: 0;
 		height: $top-width;
 		background-color: c.$off-bg-tint;
-		box-shadow: 0px 0.125rem 0.125rem #222;
+		box-shadow: 0px 0.125rem 0.125rem c.$bg;
 		ul {
 			display: flex;
 			flex-direction: row;
@@ -72,9 +73,9 @@ main {
 
 %borgar-icon-faded {
 	@extend %borgar-icon;
-	padding-top: 1rem;
-	margin-top: -1rem;
-	background: linear-gradient(transparent 0%, $borgar-bg 1em);
+	padding-top: $fade-depth;
+	margin-top: -$fade-depth;
+	background: linear-gradient(transparent 0%, $borgar-bg $fade-depth);
 }
 
 /* Article nav, along side */
@@ -114,7 +115,7 @@ article {
 			//@extend %borgar-icon;
 			//top: 0;
 			@extend %borgar-icon-faded;
-			top: -1rem;
+			top: -$fade-depth;
 			position: sticky;
 			float: right;
 
@@ -134,13 +135,14 @@ article {
 			padding-bottom: 0.5em;
 
 			&:first-of-type { // first top-level list // really this shouldn't matter (because there should only be one top-level list)
-				padding-top: $borgar-height + 1rem;
-				background: linear-gradient(transparent 0%, c.$off-bg 1rem);
-				top: -1rem;
-				margin-top: -1rem;
+				padding-top: $borgar-height + $fade-depth;
+				background: linear-gradient(transparent 0%, c.$off-bg $fade-depth);
+				top: -$fade-depth;
+				margin-top: -$fade-depth;
 				@media all and (min-width: $always-display-breakpoint) {
-					padding-top: 0.5rem + 1rem;
+					padding-top: 0.5rem + $fade-depth;
 					height: 100vh;
+					height: calc(100vh - #{$top-width + 0.5rem + $fade-depth});
 					background: c.$off-bg;
 					border-top: 0.25rem solid c.$off-bg-tint;
 				}
@@ -151,9 +153,11 @@ article {
 				}
 
 				ul { // nested lists
-					li { // nested list items
-						a { // nested links
-							font-weight: normal;
+					a { font-weight: normal; } // nested links
+					ul { // at least doubly nested lists
+						font-size: 0.8rem;
+						ul { // at least triply nested lists
+							font-style: italic;
 						}
 					}
 				}
@@ -166,14 +170,17 @@ article {
 			li { // all list items
 				a { // all links
 					display: block;
-					padding-top: 0.3em;
-					padding-bottom: 0.3em;
-					padding-right: 0.75em;
+					padding: 0.3rem 0.75rem 0.3rem 1rem;
 					color: c.$fg;
 					transition: padding-right ease-in-out 0.15s;
 					&:hover {
 						background-color: c.$off-bg-tint;
-						padding-right: 1em;
+						padding-right: 1rem;
+					}
+					+ ul {
+						border-right: 2px solid c.$accented-bg;
+						margin-right: 0.95rem;
+						//border-radius: 0 0 0.5rem 0 / 0.35rem;
 					}
 				}
 			}

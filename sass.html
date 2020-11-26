@@ -1,51 +1,115 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title></title>
-		<link href="style.css" rel="stylesheet" type="text/css" />
+		<title>Bonkstrap: Sass</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<meta name="viewport" content="width=device-width" />
 	</head>
 	<body>
-		<nav>
-		</nav>
 		<main>
 			<article>
-				<section>
+				<section id="Configuring_Bonkstraps_behavior_with_Sass">
 					<h1>Configuring Bonkstrap's behavior with Sass</h1>
 					<p>
+					<a href="https://sass-lang.com/">Sass</a> extends vanilla CSS in several ways that create opportunities for flexibility in libraries. Bonkstrap leverages Sass
+					<a href="https://sass-lang.com/documentation/variables">variables</a>,
+					<a href="https://sass-lang.com/documentation/at-rules/use">modules</a>,
+					<a href="https://sass-lang.com/documentation/at-rules/mixin">mixins</a>, and
+					<a href="https://sass-lang.com/documentation/at-rules/extend">shared properties</a>.
 					</p>
 				</section>
-				<section>
+				<section id="Sass_compiling">
 					<h2>Sass (compiling)</h2>
 					<p>
+					Bonkstrap offers a <a href="sass/">collection of Sass modules</a>, with a central entry point at <a href="sass/main.scss"><code>main.scss</code></a>. The library can be compiled quite simply from the command line:
+					<pre><code>$ sass main.scss ../css/style.css [--watch]</code></pre>
 					</p>
 				</section>
-				<section>
+				<section id="Modular_system">
 					<h2>Modular system</h2>
 					<p>
+					Bonkstrap's styles are organized into modules, most of which roughly correspond with the element groupings at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN's HTML elements reference</a>. These groupings are also used in the documentation on Bonkstrap's <a href="#Default_styles">default styles</a>.
 					</p>
 				</section>
-				<section>
+				<section id="Default_styles">
 					<h2>Default styles</h2>
 					<p>
 					</p>
+					<section id="Hyperlinks">
+						<h3>Hyperlinks</h3>
+					</section>
+					<section id="Tables">
+						<h3>Tables</h3>
+					</section>
+					<section id="Articles_sections_and_paragraphs">
+						<h3>Articles, sections, and paragraphs</h3>
+					</section>
+					<section id="Headings">
+						<h3>Headings</h3>
+					</section>
+					<section id="Forms">
+						<h3>Forms</h3>
+					</section>
+					<section id="Code">
+						<h3>Code</h3>
+					</section>
+					<section id="Images">
+						<h3>Images</h3>
+					</section>
+					<section id="Nav_bars_and_menus">
+						<h3>Nav bars and menus</h3>
+					</section>
 				</section>
-				<section>
+				<section id="Theme_colors">
 					<h2>Theme colors</h2>
 					<p>
 					</p>
 				</section>
-				<section>
+				<section id="Vendor_prefix_mixin">
 					<h2>Vendor prefix mixin</h2>
 					<p>
 					</p>
 				</section>
-				<section>
+				<section id="Use_of_shared_properties">
 					<h2>Use of shared properties</h2>
 					<p>
 					</p>
 				</section>
+				<nav>
+					<input type="checkbox" id="article-nav-toggle-Sass"/>
+					<label for="article-nav-toggle-Sass"></label>
+					<ul>
+						<li><a href="#Configuring_Bonkstraps_behavior_with_Sass">Configuring Bonkstrap's behavior with Sass</a>
+							<ul>
+								<li><a href="#Sass_compiling">Sass (compiling)</a></li>
+								<li><a href="#Modular_system">Modular system</a></li>
+								<li><a href="#Default_styles">Default styles</a>
+									<ul>
+										<li><a href="#Hyperlinks">Hyperlinks</a></li>
+										<li><a href="#Tables">Tables</a></li>
+										<li><a href="#Articles_sections_and_paragraphs">Articles, sections, and paragraphs</a></li>
+										<li><a href="#Headings">Headings</a></li>
+										<li><a href="#Forms">Forms</a></li>
+										<li><a href="#Code">Code</a></li>
+										<li><a href="#Images">Images</a></li>
+										<li><a href="#Nav_bars_and_menus">Nav bars and menus</a></li>
+									</ul>
+								</li>
+								<li><a href="#Theme_colors">Theme colors</a></li>
+								<li><a href="#Vendor_prefix_mixin">Vendor prefix mixin</a></li>
+								<li><a href="#Use_of_shared_properties">Use of shared properties</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</article>
 		</main>
+		<nav>
+			<ul>
+				<li><img src="images/logo.svg" /></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sass.html">Sass</a></li>
+			</ul>
+		</nav>
 	</body>
 </html>

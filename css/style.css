@@ -160,7 +160,7 @@ main ~ nav {
   right: 0;
   height: 3rem;
   background-color: rgba(238, 238, 238, 0.05);
-  box-shadow: 0px 0.125rem 0.125rem #222;
+  box-shadow: 0px 0.125rem 0.125rem #202020;
 }
 main ~ nav ul {
   display: flex;
@@ -198,7 +198,7 @@ article > nav > label[for|=article-nav-toggle] {
 article > nav > label[for|=article-nav-toggle] {
   padding-top: 1rem;
   margin-top: -1rem;
-  background: linear-gradient(transparent 0%, #2a2a2a 1em);
+  background: linear-gradient(transparent 0%, #2a2a2a 1rem);
 }
 
 /* Article nav, along side */
@@ -263,27 +263,36 @@ article > nav > ul:first-of-type {
   article > nav > ul:first-of-type {
     padding-top: 1.5rem;
     height: 100vh;
+    height: calc(100vh - 4.5rem);
     background: #2a2a2a;
     border-top: 0.25rem solid rgba(238, 238, 238, 0.05);
   }
 }
-article > nav > ul > li ul li a {
+article > nav > ul > li ul a {
   font-weight: normal;
+}
+article > nav > ul > li ul ul {
+  font-size: 0.8rem;
+}
+article > nav > ul > li ul ul ul {
+  font-style: italic;
 }
 article > nav ul {
   user-select: none;
 }
 article > nav ul li a {
   display: block;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-  padding-right: 0.75em;
+  padding: 0.3rem 0.75rem 0.3rem 1rem;
   color: #eeeeee;
   transition: padding-right ease-in-out 0.15s;
 }
 article > nav ul li a:hover {
   background-color: rgba(238, 238, 238, 0.05);
-  padding-right: 1em;
+  padding-right: 1rem;
+}
+article > nav ul li a + ul {
+  border-right: 2px solid #105990;
+  margin-right: 0.95rem;
 }
 
 /*

@@ -2,13 +2,6 @@
 @use 'constants' as c;
 @use 'icons';
 
-body {
-	background-color: c.$bg;
-	color: c.$fg;
-	font-family: c.$body-font;
-	font-size: 1rem;
-	word-wrap: break-word;
-}
 
 p {
 	line-height: 1.5em;

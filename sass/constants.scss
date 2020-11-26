@@ -22,6 +22,8 @@ $off-bg-tint: color.adjust($fg, $alpha: -0.95) !default;
 $off-fg-tint: color.adjust($bg, $alpha: -0.95) !default;
 $off-bg: color.mix($bg, $fg, 95%) !default;
 $off-fg: color.mix($fg, $bg, 95%) !default;
+$accented-bg: color.mix($accent, $bg, 50%) !default;
+$accented-fg: color.mix($accent, $fg, 50%) !default;
 
 $heading-font: 'Roboto' !default;
 $body-font: 'Roboto' !default;

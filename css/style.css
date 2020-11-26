@@ -60,6 +60,10 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  font-size: 1.25em;
+}
+
 body {
   background-color: #202020;
   color: #eeeeee;
@@ -68,81 +72,77 @@ body {
   word-wrap: break-word;
 }
 
-p {
-  line-height: 1.5em;
-  padding-bottom: 0.5em;
+blockquote, address, aside, hgroup {
+  margin-left: 0.5rem;
+  border-left: 2px solid #105990;
+  padding-left: 1rem;
 }
 
-a {
-  color: #0091ff;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-a[href^=http]::after {
-  display: inline-block;
-  content: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><polyline fill="rgba(0, 145, 255, 1)" points="0,16 48,16 48,32 16,32 16,112 96,112 96,80 112,80 112,128 0,128"/><polyline fill="rgba(0, 145, 255, 1)" points="80,0 128,0 128,48 114,48 114,25.314 54.461,84.853 43.147,73.539 102.686,14 80,14"/></svg>');
-  width: 0.8em;
-  height: 0.8em;
-  margin-left: 0.2em;
-  color: inherit;
-}
-
-pre, code {
-  font-family: monospace;
-}
-pre em, code em {
-  margin-right: 0.1em;
-}
-
-em {
+article > nav > ul > li ul ul ul {
   font-style: italic;
 }
 
-:root {
-  font-size: 1.25em;
+article > nav > ul > li ul a {
+  font-weight: normal;
 }
 
-body {
-  font-family: "Roboto";
+article > nav > ul > li ul ul {
+  font-size: 0.8rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto";
+pre {
+  font-family: monospace;
 }
-
-h1 {
-  font-size: 2.7rem;
-  padding: 0.2em 0;
-}
-
-h2 {
-  font-size: 2.4rem;
-  padding: 0.2em 0;
-}
-
-h3 {
-  font-size: 2.1rem;
-  padding: 0.2em 0;
-}
-
-h4 {
-  font-size: 1.9rem;
-  padding: 0.2em 0;
-}
-
-h5 {
-  font-size: 1.7rem;
-  padding: 0.2em 0;
-}
-
-h6 {
-  font-size: 1.5rem;
-  padding: 0.2em 0;
+pre em {
+  margin-right: 0.1em;
 }
 
 article, section {
   padding: 0.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+  padding: 0.2em 0;
+}
+
+h1 {
+  font-size: 2.7rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1.9rem;
+}
+
+h5 {
+  font-size: 1.7rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+article > nav > label[for|=article-nav-toggle] {
+  width: 3rem;
+  height: 2.5rem;
+  background-color: #2a2a2a;
+  border-radius: 0 0 0 0.5rem;
+  content: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <path d="M12 24h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/> <path d="M12 45h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/> <path d="M12 66h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/></svg>');
+  cursor: pointer;
+}
+
+article > nav > label[for|=article-nav-toggle] {
+  padding-top: 1rem;
+  margin-top: -1rem;
+  background: linear-gradient(transparent 0%, #2a2a2a 1rem);
 }
 
 /* Site nav, across top */
@@ -162,15 +162,15 @@ main ~ nav {
   background-color: rgba(238, 238, 238, 0.05);
   box-shadow: 0px 0.125rem 0.125rem #202020;
 }
-main ~ nav ul {
+main ~ nav > ul {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
 }
-main ~ nav ul > li {
+main ~ nav > ul > li {
   padding: 1rem;
 }
-main ~ nav ul > li a, main ~ nav ul > li label {
+main ~ nav > ul > li a, main ~ nav > ul > li label {
   font: inherit;
   color: inherit;
   display: block;
@@ -178,27 +178,13 @@ main ~ nav ul > li a, main ~ nav ul > li label {
   padding: 1rem;
   margin: -1rem;
 }
-main ~ nav ul > li a:hover, main ~ nav ul > li label:hover {
+main ~ nav > ul > li a:hover, main ~ nav > ul > li label:hover {
   background-color: rgba(238, 238, 238, 0.05);
+  border-bottom: 3px solid #0091ff;
 }
-main ~ nav ul > li img {
+main ~ nav > ul > li img {
   height: 2rem;
   margin: -0.5rem;
-}
-
-article > nav > label[for|=article-nav-toggle] {
-  width: 3rem;
-  height: 2.5rem;
-  background-color: #2a2a2a;
-  border-radius: 0 0 0 0.5rem;
-  content: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <path d="M12 24h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/> <path d="M12 45h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/> <path d="M12 66h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/></svg>');
-  cursor: pointer;
-}
-
-article > nav > label[for|=article-nav-toggle] {
-  padding-top: 1rem;
-  margin-top: -1rem;
-  background: linear-gradient(transparent 0%, #2a2a2a 1rem);
 }
 
 /* Article nav, along side */
@@ -244,6 +230,25 @@ article > nav > label[for|=article-nav-toggle] {
     display: none;
   }
 }
+article > nav ul {
+  user-select: none;
+}
+article > nav ul li a {
+  display: block;
+  padding: 0.3rem 0.75rem 0.3rem 1rem;
+  color: #eeeeee;
+  transition: padding-right 0.15s ease-in-out;
+}
+article > nav ul li a:hover {
+  background-color: rgba(238, 238, 238, 0.05);
+  border-right: 2px solid #0091ff;
+  margin-right: -2px;
+  padding-right: 1rem;
+}
+article > nav ul li a + ul {
+  border-right: 2px solid #105990;
+  margin-right: 0.95rem;
+}
 article > nav > ul {
   position: sticky;
   top: 0;
@@ -252,135 +257,53 @@ article > nav > ul {
   border-radius: 0 0 0 0.5rem;
   text-align: right;
   padding-bottom: 0.5em;
-}
-article > nav > ul:first-of-type {
   padding-top: 3.5rem;
   background: linear-gradient(transparent 0%, #2a2a2a 1rem);
   top: -1rem;
   margin-top: -1rem;
 }
 @media all and (min-width: 80rem) {
-  article > nav > ul:first-of-type {
+  article > nav > ul {
     padding-top: 1.5rem;
     height: 100vh;
     height: calc(100vh - 4.5rem);
+    overflow-x: hidden;
     background: #2a2a2a;
     border-top: 0.25rem solid rgba(238, 238, 238, 0.05);
   }
 }
-article > nav > ul > li ul a {
-  font-weight: normal;
+p {
+  line-height: 1.5em;
+  padding-bottom: 0.5em;
 }
-article > nav > ul > li ul ul {
-  font-size: 0.8rem;
+
+a {
+  color: #0091ff;
+  font-weight: 500;
+  text-decoration: none;
 }
-article > nav > ul > li ul ul ul {
+
+a[href^=http]::after {
+  display: inline-block;
+  content: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><polyline fill="rgba(0, 145, 255, 1)" points="0,16 48,16 48,32 16,32 16,112 96,112 96,80 112,80 112,128 0,128"/><polyline fill="rgba(0, 145, 255, 1)" points="80,0 128,0 128,48 114,48 114,25.314 54.461,84.853 43.147,73.539 102.686,14 80,14"/></svg>');
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.2em;
+  margin-right: 0.1em;
+  color: inherit;
+}
+
+pre, code {
+  font-family: monospace;
+}
+pre em, code em {
+  margin-right: 0.1em;
+}
+
+em {
   font-style: italic;
 }
-article > nav ul {
-  user-select: none;
-}
-article > nav ul li a {
-  display: block;
-  padding: 0.3rem 0.75rem 0.3rem 1rem;
-  color: #eeeeee;
-  transition: padding-right ease-in-out 0.15s;
-}
-article > nav ul li a:hover {
-  background-color: rgba(238, 238, 238, 0.05);
-  padding-right: 1rem;
-}
-article > nav ul li a + ul {
-  border-right: 2px solid #105990;
-  margin-right: 0.95rem;
-}
 
-/*
-
-main {
-margin-left: $borgar-width;
-@media (min-width: $always-display-breakpoint) {
-margin-left: $sidebar-width;
-}
-}
-
-article > nav {
-display: none;
-input[type=checkbox] {
-display: none;
-transition: $transition;
-
-~ {
-
-label {
-position: fixed;
-top: 0;
-left: 0;
-width: $borgar-width;
-transition: $transition;
-transition-property: padding-left;
-@media (min-width: $always-display-breakpoint) {
-display: none;
-}
-}
-
-ul {
-background-color: c.$off-bg;
-display: block;
-position: fixed;
-transition: $transition;
-transition-property: left;
-top: 0;
-height: 100vh;
-width: 100vw;
-left: -100vw;
-@media (min-width: $sidebar-width) {
-width: $sidebar-width;
-left: -$sidebar-width;
-}
-@media (min-width: $always-display-breakpoint) {
-left: 0;
-}
-
-> li {
-box-sizing: border-box;
-height: 2rem;
-padding: 0.5rem;
-text-align: end;
-cursor: pointer;
-user-select: none;
-
-&:hover {
-background-color: c.$off-bg-tint;
-}
-}
-}
-}
-
-&:checked ~ {
-label[for=nav-open] {
-width: 100vw;
-height: 100vh;
-background-color: $shade;
-padding-left: $sidebar-width;
-}
-
-ul {
-left: 0;
-}
-}
-}
-
-#nav-menu-icon {
-width: $borgar-width;
-height: $borgar-height;
-background-color: $borgar-bg;
-border-radius: 0 0 0.5rem 0;
-content: url(icons.$prefix + map.get(icons.$map, 'borgar'));
-}
-}
-
-*/
 .grid-row {
   display: grid;
   grid-template-columns: 1fr;

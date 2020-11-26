@@ -1,0 +1,15 @@
+@use 'constants' as c;
+@use 'util';
+
+p {
+	line-height: 1.5em;
+	padding-bottom: 0.5em;
+}
+
+blockquote {
+	@extend %bar-left;
+}
+
+pre {
+	@extend %mono;
+}

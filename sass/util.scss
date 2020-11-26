@@ -1,0 +1,36 @@
+@use 'constants' as c;
+
+$bar-margin: 0.5rem;
+$bar-width: 2px;
+$bar-padding: 1rem;
+
+%bar-top {
+	margin-top:  $bar-margin;
+	border-top:  $bar-width solid c.$accented-bg;
+	padding-top: $bar-padding;
+}
+
+%bar-right {
+	margin-right:  $bar-margin;
+	border-right:  $bar-width solid c.$accented-bg;
+	padding-right: $bar-padding;
+}
+
+%bar-bottom {
+	margin-bottom:  $bar-margin;
+	border-bottom:  $bar-width solid c.$accented-bg;
+	padding-bottom: $bar-padding;
+}
+
+%bar-left {
+	margin-left:  $bar-margin;
+	border-left:  $bar-width solid c.$accented-bg;
+	padding-left: $bar-padding;
+}
+
+%italic { font-style: italic; }
+%normal-weight { font-weight: normal; }
+%semibold { font-weight: 500; }
+%bold { font-weight: bold; }
+%smol { font-size:0.8rem; }
+%mono { font-family: monospace; em { margin-right: 0.1em; } } // TODO add all italic-styled elements styles here

@@ -1,0 +1,251 @@
+@use 'constants' as c;
+@use 'util';
+@use 'icons';
+@use 'sass:color';
+@use 'sass:map';
+
+address, aside, hgroup {
+	@extend %bar-left;
+}
+// fun fact: hgroup was removed from W3C's HTML5 spec, but remains
+// in the WHATWG version. moreover, the thing it's supposed to do
+// isn't actually implemented in any browsers, so it's kinda useless.
+
+article, section {
+	padding: 0.5rem;
+}
+
+header, footer {
+	//background-color: c.$off-bg-tint;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: c.$heading-font;
+	padding: 0.2em 0;
+}
+
+h1 { font-size: 2.7rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 2.1rem; }
+h4 { font-size: 1.9rem; }
+h5 { font-size: 1.7rem; }
+h6 { font-size: 1.5rem; }
+
+////////////////////////////////////////
+//////////// begin nav hell ////////////
+////////////////////////////////////////
+
+// Borgar settings
+$borgar-width: 3rem;
+$borgar-height: 2.5rem;
+$borgar-bg: c.$off-bg;
+$borgar-plate-radius: 0.5rem;
+
+// Article nav settings
+$fade-depth: 1rem; // gradient length above borgar and sidebar navs
+$sidebar-width: 15rem;
+$transition: 0.15s ease-in-out;
+$always-display-breakpoint: 80rem; // above this width, always show
+// sidebar nav
+
+// Main (sitewide) nav settings
+$top-width: 3rem;
+$top-padding: 1rem;
+
+// Borgar icon defns
+%borgar-icon {
+	width: $borgar-width;
+	height: $borgar-height;
+	background-color: $borgar-bg;
+	border-radius: 0 0 0 $borgar-plate-radius;
+	content: url(icons.$prefix + map.get(icons.$map, 'borgar'));
+	cursor: pointer;
+}
+
+// Same as previous but with a gradient above
+%borgar-icon-faded {
+	@extend %borgar-icon;
+	padding-top: $fade-depth;
+	margin-top: -$fade-depth;
+	background: linear-gradient(transparent 0%, $borgar-bg $fade-depth);
+}
+
+
+/* Site nav, across top */
+main {
+	// "take up the whole viewport except the top few rems"
+	position: fixed;
+	top: $top-width;
+	bottom: 0;
+	right: 0;
+	overflow-x: hidden; // shows scrollbar for y only when necessary
+
+	~ nav {
+		// "stick to the top few rems of the viewport at all times"
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: $top-width;
+		background-color: c.$off-bg-tint;
+		box-shadow: 0px 0.125rem 0.125rem c.$bg;
+		> ul {
+			display: flex;
+			flex-direction: row;
+			box-sizing: border-box;
+			> li {
+				padding: $top-padding;
+
+				// support labels in preparation for drop-downs
+				// mostly to remind me that they'll go here, i guess
+				a, label {
+					font: inherit;
+					color: inherit;
+					display: block; // block block block block block
+					height: 100%;
+					// this is what we call a pro gamer move
+					padding: $top-padding;
+					margin: -$top-padding;
+					&:hover {
+						background-color: c.$off-bg-tint;
+						border-bottom: 3px solid c.$accent;
+					}
+				}
+				img {
+					// i wrote this with the logo in mind; i wonder
+					// if it'll be useful or detractive anywhere else
+					height: $top-width - $top-padding;
+					margin: -$top-padding/2;
+				}
+			}
+		}
+	}
+}
+
+
+/* Article nav, along side */
+article {
+	position: relative;
+
+	@media all and (min-width: $always-display-breakpoint) {
+		padding-right: $sidebar-width;
+	}
+
+	// make sure the first heading of the article leaves room for the
+	// borgar, because that'd be awkward
+	section:first-of-type > h1:first-of-type {
+		margin-right: $borgar-width;
+	}
+
+	// turn back now
+	> nav {
+		// abandon all hope, smh
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: $sidebar-width;
+
+		> input[type=checkbox][id|=article-nav-toggle] {
+			display: none;
+			&:not(:checked) ~ ul {
+				display: none;
+				@media all and (min-width: $always-display-breakpoint) {
+					display: block;
+				}
+			}
+			// i told you not to look in here
+			&:checked ~ label {
+				z-index: 1;
+			}
+		}
+
+		> label[for|=article-nav-toggle] {
+			//@extend %borgar-icon;
+			//top: 0;
+			@extend %borgar-icon-faded;
+			top: -$fade-depth;
+			position: sticky;
+			float: right;
+
+			@media all and (min-width: $always-display-breakpoint) {
+				display: none;
+			}
+		}
+
+
+		ul { // all lists
+			user-select: none;
+			li { // all list items
+				a { // all links
+					display: block;
+					padding: 0.3rem 0.75rem 0.3rem 1rem;
+					color: c.$fg;
+					transition: padding-right $transition;
+					&:hover {
+						background-color: c.$off-bg-tint;
+						border-right: 2px solid c.$accent;
+						margin-right: -2px;
+						padding-right: 1rem;
+					}
+					+ ul {
+						border-right: 2px solid c.$accented-bg;
+						margin-right: 0.95rem;
+						//border-radius: 0 0 0.5rem 0 / 0.35rem;
+					}
+				}
+			}
+		}
+
+		> ul { // top level list(s but there should only be one)
+			position: sticky;
+			top: 0;
+			background: c.$off-bg;
+			border-left:   0.25rem solid c.$off-bg-tint;
+			border-radius: 0 0 0 0.5rem;
+			text-align: right;
+			padding-bottom: 0.5em;
+
+			padding-top: $borgar-height + $fade-depth;
+			background: linear-gradient(transparent 0%, c.$off-bg $fade-depth);
+			top: -$fade-depth;
+			margin-top: -$fade-depth;
+
+			// for desktop layout
+			@media all and (min-width: $always-display-breakpoint) {
+				$bruh-idk: 0.5rem + $fade-depth; // i think the 0.5rem is the
+				// spacing between the top item
+				// and the sitewide nav bar
+				padding-top: $bruh-idk;
+				height: 100vh;
+				height: calc(100vh - #{$top-width + $bruh-idk});
+				overflow-x: hidden;
+				background: c.$off-bg;
+				border-top: 0.25rem solid c.$off-bg-tint;
+			}
+
+			> li { // top level list item
+				> a { // top level link
+				} // we don't have anything for this rn, i guess
+
+				// here we style our nested things
+				ul { // nested lists
+					a { @extend %normal-weight; } // nested links
+					ul { // at least doubly nested lists
+						@extend %smol;
+						ul { // at least triply nested lists
+							@extend %italic;
+							// if you have to go deeper, rethink something
+						}
+					}
+				}
+			}
+		}
+	}
+} // wheeeeeeee
+
+////////////////////////////////////////
+///////////// end nav hell /////////////
+////////////////////////////////////////
+
+

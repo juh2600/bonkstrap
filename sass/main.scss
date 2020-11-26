@@ -7,6 +7,8 @@
 //)
 ;
 @use 'roots';
+@use 'content-sectioning';
+@use 'text-content.scss';
 @use 'basic';
 @use 'hierarchy';
 @use 'nav';

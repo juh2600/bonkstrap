@@ -4,6 +4,7 @@
 		<title>Bonkstrap: Sass</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
 		<main>
@@ -35,29 +36,73 @@
 					<h2>Default styles</h2>
 					<p>
 					</p>
-					<section id="Hyperlinks">
-						<h3>Hyperlinks</h3>
+					<section id="Roots">
+						<h3>Roots</h3>
+						<p>The document root (<code>html</code>) and sectioning root (<code>body</code>) have their margins and paddings reset to 0 on all sides by the <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Meyer reset</a>. Beyond that, the sectioning root is configured with useful background and foreground colors, font family and size, and a word wrap setting.</p>
 					</section>
-					<section id="Tables">
-						<h3>Tables</h3>
+					<section id="Content_sectioning">
+						<h3>Content sectioning</h3>
+						<p>
+						There are a handful of content sectioning elements. Most of these aren't very interesting to look at; they're more meaningful under the hood.
+						</p>
+						<h4><code>address</code></h4>
+						<address>
+							Kate of the Southern Isles<br />
+							<a href="mailto:kate@contoso.com">kate@contoso.com</a><br>
+							<a href="tel:+19118675309">(911) 867-5309</a>
+						</address>
+						<h4><code>article</code></h4>
+						<p>
+						An article is a chunk of information that can stand alone and be moved from one document to another and still make sense. It is possible to have several articles in the same page. Each of these pages contains a single article; for examples of article styling, look no further than anywhere on this site.
+						</p>
+						<h4><code>aside</code></h4>
+						<aside><p>The <code>hgroup</code> element was removed from the W3C HTML5 spec, but remains in the WHATWG HTML spec. Moreover, no browsers implement its semantics, so it's pretty much useless. (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup#Usage_notes">MDN</a>)</p></aside>
+						<h4><code>section</code>, <code>header</code>, and <code>footer</code></h4>
+						<p>
+						There's not much to look at here. Notice that the <code>section</code> is indented slightly from the surrounding content. The <code>header</code> and <code>footer</code> tags are more for semantics than for display, so they don't really show up. Styling a footer is also very context-dependent, and footers can show up in all sorts of places, so it makes more sense to write styles for them as their use cases are discovered.
+						</p>
+						<section>
+							<header><h5>A sample section</h5></header>
+							<p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.</p>
+							<footer>&copy; 2020 Seinfeld probably. What a guy.</footer>
+						</section>
+						<h4>Headings</h4>
+						<p>
+						These headings are grouped by an <code>hgroup</code>. Perhaps that shouldn't affect styling at all, since it's kinda worthless. Fake element.
+						</p>
+						<hgroup>
+							<h1>&lt;h1&gt; &ndash; Heading level 1</h1>
+							<h2>&lt;h2&gt; &ndash; Heading level 2</h1>
+							<h3>&lt;h3&gt; &ndash; Heading level 3</h1>
+							<h4>&lt;h4&gt; &ndash; Heading level 4</h1>
+							<h5>&lt;h5&gt; &ndash; Heading level 5</h1>
+							<h6>&lt;h6&gt; &ndash; Heading level 6</h1>
+						</hgroup>
+						<h4><code>main</code> and <code>nav</code></h4>
+						<p>
+						This large area is a <code>main</code> tag. The bars at the top and right, or the menu on mobile, are <code>nav</code> tags. The navigational area at the top of the page contains site-wide links. The navigational area to the right (sidebar or menu) contains intra-page links for navigating within the current document. Please appreciate them.
+						</p>
 					</section>
-					<section id="Articles_sections_and_paragraphs">
-						<h3>Articles, sections, and paragraphs</h3>
-					</section>
-					<section id="Headings">
-						<h3>Headings</h3>
-					</section>
-					<section id="Forms">
-						<h3>Forms</h3>
-					</section>
-					<section id="Code">
-						<h3>Code</h3>
-					</section>
-					<section id="Images">
-						<h3>Images</h3>
-					</section>
-					<section id="Nav_bars_and_menus">
-						<h3>Nav bars and menus</h3>
+					<section id="Text_content">
+						<h3>Text content</h3>
+						<p>
+						Text content elements are particularly important for accessibility and SEO.
+						</p>
+						<h4>Paragraph: <code>p</code></h4>
+						<p>
+						All the "regular text" you see on this page is wrapped in <code>p</code> tags. It is what it is.
+						</p>
+						<h4><code>blockquote</code></h4>
+						<blockquote cite="https://www.imdb.com/title/tt1245907/characters/nm0825998"><p>You've got a 33.3% chance of winning. But I, I've got a 66 and two third chance of winning, cause Kurt Angle KNOWS he can't beat me, and he's not even gonna try. So Samoa Joe, you take your 33 and a third chance, minus my 25% chance, and you've got an eight and a third chance of winning, at Sacrifice. But then you take my 75 per chance chance of winning, if we was to go one on one, and then add 66 and two thirds... per cents, I got a 141 and two thirds chance of winning, at Sacrifice. The numbers don't lie, and they spell disaster for you!</p></blockquote>
+						<h4><code>div</code></h4>
+						<div>🦀 divs are cancelled 🦀</div>
+						<h4>Figures: <code>figure</code> and <code>figcaption</code></h4>
+
+						<h4>Horizontal rule: <code>hr</code></h4>
+						<hr />
+						<h4>Preformatted text: <code>pre</code></h4>
+						<h4>Ordered and unordered lists: <code>ol</code>, <code>ul</code>, and <code>li</code></h4>
+						<h4>Description list: <code>dl</code>, <code>dt</code>, and <code>dd</code></h4>
 					</section>
 				</section>
 				<section id="Theme_colors">

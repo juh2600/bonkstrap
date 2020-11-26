@@ -3,10 +3,6 @@
 @use 'icons';
 
 
-p {
-	line-height: 1.5em;
-	padding-bottom: 0.5em;
-}
 
 a {
 	color: c.$accent;
@@ -21,6 +17,7 @@ a[href^=http]::after {
 	width: 0.8em;
 	height: 0.8em;
 	margin-left: 0.2em;
+	margin-right: 0.1em;
 	color: inherit;
 }
 

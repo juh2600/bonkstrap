@@ -1,5 +1,9 @@
 @use 'constants' as c;
 
+:root {
+	font-size: c.$body-font-size;
+}
+
 body {
 	background-color: c.$bg;
 	color: c.$fg;

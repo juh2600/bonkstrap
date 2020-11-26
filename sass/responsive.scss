@@ -39,5 +39,8 @@
 @for $i from 1 through 10 {
 	@media (min-width: #{$i}0rem) {
 		.below-#{$i}0rem { display: none; }
-}
+	}
+	@media (max-width: #{$i}0rem) {
+		.above-#{$i}0rem { display: none; }
+	}
 }

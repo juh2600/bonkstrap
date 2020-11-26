@@ -7,13 +7,14 @@
 	</head>
 	<body>
 		<main>
-			<article> <section>
+			<article>
+				<section id="Bonkstrap">
 					<h1>Bonkstrap</h1>
 					<p>
 					Bonkstrap is a CSS framework to ease the design of responsive web sites. It is written in <a href="https://sass-lang.com/">SCSS</a> and divided into <a href="sass.html#modules">modules</a>. Bonkstrap also employs <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Eric Meyer's CSS reset</a> to mask vendor-default styles, helping to produce consistent appearances across browsers.
 					</p>
 				</section>
-				<section>
+				<section id="Responsive_design">
 					<h2>Responsive design</h2>
 					<p>
 					Bonkstrap offers a column-based system to organize content. An item in a column layout can specify how many columns to span and in which column to begin, using the classes <code>col-<em>n</em>w</code> for a width of <em>n</em> columns and <code>col-<em>m</em></code> to have the leftmost end of the item in column <em>m</em>. Columns will wrap around on narrower screens. Nested column systems will automatically tint their backgrounds to help distinguish them.
@@ -91,36 +92,150 @@
 							Sixth
 						</div>
 				</section>
-				<section>
+				<section id="CSS_reset">
 					<h2>CSS reset</h2>
 					<p>
 					The <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Meyer reset</a> works to undo all or most of the default styles that browsers apply. This leaves us with a clean slate on which to design everything else. Because changing the contents of the reset could affect how Bonkstrap's styles are interpreted, we treat it as an integral part of the framework and compile it in with the rest of the Sass code, as opposed to linking it separately.
 					</p>
 				</section>
-				<section>
+				<section id="CSS_classes">
 					<h2>CSS classes</h2>
 					<p>
 					</p>
 				</section>
-				<section>
+				<section id="CSS_transitions_transforms">
 					<h2>CSS transitions<br class="below-40rem" />/transforms</h2>
 					<p>
 					</p>
 				</section>
 				<nav>
-					<input type="checkbox" id="article-nav-open" />
-					<label for="article-nav-open">
-						<div class="borgar-icon">
-						</div>
-					</label>
+					<input type="checkbox" id="article-nav-toggle-Bonkstrap-2"/>
+					<label for="article-nav-toggle-Bonkstrap-2"></label>
 					<ul>
-						<li>Bonkstrap</li>
-						<ul>
-							<li>Responsive design</li>
-							<li>CSS reset</li>
-							<li>CSS classes</li>
-							<li>CSS transitions/transforms</li>
-						</ul>
+						<li><a href="#Bonkstrap">Bonkstrap</a>
+							<ul>
+								<li><a href="#Responsive_design">Responsive design</a></li>
+								<li><a href="#CSS_reset">CSS reset</a></li>
+								<li><a href="#CSS_classes">CSS classes</a></li>
+								<li><a href="#CSS_transitions_transforms">CSS transitions/transforms</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</article>
+			<article>
+				<section id="Bonkstrap">
+					<h1>Bonkstrap</h1>
+					<p>
+					Bonkstrap is a CSS framework to ease the design of responsive web sites. It is written in <a href="https://sass-lang.com/">SCSS</a> and divided into <a href="sass.html#modules">modules</a>. Bonkstrap also employs <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Eric Meyer's CSS reset</a> to mask vendor-default styles, helping to produce consistent appearances across browsers.
+					</p>
+				</section>
+				<section id="Responsive_design">
+					<h2>Responsive design</h2>
+					<p>
+					Bonkstrap offers a column-based system to organize content. An item in a column layout can specify how many columns to span and in which column to begin, using the classes <code>col-<em>n</em>w</code> for a width of <em>n</em> columns and <code>col-<em>m</em></code> to have the leftmost end of the item in column <em>m</em>. Columns will wrap around on narrower screens. Nested column systems will automatically tint their backgrounds to help distinguish them.
+					</p>
+					<div class="grid-row">
+						<div class="cell col-1w">
+							<code>.col-1w</code>
+						</div>
+						<div class="cell col-1w col-3">
+							<code>.col-1w.col-3</code>
+						</div>
+						<div class="cell col-1w col-5">
+							<code>.col-1w.col-5</code>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="cell col-2w col-2">
+							<code>.col-2w.col-2</code>
+						</div>
+						<div class="cell col-2w col-5">
+							<code>.col-2w.col-5</code>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="cell col-3w">
+							<code>.col-3w</code>
+						</div>
+						<div class="cell col-3w">
+							<code>.col-3w</code>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="cell col-2w">
+							<code>.col-2w</code>
+						</div>
+						<div class="cell col-4w">
+							<code>.col-4w</code>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="cell col-5w">
+							<code>.col-5w</code>
+							<div class="grid-row">
+								<div class="cell col-3w">An example of (3w)</div>
+								<div class="cell col-1w">nested (1w)</div>
+								<div class="cell col-2w">columns (2w)</div>
+							</div>
+						</div>
+						<div class="cell col-1w">
+							<code>.col-1w</code>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="cell col-6w">
+							<code>.col-6w</code>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="cell col-1w">
+							First
+						</div>
+						<div class="cell col-1w">
+							Second
+						</div>
+						<div class="cell col-1w">
+							Third
+						</div>
+						<div class="cell col-1w">
+							Fourth
+						</div>
+						<div class="cell col-1w">
+							Fifth
+						</div>
+						<div class="cell col-1w">
+							Sixth
+						</div>
+				</section>
+				<section id="CSS_reset">
+					<h2>CSS reset</h2>
+					<p>
+					The <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Meyer reset</a> works to undo all or most of the default styles that browsers apply. This leaves us with a clean slate on which to design everything else. Because changing the contents of the reset could affect how Bonkstrap's styles are interpreted, we treat it as an integral part of the framework and compile it in with the rest of the Sass code, as opposed to linking it separately.
+					</p>
+				</section>
+				<section id="CSS_classes">
+					<h2>CSS classes</h2>
+					<p>
+					</p>
+				</section>
+				<section id="CSS_transitions_transforms">
+					<h2>CSS transitions<br class="below-40rem" />/transforms</h2>
+					<p>
+					</p>
+				</section>
+				<nav>
+					<input type="checkbox" id="article-nav-toggle-Bonkstrap"/>
+					<label for="article-nav-toggle-Bonkstrap"></label>
+					<ul>
+						<li><a href="#Bonkstrap">Bonkstrap</a>
+							<ul>
+								<li><a href="#Responsive_design">Responsive design</a></li>
+								<li><a href="#CSS_reset">CSS reset</a></li>
+								<li><a href="#CSS_classes">CSS classes</a></li>
+								<li><a href="#CSS_transitions_transforms">CSS transitions/transforms</a></li>
+							</ul>
+						</li>
 					</ul>
 				</nav>
 			</article>

@@ -132,17 +132,81 @@ main ~ nav ul > li img {
   margin: -0.5rem;
 }
 
-/* Article nav, along side */
-article section:first-of-type > h1:first-of-type {
-  margin-right: 3rem;
-}
-
-.borgar-icon {
+article > nav > label[for|=article-nav-toggle] {
   width: 3rem;
   height: 2.5rem;
   background-color: #2a2a2a;
   border-radius: 0 0 0 0.5rem;
   content: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <path d="M12 24h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/> <path d="M12 45h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/> <path d="M12 66h72a4 4 0 0 1 0 8h-72a4 4 0 0 1 0 -8" fill="rgba(0, 145, 255, 1)"/></svg>');
+  cursor: pointer;
+}
+
+article > nav > label[for|=article-nav-toggle] {
+  padding-top: 1rem;
+  margin-top: -1rem;
+  background: linear-gradient(transparent 0%, #2a2a2a 1em);
+}
+
+/* Article nav, along side */
+article {
+  position: relative;
+}
+article section:first-of-type > h1:first-of-type {
+  margin-right: 3rem;
+}
+article > nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 15rem;
+}
+article > nav > input[type=checkbox][id|=article-nav-toggle] {
+  display: none;
+}
+article > nav > input[type=checkbox][id|=article-nav-toggle]:not(:checked) ~ ul {
+  display: none;
+}
+article > nav > input[type=checkbox][id|=article-nav-toggle]:checked ~ label {
+  z-index: 1;
+}
+article > nav > label[for|=article-nav-toggle] {
+  top: -1rem;
+  position: sticky;
+  float: right;
+}
+article > nav > ul {
+  position: sticky;
+  top: 0;
+  background: #2a2a2a;
+  border-left: 0.25rem solid rgba(238, 238, 238, 0.05);
+  border-radius: 0 0 0 0.5rem;
+  text-align: right;
+  padding-bottom: 0.5em;
+}
+article > nav > ul:first-of-type {
+  padding-top: 3.5rem;
+  background: linear-gradient(transparent 0%, #2a2a2a 1rem);
+  top: -1rem;
+  margin-top: -1rem;
+}
+article > nav > ul > li ul li a {
+  font-weight: normal;
+}
+article > nav ul {
+  user-select: none;
+}
+article > nav ul li a {
+  display: block;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-right: 0.75em;
+  color: #eeeeee;
+  transition: padding-right ease-in-out 0.15s;
+}
+article > nav ul li a:hover {
+  background-color: rgba(238, 238, 238, 0.05);
+  padding-right: 1em;
 }
 
 /*
@@ -163,71 +227,71 @@ transition: $transition;
 ~ {
 
 label {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: $borgar-width;
-	transition: $transition;
-	transition-property: padding-left;
-	@media (min-width: $always-display-breakpoint) {
-		display: none;
-	}
+position: fixed;
+top: 0;
+left: 0;
+width: $borgar-width;
+transition: $transition;
+transition-property: padding-left;
+@media (min-width: $always-display-breakpoint) {
+display: none;
+}
 }
 
 ul {
-	background-color: c.$off-bg;
-	display: block;
-	position: fixed;
-	transition: $transition;
-	transition-property: left;
-	top: 0;
-	height: 100vh;
-	width: 100vw;
-	left: -100vw;
-	@media (min-width: $sidebar-width) {
-		width: $sidebar-width;
-		left: -$sidebar-width;
-	}
-	@media (min-width: $always-display-breakpoint) {
-		left: 0;
-	}
-
-	> li {
-		box-sizing: border-box;
-		height: 2rem;
-		padding: 0.5rem;
-		text-align: end;
-		cursor: pointer;
-		user-select: none;
-
-		&:hover {
-			background-color: c.$off-bg-tint;
-		}
-	}
+background-color: c.$off-bg;
+display: block;
+position: fixed;
+transition: $transition;
+transition-property: left;
+top: 0;
+height: 100vh;
+width: 100vw;
+left: -100vw;
+@media (min-width: $sidebar-width) {
+width: $sidebar-width;
+left: -$sidebar-width;
 }
-		}
+@media (min-width: $always-display-breakpoint) {
+left: 0;
+}
 
-		&:checked ~ {
-			label[for=nav-open] {
-				width: 100vw;
-				height: 100vh;
-				background-color: $shade;
-				padding-left: $sidebar-width;
-			}
+> li {
+box-sizing: border-box;
+height: 2rem;
+padding: 0.5rem;
+text-align: end;
+cursor: pointer;
+user-select: none;
 
-			ul {
-				left: 0;
-			}
-		}
-	}
+&:hover {
+background-color: c.$off-bg-tint;
+}
+}
+}
+}
 
-	#nav-menu-icon {
-		width: $borgar-width;
-		height: $borgar-height;
-		background-color: $borgar-bg;
-		border-radius: 0 0 0.5rem 0;
-		content: url(icons.$prefix + map.get(icons.$map, 'borgar'));
-	}
+&:checked ~ {
+label[for=nav-open] {
+width: 100vw;
+height: 100vh;
+background-color: $shade;
+padding-left: $sidebar-width;
+}
+
+ul {
+left: 0;
+}
+}
+}
+
+#nav-menu-icon {
+width: $borgar-width;
+height: $borgar-height;
+background-color: $borgar-bg;
+border-radius: 0 0 0.5rem 0;
+content: url(icons.$prefix + map.get(icons.$map, 'borgar'));
+}
 }
 
 */
@@ -386,8 +450,18 @@ article, section {
     display: none;
   }
 }
+@media (max-width: 10rem) {
+  .above-10rem {
+    display: none;
+  }
+}
 @media (min-width: 20rem) {
   .below-20rem {
+    display: none;
+  }
+}
+@media (max-width: 20rem) {
+  .above-20rem {
     display: none;
   }
 }
@@ -396,8 +470,18 @@ article, section {
     display: none;
   }
 }
+@media (max-width: 30rem) {
+  .above-30rem {
+    display: none;
+  }
+}
 @media (min-width: 40rem) {
   .below-40rem {
+    display: none;
+  }
+}
+@media (max-width: 40rem) {
+  .above-40rem {
     display: none;
   }
 }
@@ -406,8 +490,18 @@ article, section {
     display: none;
   }
 }
+@media (max-width: 50rem) {
+  .above-50rem {
+    display: none;
+  }
+}
 @media (min-width: 60rem) {
   .below-60rem {
+    display: none;
+  }
+}
+@media (max-width: 60rem) {
+  .above-60rem {
     display: none;
   }
 }
@@ -416,8 +510,18 @@ article, section {
     display: none;
   }
 }
+@media (max-width: 70rem) {
+  .above-70rem {
+    display: none;
+  }
+}
 @media (min-width: 80rem) {
   .below-80rem {
+    display: none;
+  }
+}
+@media (max-width: 80rem) {
+  .above-80rem {
     display: none;
   }
 }
@@ -426,8 +530,18 @@ article, section {
     display: none;
   }
 }
+@media (max-width: 90rem) {
+  .above-90rem {
+    display: none;
+  }
+}
 @media (min-width: 100rem) {
   .below-100rem {
+    display: none;
+  }
+}
+@media (max-width: 100rem) {
+  .above-100rem {
     display: none;
   }
 }

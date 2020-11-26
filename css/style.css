@@ -1,3 +1,10 @@
+/*/
+// alternate color scheme, just as a demo
+// black on white with red
+$fg: #202020 !default;
+$bg: #eeeeee !default;
+$accent: #ff0091 !default;
+/**/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -92,6 +99,52 @@ em {
   font-style: italic;
 }
 
+:root {
+  font-size: 1.25em;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 2.7rem;
+  padding: 0.2em 0;
+}
+
+h2 {
+  font-size: 2.4rem;
+  padding: 0.2em 0;
+}
+
+h3 {
+  font-size: 2.1rem;
+  padding: 0.2em 0;
+}
+
+h4 {
+  font-size: 1.9rem;
+  padding: 0.2em 0;
+}
+
+h5 {
+  font-size: 1.7rem;
+  padding: 0.2em 0;
+}
+
+h6 {
+  font-size: 1.5rem;
+  padding: 0.2em 0;
+}
+
+article, section {
+  padding: 0.5rem;
+}
+
 /* Site nav, across top */
 main {
   position: fixed;
@@ -107,6 +160,7 @@ main ~ nav {
   right: 0;
   height: 3rem;
   background-color: rgba(238, 238, 238, 0.05);
+  box-shadow: 0px 0.125rem 0.125rem #222;
 }
 main ~ nav ul {
   display: flex;
@@ -151,6 +205,11 @@ article > nav > label[for|=article-nav-toggle] {
 article {
   position: relative;
 }
+@media all and (min-width: 80rem) {
+  article {
+    padding-right: 15rem;
+  }
+}
 article section:first-of-type > h1:first-of-type {
   margin-right: 3rem;
 }
@@ -167,6 +226,11 @@ article > nav > input[type=checkbox][id|=article-nav-toggle] {
 article > nav > input[type=checkbox][id|=article-nav-toggle]:not(:checked) ~ ul {
   display: none;
 }
+@media all and (min-width: 80rem) {
+  article > nav > input[type=checkbox][id|=article-nav-toggle]:not(:checked) ~ ul {
+    display: block;
+  }
+}
 article > nav > input[type=checkbox][id|=article-nav-toggle]:checked ~ label {
   z-index: 1;
 }
@@ -174,6 +238,11 @@ article > nav > label[for|=article-nav-toggle] {
   top: -1rem;
   position: sticky;
   float: right;
+}
+@media all and (min-width: 80rem) {
+  article > nav > label[for|=article-nav-toggle] {
+    display: none;
+  }
 }
 article > nav > ul {
   position: sticky;
@@ -189,6 +258,14 @@ article > nav > ul:first-of-type {
   background: linear-gradient(transparent 0%, #2a2a2a 1rem);
   top: -1rem;
   margin-top: -1rem;
+}
+@media all and (min-width: 80rem) {
+  article > nav > ul:first-of-type {
+    padding-top: 1.5rem;
+    height: 100vh;
+    background: #2a2a2a;
+    border-top: 0.25rem solid rgba(238, 238, 238, 0.05);
+  }
 }
 article > nav > ul > li ul li a {
   font-weight: normal;
@@ -295,52 +372,6 @@ content: url(icons.$prefix + map.get(icons.$map, 'borgar'));
 }
 
 */
-:root {
-  font-size: 1.25em;
-}
-
-body {
-  font-family: "Roboto";
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto";
-}
-
-h1 {
-  font-size: 2.7rem;
-  padding: 0.2em 0;
-}
-
-h2 {
-  font-size: 2.4rem;
-  padding: 0.2em 0;
-}
-
-h3 {
-  font-size: 2.1rem;
-  padding: 0.2em 0;
-}
-
-h4 {
-  font-size: 1.9rem;
-  padding: 0.2em 0;
-}
-
-h5 {
-  font-size: 1.7rem;
-  padding: 0.2em 0;
-}
-
-h6 {
-  font-size: 1.5rem;
-  padding: 0.2em 0;
-}
-
-article, section {
-  padding: 0.5rem;
-}
-
 .grid-row {
   display: grid;
   grid-template-columns: 1fr;

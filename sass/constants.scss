@@ -4,13 +4,24 @@
     @return unquote("rgba(#{red($color)}, #{green($color)}, #{blue($color)}, #{$alpha})");
 }
 
+// these are the three main theme colors
+// white on black with blue
 $bg: #202020 !default;
 $fg: #eeeeee !default;
+$accent: #0091ff !default;
+/*/
+// alternate color scheme, just as a demo
+// black on white with red
+$fg: #202020 !default;
+$bg: #eeeeee !default;
+$accent: #ff0091 !default;
+/**/
+
+// everything else is derived from the above
 $off-bg-tint: color.adjust($fg, $alpha: -0.95) !default;
 $off-fg-tint: color.adjust($bg, $alpha: -0.95) !default;
 $off-bg: color.mix($bg, $fg, 95%) !default;
 $off-fg: color.mix($fg, $bg, 95%) !default;
-$accent: #0091ff !default;
 
 $heading-font: 'Roboto' !default;
 $body-font: 'Roboto' !default;

@@ -33,6 +33,7 @@ main {
 		right: 0;
 		height: $top-width;
 		background-color: c.$off-bg-tint;
+		box-shadow: 0px 0.125rem 0.125rem #222;
 		ul {
 			display: flex;
 			flex-direction: row;
@@ -80,6 +81,11 @@ main {
 
 article {
 	position: relative;
+
+	@media all and (min-width: $always-display-breakpoint) {
+		padding-right: $sidebar-width;
+	}
+
 	section:first-of-type > h1:first-of-type {
 		margin-right: $borgar-width;
 	}
@@ -95,6 +101,9 @@ article {
 			display: none;
 			&:not(:checked) ~ ul {
 				display: none;
+				@media all and (min-width: $always-display-breakpoint) {
+					display: block;
+				}
 			}
 			&:checked ~ label {
 				z-index: 1;
@@ -108,9 +117,13 @@ article {
 			top: -1rem;
 			position: sticky;
 			float: right;
+
+			@media all and (min-width: $always-display-breakpoint) {
+				display: none;
+			}
 		}
 
-		> ul { // top level lists
+		> ul { // top level list(s but there should only be one)
 			position: sticky;
 			top: 0;
 			background: c.$off-bg;
@@ -120,11 +133,17 @@ article {
 			text-align: right;
 			padding-bottom: 0.5em;
 
-			&:first-of-type { // first top-level list
+			&:first-of-type { // first top-level list // really this shouldn't matter (because there should only be one top-level list)
 				padding-top: $borgar-height + 1rem;
 				background: linear-gradient(transparent 0%, c.$off-bg 1rem);
 				top: -1rem;
 				margin-top: -1rem;
+				@media all and (min-width: $always-display-breakpoint) {
+					padding-top: 0.5rem + 1rem;
+					height: 100vh;
+					background: c.$off-bg;
+					border-top: 0.25rem solid c.$off-bg-tint;
+				}
 			}
 
 			> li { // top level list item

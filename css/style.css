@@ -60,6 +60,486 @@ table {
   border-spacing: 0;
 }
 
+.max-height-5rem {
+  max-height: 5rem;
+}
+
+.max-width-5rem {
+  max-width: 5rem;
+}
+
+.height-5rem {
+  height: 5rem;
+}
+
+.width-5rem {
+  width: 5rem;
+}
+
+.max-height-10rem {
+  max-height: 10rem;
+}
+
+.max-width-10rem {
+  max-width: 10rem;
+}
+
+.height-10rem {
+  height: 10rem;
+}
+
+.width-10rem {
+  width: 10rem;
+}
+
+.max-height-15rem {
+  max-height: 15rem;
+}
+
+.max-width-15rem {
+  max-width: 15rem;
+}
+
+.height-15rem {
+  height: 15rem;
+}
+
+.width-15rem {
+  width: 15rem;
+}
+
+.max-height-20rem {
+  max-height: 20rem;
+}
+
+.max-width-20rem {
+  max-width: 20rem;
+}
+
+.height-20rem {
+  height: 20rem;
+}
+
+.width-20rem {
+  width: 20rem;
+}
+
+.max-height-25rem {
+  max-height: 25rem;
+}
+
+.max-width-25rem {
+  max-width: 25rem;
+}
+
+.height-25rem {
+  height: 25rem;
+}
+
+.width-25rem {
+  width: 25rem;
+}
+
+.max-height-30rem {
+  max-height: 30rem;
+}
+
+.max-width-30rem {
+  max-width: 30rem;
+}
+
+.height-30rem {
+  height: 30rem;
+}
+
+.width-30rem {
+  width: 30rem;
+}
+
+.max-height-35rem {
+  max-height: 35rem;
+}
+
+.max-width-35rem {
+  max-width: 35rem;
+}
+
+.height-35rem {
+  height: 35rem;
+}
+
+.width-35rem {
+  width: 35rem;
+}
+
+.max-height-40rem {
+  max-height: 40rem;
+}
+
+.max-width-40rem {
+  max-width: 40rem;
+}
+
+.height-40rem {
+  height: 40rem;
+}
+
+.width-40rem {
+  width: 40rem;
+}
+
+.max-height-45rem {
+  max-height: 45rem;
+}
+
+.max-width-45rem {
+  max-width: 45rem;
+}
+
+.height-45rem {
+  height: 45rem;
+}
+
+.width-45rem {
+  width: 45rem;
+}
+
+.max-height-50rem {
+  max-height: 50rem;
+}
+
+.max-width-50rem {
+  max-width: 50rem;
+}
+
+.height-50rem {
+  height: 50rem;
+}
+
+.width-50rem {
+  width: 50rem;
+}
+
+.max-height-5pct {
+  max-height: 5%;
+}
+
+.max-width-5pct {
+  max-width: 5%;
+}
+
+.height-5pct {
+  height: 5%;
+}
+
+.width-5pct {
+  width: 5%;
+}
+
+.max-height-10pct {
+  max-height: 10%;
+}
+
+.max-width-10pct {
+  max-width: 10%;
+}
+
+.height-10pct {
+  height: 10%;
+}
+
+.width-10pct {
+  width: 10%;
+}
+
+.max-height-15pct {
+  max-height: 15%;
+}
+
+.max-width-15pct {
+  max-width: 15%;
+}
+
+.height-15pct {
+  height: 15%;
+}
+
+.width-15pct {
+  width: 15%;
+}
+
+.max-height-20pct {
+  max-height: 20%;
+}
+
+.max-width-20pct {
+  max-width: 20%;
+}
+
+.height-20pct {
+  height: 20%;
+}
+
+.width-20pct {
+  width: 20%;
+}
+
+.max-height-25pct {
+  max-height: 25%;
+}
+
+.max-width-25pct {
+  max-width: 25%;
+}
+
+.height-25pct {
+  height: 25%;
+}
+
+.width-25pct {
+  width: 25%;
+}
+
+.max-height-30pct {
+  max-height: 30%;
+}
+
+.max-width-30pct {
+  max-width: 30%;
+}
+
+.height-30pct {
+  height: 30%;
+}
+
+.width-30pct {
+  width: 30%;
+}
+
+.max-height-35pct {
+  max-height: 35%;
+}
+
+.max-width-35pct {
+  max-width: 35%;
+}
+
+.height-35pct {
+  height: 35%;
+}
+
+.width-35pct {
+  width: 35%;
+}
+
+.max-height-40pct {
+  max-height: 40%;
+}
+
+.max-width-40pct {
+  max-width: 40%;
+}
+
+.height-40pct {
+  height: 40%;
+}
+
+.width-40pct {
+  width: 40%;
+}
+
+.max-height-45pct {
+  max-height: 45%;
+}
+
+.max-width-45pct {
+  max-width: 45%;
+}
+
+.height-45pct {
+  height: 45%;
+}
+
+.width-45pct {
+  width: 45%;
+}
+
+.max-height-50pct {
+  max-height: 50%;
+}
+
+.max-width-50pct {
+  max-width: 50%;
+}
+
+.height-50pct {
+  height: 50%;
+}
+
+.width-50pct {
+  width: 50%;
+}
+
+.max-height-55pct {
+  max-height: 55%;
+}
+
+.max-width-55pct {
+  max-width: 55%;
+}
+
+.height-55pct {
+  height: 55%;
+}
+
+.width-55pct {
+  width: 55%;
+}
+
+.max-height-60pct {
+  max-height: 60%;
+}
+
+.max-width-60pct {
+  max-width: 60%;
+}
+
+.height-60pct {
+  height: 60%;
+}
+
+.width-60pct {
+  width: 60%;
+}
+
+.max-height-65pct {
+  max-height: 65%;
+}
+
+.max-width-65pct {
+  max-width: 65%;
+}
+
+.height-65pct {
+  height: 65%;
+}
+
+.width-65pct {
+  width: 65%;
+}
+
+.max-height-70pct {
+  max-height: 70%;
+}
+
+.max-width-70pct {
+  max-width: 70%;
+}
+
+.height-70pct {
+  height: 70%;
+}
+
+.width-70pct {
+  width: 70%;
+}
+
+.max-height-75pct {
+  max-height: 75%;
+}
+
+.max-width-75pct {
+  max-width: 75%;
+}
+
+.height-75pct {
+  height: 75%;
+}
+
+.width-75pct {
+  width: 75%;
+}
+
+.max-height-80pct {
+  max-height: 80%;
+}
+
+.max-width-80pct {
+  max-width: 80%;
+}
+
+.height-80pct {
+  height: 80%;
+}
+
+.width-80pct {
+  width: 80%;
+}
+
+.max-height-85pct {
+  max-height: 85%;
+}
+
+.max-width-85pct {
+  max-width: 85%;
+}
+
+.height-85pct {
+  height: 85%;
+}
+
+.width-85pct {
+  width: 85%;
+}
+
+.max-height-90pct {
+  max-height: 90%;
+}
+
+.max-width-90pct {
+  max-width: 90%;
+}
+
+.height-90pct {
+  height: 90%;
+}
+
+.width-90pct {
+  width: 90%;
+}
+
+.max-height-95pct {
+  max-height: 95%;
+}
+
+.max-width-95pct {
+  max-width: 95%;
+}
+
+.height-95pct {
+  height: 95%;
+}
+
+.width-95pct {
+  width: 95%;
+}
+
+.max-height-100pct {
+  max-height: 100%;
+}
+
+.max-width-100pct {
+  max-width: 100%;
+}
+
+.height-100pct {
+  height: 100%;
+}
+
+.width-100pct {
+  width: 100%;
+}
+
 :root {
   font-size: 1.25em;
 }
@@ -72,18 +552,28 @@ body {
   word-wrap: break-word;
 }
 
-blockquote, address, aside, hgroup {
+dd {
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #105990;
+  padding-bottom: 1rem;
+}
+
+blockquote, dd, address, aside {
   margin-left: 0.5rem;
   border-left: 2px solid #105990;
   padding-left: 1rem;
 }
 
-article > nav > ul > li ul ul ul {
+figure::before, dt, article > nav > ul > li ul ul ul {
   font-style: italic;
 }
 
 article > nav > ul > li ul a {
   font-weight: normal;
+}
+
+a, abbr {
+  font-weight: 500;
 }
 
 article > nav > ul > li ul ul {
@@ -97,13 +587,17 @@ pre em {
   margin-right: 0.1em;
 }
 
+address {
+  line-height: 1.25em;
+}
+
 article, section {
   padding: 0.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto";
-  padding: 0.2em 0;
+  padding: 0.4rem 0;
 }
 
 h1 {
@@ -130,8 +624,16 @@ h6 {
   font-size: 1.5rem;
 }
 
+hgroup {
+  padding-bottom: 0.4rem;
+}
+hgroup h1, hgroup h2, hgroup h3, hgroup h4, hgroup h5, hgroup h6 {
+  padding-bottom: 0;
+}
+
 article > nav > label[for|=article-nav-toggle] {
   width: 3rem;
+  margin-left: -3rem;
   height: 2.5rem;
   background-color: #2a2a2a;
   border-radius: 0 0 0 0.5rem;
@@ -204,7 +706,7 @@ article > nav {
   top: 0;
   right: 0;
   height: 100%;
-  width: 15rem;
+  max-width: 15rem;
 }
 article > nav > input[type=checkbox][id|=article-nav-toggle] {
   display: none;
@@ -272,18 +774,78 @@ article > nav > ul {
     border-top: 0.25rem solid rgba(238, 238, 238, 0.05);
   }
 }
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  margin: 0;
+  line-height: 1rem;
+}
+
 p {
   line-height: 1.5em;
   padding-bottom: 0.5em;
 }
 
+article {
+  counter-reset: figure;
+}
+
+figure {
+  counter-increment: figure;
+  padding: 1rem;
+}
+figure * {
+  width: 100%;
+}
+figure::before {
+  content: "Figure " counter(figure);
+  display: block;
+  padding: 0.5rem 0;
+}
+figure figcaption {
+  padding: 0.5rem 0;
+}
+
+hr {
+  border-color: #0091ff;
+}
+
+pre {
+  background-color: #00000040;
+  padding: 1rem;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol > li, ul > li {
+  margin-left: 2rem;
+  line-height: 1.35em;
+}
+
+dl {
+  line-height: 1.25em;
+}
+
+dd {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 a {
   color: #0091ff;
-  font-weight: 500;
   text-decoration: none;
 }
 
-a[href^=http]::after {
+a[href*="://"]::after,
+a[href^="mailto:"]::after,
+a[href^="tel:"]::after {
   display: inline-block;
   content: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><polyline fill="rgba(0, 145, 255, 1)" points="0,16 48,16 48,32 16,32 16,112 96,112 96,80 112,80 112,128 0,128"/><polyline fill="rgba(0, 145, 255, 1)" points="80,0 128,0 128,48 114,48 114,25.314 54.461,84.853 43.147,73.539 102.686,14 80,14"/></svg>');
   width: 0.8em;
@@ -291,6 +853,14 @@ a[href^=http]::after {
   margin-left: 0.2em;
   margin-right: 0.1em;
   color: inherit;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+b {
+  text-decoration: underline;
 }
 
 pre, code {

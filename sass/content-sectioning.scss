@@ -4,12 +4,15 @@
 @use 'sass:color';
 @use 'sass:map';
 
-address, aside, hgroup {
+$heading-padding: 0.4rem;
+
+address {
+	line-height: 1.25em;
+}
+
+address, aside {
 	@extend %bar-left;
 }
-// fun fact: hgroup was removed from W3C's HTML5 spec, but remains
-// in the WHATWG version. moreover, the thing it's supposed to do
-// isn't actually implemented in any browsers, so it's kinda useless.
 
 article, section {
 	padding: 0.5rem;
@@ -21,7 +24,7 @@ header, footer {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: c.$heading-font;
-	padding: 0.2em 0;
+	padding: $heading-padding 0;
 }
 
 h1 { font-size: 2.7rem; }
@@ -30,6 +33,13 @@ h3 { font-size: 2.1rem; }
 h4 { font-size: 1.9rem; }
 h5 { font-size: 1.7rem; }
 h6 { font-size: 1.5rem; }
+
+hgroup {
+	h1, h2, h3, h4, h5, h6 {
+		padding-bottom: 0;
+	}
+	padding-bottom: $heading-padding;
+}
 
 ////////////////////////////////////////
 //////////// begin nav hell ////////////
@@ -55,6 +65,7 @@ $top-padding: 1rem;
 // Borgar icon defns
 %borgar-icon {
 	width: $borgar-width;
+	margin-left: -$borgar-width;
 	height: $borgar-height;
 	background-color: $borgar-bg;
 	border-radius: 0 0 0 $borgar-plate-radius;
@@ -144,7 +155,7 @@ article {
 		top: 0;
 		right: 0;
 		height: 100%;
-		width: $sidebar-width;
+		max-width: $sidebar-width;
 
 		> input[type=checkbox][id|=article-nav-toggle] {
 			display: none;
@@ -243,6 +254,14 @@ article {
 		}
 	}
 } // wheeeeeeee
+
+nav ul {
+	list-style-type: none;
+	li {
+		margin: 0;
+		line-height: 1rem;
+	}
+}
 
 ////////////////////////////////////////
 ///////////// end nav hell /////////////

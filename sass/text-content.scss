@@ -10,6 +10,50 @@ blockquote {
 	@extend %bar-left;
 }
 
+article { counter-reset: figure; }
+figure {
+	counter-increment: figure;
+	padding: 1rem;
+
+	* {
+		width: 100%;
+	}
+	&::before {
+		content: "Figure " counter(figure);
+		display: block;
+		padding: 0.5rem 0;
+		@extend %italic;
+	}
+	figcaption {
+		padding: 0.5rem 0;
+	}
+}
+
+hr {
+	border-color: c.$accent;
+}
+
 pre {
 	@extend %mono;
+	background-color: #00000040;
+	padding: 1rem;
+}
+
+ol { list-style-type: decimal; }
+ul { list-style-type: disc; }
+
+ol, ul {
+	> li {
+		margin-left: 2rem;
+		line-height: 1.35em;
+	}
+}
+
+dl { line-height: 1.25em; }
+dt { @extend %italic; }
+dd {
+	@extend %bar-left;
+	@extend %bar-bottom;
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
 }

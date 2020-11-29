@@ -6,10 +6,11 @@
 //	$accent: #ff0091
 //)
 ;
+@use 'bounds';
 @use 'roots';
 @use 'content-sectioning';
 @use 'text-content.scss';
-@use 'basic';
+@use 'inline-text.scss';
 @use 'hierarchy';
 @use 'nav';
 @use 'responsive';

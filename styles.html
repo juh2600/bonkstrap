@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Bonkstrap: Sass</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+	<body>
+		<main>
+			<article>
+				<section id="Default_styles">
+					<h1>Default styles</h1>
+					<p>
+					Descriptions for each element are derived (heavily) from the <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements reference</a></cite> generously supplied to us by the Mozilla Developer Network (hereafter <abbr>MDN</abbr>).
+					</p>
+
+					<section id="Roots">
+						<h2>Roots</h2>
+						<p>The document root (<code>html</code>) and sectioning root (<code>body</code>) have their margins and paddings reset to 0 on all sides by the <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Meyer reset</a>. Beyond that, the sectioning root is configured with useful background and foreground colors, font family and size, and a word wrap setting.</p>
+					</section>
+
+					<section id="Content_sectioning">
+						<h2>Content sectioning</h2>
+						<p>
+						There are a handful of content sectioning elements. Most of these aren't very interesting to look at; they're more meaningful under the hood.
+						</p>
+
+						<h3 id="Address"><code id="address">address</code></h3>
+						<p>
+						The <code>address</code> element marks up contact information, such as for an article's author.
+						</p>
+						<address>
+							Kate of the Southern Isles<br />
+							<a href="mailto:kate@contoso.com">kate@contoso.com</a><br>
+							<a href="tel:+19118675309">(911) 867-5309</a>
+						</address>
+
+						<h3 id="Article"><code id="article">article</code></h3>
+						<p>
+						An article is a chunk of information that can stand alone and be moved from one document to another without loss of context. It is possible to have several articles in the same page. Each of these pages contains a single article; for examples of article styling, look no further than anywhere on this site.
+						</p>
+
+						<h3 id="Aside"><code id="aside">aside</code></h3>
+						<p>
+						An aside is a portion of content that is related to its parent, but does not fit into the flow of its surrounding content.
+						</p>
+						<aside><p>The <code>hgroup</code> element was removed from the W3C HTML5 spec, but remains in the WHATWG HTML spec. Moreover, no browsers implement its semantics, so it's pretty much useless. (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup#Usage_notes">MDN</a>)</p></aside>
+
+						<h3 id="Section_header_and_footer"><code id="section">section</code>, <code id="header">header</code>, and <code id="footer">footer</code></h3>
+						<p>
+						There's not much to look at here. Notice that the <code>section</code> is indented slightly from the surrounding content. The <code>header</code> and <code>footer</code> tags are more for semantics than for display, so they don't really show up. Styling a footer is also very context-dependent, and footers can show up in all sorts of places, so it makes more sense to write styles for them as their use cases are discovered.
+						</p>
+						<section>
+							<header><h4>A sample section</h4></header>
+							<p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.</p>
+							<footer>&copy; 2020 Seinfeld probably. What a guy.</footer>
+						</section>
+
+						<h3 id="Headings">Headings</h3>
+						<p>
+						These headings are grouped by an <code>hgroup</code>; they are slightly closer together but retain the same padding at the top and bottom of the group as if they were separate. Perhaps <code>hgroup</code> shouldn't affect styling at all, since it's kinda worthless. Fake element.
+						</p>
+						<hgroup>
+							<h1 id="h1"><code>&lt;h1&gt;</code> &ndash; Heading level 1</h1>
+							<h2 id="h2"><code>&lt;h2&gt;</code> &ndash; Heading level 2</h2>
+							<h3 id="h3"><code>&lt;h3&gt;</code> &ndash; Heading level 3</h3>
+							<h4 id="h4"><code>&lt;h4&gt;</code> &ndash; Heading level 4</h4>
+							<h5 id="h5"><code>&lt;h5&gt;</code> &ndash; Heading level 5</h5>
+							<h6 id="h6"><code>&lt;h6&gt;</code> &ndash; Heading level 6</h6>
+						</hgroup>
+
+						<h3 id="Main_and_nav"><code id="main">main</code> and <code id="nav">nav</code></h3>
+						<p>
+						This large area is a <code>main</code> tag. The bars at the top and right, or the menu on mobile, are <code>nav</code> tags. The navigational area at the top of the page contains site-wide links. The navigational area to the right (sidebar or menu) contains intra-page links for navigating within the current document (specifically, within the current article). Please appreciate them.
+						</p>
+					</section>
+
+					<section id="Text_content">
+						<h2>Text content</h2>
+						<p>
+						Text content elements are particularly important for accessibility and SEO.
+						</p>
+
+						<h3 id="Paragraph">Paragraph: <code id="p">p</code></h3>
+						<p>
+						All the "regular text" you see on this page is wrapped in <code>p</code> tags. It is what it is.
+						</p>
+
+						<h3 id="Blockquote"><code id="blockquote">blockquote</code></h3>
+						<p>
+						A block quote is used to quote a longer passage, where an inline quote would be inappropriate.
+						</p>
+						<blockquote cite="https://www.imdb.com/title/tt1245907/characters/nm0825998"><p>You've got a 33.3% chance of winning. But I, I've got a 66 and two third chance of winning, cause Kurt Angle KNOWS he can't beat me, and he's not even gonna try. So Samoa Joe, you take your 33 and a third chance, minus my 25% chance, and you've got an eight and a third chance of winning, at Sacrifice. But then you take my 75 per chance chance of winning, if we was to go one on one, and then add 66 and two thirds... per cents, I got a 141 and two thirds chance of winning, at Sacrifice. The numbers don't lie, and they spell disaster for you!</p></blockquote>
+
+						<h3 id="Div"><code id="div">div</code></h3>
+						<p>
+						The <code>div</code> element is a generic container without any semantic value. As such, it probably should not have any default styling. I'm tempted, though, to add some weird little buggy behavior to discourage <a href="https://google.com/search?q=divitis">divitis</a>.
+						</p>
+						<div>🦀 divs are cancelled 🦀</div>
+
+						<h3 id="Figures">Figures: <code id="figure">figure</code> and <code id="figcaption">figcaption</code></h3>
+						<p>
+						A figure consists of some sort of illustration, diagram, or other chomk of information that doesn't make sense as inline text, along with an optional caption. The caption may come before or after the other contents of the figure, but not between (if a figure has multiple items).
+						</p>
+						<figure>
+							<figcaption>The Linux project almost had a fox as its mascot.</figcaption>
+							<img src="images/almost-linux.png" alt="Linux fox" class="max-width-20rem" />
+						</figure>
+
+						<h3 id="Horizontal_rule">Horizontal rule: <code id="hr">hr</code></h3>
+						<p>
+						A horizontal rule indicates a shift in topic.
+						</p>
+						<hr />
+
+						<h3 id="Preformatted_text">Preformatted text: <code id="pre">pre</code></h3>
+						<p>
+						A block of preformatted text is used in situations where it it important to reproduce text exactly as it appears somewhere else, complete with indentation and spacing. It is commonly used to mark up blocks of code, although semantically the <a href="#Code"><code>code</code></a> tag should be used as well.
+						<pre>
+                   -`                    jtreed@jtreed-tpad-manjaro 
+                  .o+`                   -------------------------- 
+                 `ooo/                   OS: Manjaro Linux x86_64 
+                `+oooo:                  Host: 20QUS0PW00 ThinkPad P1 Gen 2 
+               `+oooooo:                 Kernel: 5.9.11-2-MANJARO 
+               -+oooooo+:                Uptime: 12 hours, 38 mins 
+             `/:-:++oooo+:               Packages: 1321 (pacman) 
+            `/++++/+++++++:              Shell: fish 3.1.2 
+           `/++++++++++++++:             Resolution: 1920x1080 
+          `/+++ooooooooooooo/`           WM: i3 
+         ./ooosssso++osssssso+`          Theme: Adwaita [GTK2/3] 
+        .oossssso-````/ossssss+`         Icons: Windows10 [GTK2/3] 
+       -osssssso.      :ssssssso.        Terminal: kitty 
+      :osssssss/        osssso+++.       Terminal Font: Comic Shanns 16.0 
+     /ossssssss/        +ssssooo/-       CPU: Intel i9-9880H (16) @ 4.800GHz 
+   `/ossssso+/:-        -:/+osssso+-     GPU: Intel UHD Graphics 630 
+  `+sso+:-`                 `.-/+oso:    GPU: NVIDIA Quadro T2000 Mobile / Max-Q 
+ `++:.                           `-/+/   Memory: 3143MiB / 31724MiB 
+ .`                                 `/</pre>
+
+						<h3 id="Ordered_and_unordered_lists">Ordered and unordered lists: <code id="ol">ol</code>, <code id="ul">ul</code>, and <code id="li">li</code></h3>
+						<p>
+						Ordered and unordered lists are just that&mdash;lists. An unordered list may be reordered without affecting its meaning; an ordered list may not. Lists may be nested.
+						</p>
+						<ol>
+							<li>First</li>
+							<li>Second</li>
+							<li>Third
+								<ol>
+									<li>Third-first</li>
+									<li>Third-second</li>
+								</ol>
+							</li>
+						</ol>
+						<ul>
+							<li>An item</li>
+							<li>An item</li>
+							<li>An item
+						<ul>
+							<li>A sub-item
+								<ol>
+									<li>This</li>
+									<li>item</li>
+									<li>has</li>
+									<li>steps</li>
+								</ol>
+							</li>
+							<li>A sub-item</li>
+						</ul>
+							</li>
+						</ul>
+
+						<h3 id="Description_list">Description list: <code>dl</code>, <code>dt</code>, and <code>dd</code></h3>
+						<p>
+						A description list is a collection of key-value pairs, where the keys are terms and the values are descriptions or definitions. I dunno how I've never heard of these tags before this project. They make so much sense!
+						</p>
+						<dl>
+							<dt>Amiga</dt>
+							<dd>A series of personal computer models originally sold by Commodore, based on 680x0 processors, custom support chips and an operating system that combined some of the best features of Macintosh and Unix with compatibility with neither. (from <a href="http://catb.org/jargon/html/A/Amiga.html">Jargon File</a>)</dd>
+							<dt>toaster</dt>
+							<dd>The archetypal really stupid application for an embedded microprocessor controller; often used in comments that imply that a scheme is inappropriate technology (from <a href="http://catb.org/jargon/html/T/toaster.html">Jargon File</a>)</dd>
+							<dt>TOPS-10</dt>
+							<dd>DEC's proprietary OS for the fabled PDP-10 machines, long a favorite of hackers but now long extinct. (from <a href="http://catb.org/jargon/html/T/TOPS-10.html">Jargon File</a>)</dd>
+							<!-- FIXME <cite> the above? -->
+						</dl>
+					</section>
+
+					<section id="Inline_text">
+						<h2>Inline text</h2>
+						<p>These tags are used to clarify or define the meaning, structure, or style of a portion of inline text content.</p>
+
+						<h3 id="Anchor">Anchor: <code id="a">a</code></h3>
+						<p>
+						Anchor tags, more commonly known as "hyperlinks" or simply "links", are widely used. Bonkstrap styles them using a semi-bold font weight and the accent color. External links are identified by CSS as having an <code>href</code> attribute beginning with <code>http</code> or some other URI protocol schemes, which isn't the most technically correct assumption, but it works enough&tm;. Anyways, these anchors that are identified as "external" are marked with an icon.
+						</p>
+						<ul>
+							<li><a href="index.html">Bonkstrap home page</a></li>
+							<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">An external link</a></li>
+						</ul>
+
+						<h3 id="Abbreviation">Abbreviation: <code id="abbr">abbr</code></h3>
+						<p>
+						The abbreviation tag is used to mark up an abbreviation. The definition corresponding to the abbreviated term can either be present in surrounding in-line text, or may be added to the element's <code>title</code> attribute, or both. This tag may also be used together with the <a href="#Definition">definition</a> tag.
+						</p>
+						<ul>
+							<li><abbr>XML</abbr> is short for Extensible Markup Language.</li>
+							<li><abbr title="Hypertext Transfer Protocol">HTTP</abbr> is a common protocol for information exchange on the World Wide Web.</li>
+							<li>XMLHttpRequest, or <abbr title="XMLHttpRequest">XHR</abbr>, is a type of object found in JavaScript web programming.</li>
+						</ul>
+
+						<h3 id="Bring_attention_to">Bring attention to: <code id="b">b</code></h3>
+						<p>
+						The "bring attention to" element is the attention-getter of last resort:
+						<ul>
+							<li>If the text bears special importance, use <a href="#Strong_importance"><code>strong</code></a>.</li>
+							<li>If the text would be read with emphasized stress, use <a href="#Emphasis"><code>em</code></a>.</li>
+							<li>If the text should be noted as having particular relevance, use <a href="#Mark"><code>mark</code></a>.</li>
+						</ul>
+						See also <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong#Usage_notes">MDN's usage notes on <code>strong</code></a> for a more detailed explanation of the uses of these tags.
+						</p>
+						<p>This document demonstrates <b>styles</b> defined by the Bonkstrap framework.<p>
+						<!-- FIXME this example was very not obvious. find some way to wrap all the examples consistently -->
+
+						<h3 id="Citation">Citation: <code id="cite">cite</code></h3>
+						<p>
+						A citation element is used to mark up a reference to another work. The element must contain the title of the work. The W3C spec says that it may also contain the author, but the WHATWG spec says it must never do this. I'd avoid it just to be safe, I guess. Citations may appear in a variety of places. To cite content in a <code>blockquote</code> or <code>q</code> tag using a URL, use the <code>cite</code> attribute on those elements. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">MDN's example</a> doesn't do this, so, uh, I dunno what to say about that.
+						</p>
+						<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">
+							<p>The HTML Citation element (<code>&lt;cite&gt;</code>) is used to describe a reference to a cited creative work, and must include the title of that work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.</p>
+							<footer>
+								Description of <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">The Citation element</a></cite> from MDN.
+							</footer>
+						</blockquote>
+
+						<h3 id="Code">Code: <code id="code">code</code></h3>
+						<p>
+						The <code>code</code> tag is used to mark up, you guessed it, computer code. By itself, this element is used for short snippets of inline code. It may be nested inside a <a href="#Preformatted_text"><code>pre</code></a> tag to mark up a block of code. "code" and "pre" in this paragraph are marked up with the <code>code</code> tag. Below is an example of a code block, from Joe Reed's <a href="https://github.com/josephreed2600/express-template/blob/master/routes/manager.js"><cite>express-template</cite></a> repository. Code blocks are styled with a tab width of 2, meaning that tab characters in the source code will translate to the same width as two spaces.
+						</p>
+						<pre><code>const apply = (app, component) =&gt; {
+	component.routes.forEach((route) =&gt; {
+		if(route.method.constructor.name == 'String') route.method = [route.method];
+		route.method.forEach((method) =&gt; {
+			if(route.handler.constructor.name == 'Function') route.handler = [route.handler];
+			if(route.method == 'use') {
+				route.handler.forEach((func) =&gt; {
+					app.use(func);
+					if(component.logger) component.logger.info(`Adding middleware: ${func.name}`);
+				});
+			} else {
+				app[method](route.uri, ...route.handler);
+				if(component.logger) component.logger.info(`Adding route: ${method.toLocaleUpperCase()} ${route.uri}`);
+			}
+		});
+	});
+};
+
+
+module.exports = { apply };
+</code></pre>
+
+						<h3 id="Definition">Definition: <code id="dfn">dfn</code></h3>
+						<p>
+						The <code><dfn>dfn</dfn></code> tag is used to indicate a term being defined. The nearest ancestor that is one of <code>p</code>, <code>dt</code>/<code>dd</code>, or <code>section</code> is considered to be the definition of the term.
+						</p>
+
+						<h3 id="Emphasis">Emphasis: <code id="em">em</code></h3>
+						<p>
+						The <code>em</code> tag should be used for text that would be pronounced aloud with emphasized stress. For a comparison of similar tags, see the <a href="#Bring_attention_to">Bring attention to</a> element.
+						</p>
+						<p>Ugh, fine. I guess you <em>are</em> my little pogchamp. Come here.</p>
+
+						<h3 id="Idiomatic_text">Idiomatic text: <code id="i">i</code></h3>
+						<p>
+						The <code>i</code> tag should be used to offset text that is different somehow. That's really vague, so have some examples to clarify the specific meaning:
+						</p>
+						<ul>
+							<li><i>It's a little late for my family to abandon me in a restaurant</i>, she thought.</li>
+							<li>The <i>Axiom</i> had been at sea for seven hundred years around the time WALL-E arrived.</li>
+							<li>"<i>Alohamora</i>," Hermione muttered as Mr. Weasely fumbled with his Muggle keyring.</li>
+						</ul>
+						<p>
+						For a comparison of similar tags, see the <a href="#Bring_attention_to">Bring attention to</a> element. <code>i</code> should <em>not</em> be used simply to italicize or apply other styling to its contents; doing so makes you a horrible person and you deserve to rot in some forgotten three-pixel cell of an HTML4 layout table. It is true that <code>i</code> was originally a stylistic tag, intended for italicization. However, this is no longer the case. Get with the times.
+						</p>
+
+						<h3 id="Keyboard_input">Keyboard input: <code id="kbd">kbd</code></h3>
+						<p>
+						Okay, so, uh, this one is weird. Definitely check out <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd">MDN</a> for examples if you think this might be appropriate in your content. I've done some very basic styling, because even I can't be bothered to read and grok all that. Not in the mood tonight.
+						</p>
+						<p>To exit vim, use <kbd>&lt;Esc&gt;:wq</kbd>.</p>
+
+						<h3 id="Mark">Mark: <code id="mark">mark</code></h3>
+						<p>
+						Think of <code>mark</code> as a highlighter (but not in a stylish way!). Use it to mark up text that has <mark>particular relevance</mark> to the surrounding content, as you would if you were highlighting notes while styding for an exam. For a comparison of similar tags, see the <a href="#Bring_attention_to">Bring attention to</a> element.
+						</p>
+
+						<h3 id="Quote">Quote: <code id="q">q</code></h3>
+						<p>
+						The inline quote element <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">indicates that the enclosed text is a short inline quotation</q>, according to MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"><cite>Inline Quotation element</cite></a> reference. Bonkstrap adds quotation marks around the content, which is a common practice.
+						</p>
+
+						<h3 id="Ruby">Ruby: <code id="ruby">ruby</code>, <code id="rt">rt</code>, <code id="rp">rp</code>, and <code id="rtc">rtc</code></h3>
+						<p>
+						Ruby is a system for annotating East Asian characters to aid in pronunciation and sometimes interpretation. The reset seems not to have screwed with the defaults for these, which is fortunate because it looks like a small nightmare. Thank goodness.
+						</p>
+
+						<p>
+						<ruby>
+							漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
+							字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+						</ruby>
+						</p>
+						<p>
+						<ruby xml:lang="zh-Hant" style="ruby-position: under;">
+							<rbc>
+							<rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+							<rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+							<rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+							<rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+							</rbc>
+							<rtc xml:lang="en" style="ruby-position: over;">
+							<rp>(</rp><rt>Malaysia</rt><rp>)</rp>
+							</rtc>
+						</ruby>
+						</p>
+
+						<h3 id="Strikethrough">Strikethrough: <code id="s">s</code></h3>
+						<p>
+						The strikethrough element is used to indicate text that is no longer relevant or correct. This is not to be confused with the role of the <a href="#Insertion_and_deletion">deletion</a> tag, which is used to mark up edits to a document.
+						</p>
+						<p><q><s>we're setting pumpkins on fire in the courtyard tonight</s> just kidding um we're not going to do that</q></p>
+
+						<h3 id="Insertion_and_deletion">Insertion and deletion: <code id="ins">ins</code> and <code id="del">del</code></h3>
+						<p>
+						It may be useful to mark up changes to a document, in the form of insertions and deletions. A common example of this is a diff between two versions of a file.
+						</p>
+
+<pre><code><del>foo</del>
+<ins>bar</ins>
+</code></pre>
+
+						<h3 id="Sample_output">Sample output: <code id="samp">samp</code></h3>
+						<p>
+						The <code>samp</code> tag is used to mark up output from a computer program. It may be combined in various ways with <a href="#Keyboard_input"><code>kbd</code></a>.
+						</p>
+						<p>A typical sudo prompt looks something like <samp>[sudo] password for jtreed:</samp>.</p>
+
+<h3 id="">Placeholder: <code id="small">small</code></h3>
+<p>
+</p>
+
+<h3 id="">Placeholder: <code id="span">span</code></h3>
+<p>
+</p>
+
+<h3 id="">Placeholder: <code id="strong">strong</code></h3>
+<p>
+</p>
+
+<h3 id="">Placeholder: <code id="sub">sub</code></h3>
+<p>
+</p>
+
+<h3 id="">Placeholder: <code id="sup">sup</code></h3>
+<p>
+</p>
+
+<h3 id="">Placeholder: <code id="time">time</code></h3>
+<p>
+</p>
+
+<h3 id="">Placeholder: <code id="u">u</code></h3>
+<p>
+</p>
+
+<h3 id="">Placeholder: <code id="var">var</code></h3>
+<p>
+</p>
+
+<h3 id="">Placeholder: <code id="wbr">wbr</code></h3>
+<p>
+</p>
+
+					</section>
+				</section>
+				<section id="Theme_colors">
+					<h2>Theme colors</h2>
+					<p>
+					</p>
+				</section>
+				<section id="Vendor_prefix_mixin">
+					<h2>Vendor prefix mixin</h2>
+					<p>
+					</p>
+				</section>
+				<section id="Use_of_shared_properties">
+					<h2>Use of shared properties</h2>
+					<p>
+					</p>
+				</section>
+				<nav>
+					<input type="checkbox" id="article-nav-toggle-Sass"/>
+					<label for="article-nav-toggle-Sass"></label>
+					<ul>
+						<li><a href="#Configuring_Bonkstraps_behavior_with_Sass">Configuring Bonkstrap's behavior with Sass</a>
+							<ul>
+								<li><a href="#Sass_compiling">Sass (compiling)</a></li>
+								<li><a href="#Modular_system">Modular system</a></li>
+								<li><a href="#Default_styles">Default styles</a>
+									<ul>
+										<li><a href="#Hyperlinks">Hyperlinks</a></li>
+										<li><a href="#Tables">Tables</a></li>
+										<li><a href="#Articles_sections_and_paragraphs">Articles, sections, and paragraphs</a></li>
+										<li><a href="#Headings">Headings</a></li>
+										<li><a href="#Forms">Forms</a></li>
+										<li><a href="#Code">Code</a></li>
+										<li><a href="#Images">Images</a></li>
+										<li><a href="#Nav_bars_and_menus">Nav bars and menus</a></li>
+									</ul>
+								</li>
+								<li><a href="#Theme_colors">Theme colors</a></li>
+								<li><a href="#Vendor_prefix_mixin">Vendor prefix mixin</a></li>
+								<li><a href="#Use_of_shared_properties">Use of shared properties</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</article>
+		</main>
+		<nav>
+			<ul>
+				<li><img src="images/logo.svg"/></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sass.html">Sass</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

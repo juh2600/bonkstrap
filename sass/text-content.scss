@@ -35,8 +35,10 @@ hr {
 
 pre {
 	@extend %mono;
+	tab-size: 4;
 	background-color: #00000040;
 	padding: 1rem;
+	overflow-y: hidden; // add scroll for overflow-x if necessary (e.g. wide content on narrow screen)
 }
 
 ol { list-style-type: decimal; }

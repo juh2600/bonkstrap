@@ -1,0 +1,80 @@
+@use 'constants' as c;
+@use 'util';
+@use 'icons';
+@use 'sass:map';
+
+a {
+	@extend %semibold;
+	color: c.$accent;
+	text-decoration: none;
+}
+
+// https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
+a[href*="://"]::after
+, a[href^="mailto:"]::after
+, a[href^="tel:"]::after {
+	display: inline-block;
+	content: url(icons.$prefix + map.get(icons.$map, 'external'));
+	width: 0.8em;
+	height: 0.8em;
+	margin-left: 0.2em;
+	margin-right: 0.1em;
+	color: inherit;
+}
+
+abbr {
+	@extend %semibold;
+	&[title] {
+		text-decoration: underline dotted;
+	}
+}
+
+b {
+	text-decoration: underline;
+}
+
+cite {
+	@extend %italic;
+}
+
+pre code {
+	tab-size: 2;
+}
+
+dfn, em, i {
+	@extend %italic;
+}
+
+kbd {
+	@extend %mono;
+}
+
+mark {
+	background-color: c.$accented-bg;
+	color: c.$fg;
+}
+
+// https://css-tricks.com/almanac/properties/q/quotes/
+q { quotes: "“" "”" "‘" "’"; }
+q::before { content:  open-quote; }
+q::after  { content: close-quote; }
+
+s { text-decoration: line-through; }
+
+ins { text-decoration: underline double; }
+del { text-decoration: line-through double; }
+
+samp { @extend %mono; }
+//// by the end, there should be nothing below this line? i think?
+// TODO make sure every combination of monospace italics has a margin-right
+
+pre, code {
+	font-family: monospace;
+	em {
+		margin-right: 0.1em;
+	}
+}
+
+em {
+	font-style: italic;
+}

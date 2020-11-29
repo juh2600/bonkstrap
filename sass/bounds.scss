@@ -1,0 +1,14 @@
+// try not to auto-format this file
+@for $i from 1 through 10 {
+	.max-height-#{$i*5}rem { max-height: $i * 5rem; }
+	 .max-width-#{$i*5}rem {  max-width: $i * 5rem; }
+	.height-#{$i*5}rem { height: $i * 5rem; }
+	 .width-#{$i*5}rem {  width: $i * 5rem; }
+ }
+
+ @for $i from 1 through 20 {
+	.max-height-#{$i*5}pct { max-height: $i * 5%; }
+	 .max-width-#{$i*5}pct {  max-width: $i * 5%; }
+	.height-#{$i*5}pct { height: $i * 5%; }
+	 .width-#{$i*5}pct {  width: $i * 5%; }
+}

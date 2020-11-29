@@ -20,6 +20,7 @@ $accent: #ff0091 !default;
 // everything else is derived from the above
 $off-bg-tint: color.adjust($fg, $alpha: -0.95) !default;
 $off-fg-tint: color.adjust($bg, $alpha: -0.95) !default;
+$accent-tint: color.adjust($accent, $alpha:-0.95) !default;
 $off-bg: color.mix($bg, $fg, 95%) !default;
 $off-fg: color.mix($fg, $bg, 95%) !default;
 $accented-bg: color.mix($accent, $bg, 50%) !default;

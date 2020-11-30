@@ -565,7 +565,7 @@ blockquote, dd, address, aside {
   padding-left: 1rem;
 }
 
-cite, dfn, em, i, article > nav > ul > li ul ul ul, figure::before, dt {
+cite, dfn, em, i, var, article > nav > ul > li ul ul ul, figure::before, dt {
   font-style: italic;
 }
 
@@ -573,12 +573,16 @@ article > nav > ul > li ul a {
   font-weight: normal;
 }
 
-a, abbr {
+th, a, abbr {
   font-weight: 500;
 }
 
-article > nav > ul > li ul ul {
-  font-size: 0.8rem;
+strong, var.vector, var.matrix, var.tensor {
+  font-weight: bold;
+}
+
+small, sub, sup, article > nav > ul > li ul ul {
+  font-size: smaller;
 }
 
 kbd, samp, pre {
@@ -901,6 +905,21 @@ del {
   text-decoration: line-through double;
 }
 
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
+}
+
+var.const {
+  font-style: normal;
+}
+var.tensor {
+  font-family: sans-serif;
+}
+
 pre, code {
   font-family: monospace;
 }
@@ -910,6 +929,30 @@ pre em, code em {
 
 em {
   font-style: italic;
+}
+
+table {
+  margin-bottom: 0.5em;
+}
+
+table, tbody {
+  background: rgba(238, 238, 238, 0.05);
+}
+
+tbody, td, th {
+  padding: 1rem;
+}
+
+tbody tr:nth-of-type(2n) {
+  background: rgba(238, 238, 238, 0.05);
+}
+
+tbody tr:hover {
+  background: rgba(0, 145, 255, 0.05);
+}
+
+th {
+  background: #105990;
 }
 
 .grid-row {

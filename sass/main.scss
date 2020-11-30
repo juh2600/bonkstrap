@@ -9,8 +9,8 @@
 @use 'bounds';
 @use 'roots';
 @use 'content-sectioning';
-@use 'text-content.scss';
-@use 'inline-text.scss';
-@use 'hierarchy';
-@use 'nav';
+@use 'text-content';
+@use 'inline-text';
+@use 'table';
+@use 'form';
 @use 'responsive';

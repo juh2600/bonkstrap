@@ -65,6 +65,26 @@ ins { text-decoration: underline double; }
 del { text-decoration: line-through double; }
 
 samp { @extend %mono; }
+
+small { @extend %smol; }
+
+strong { @extend %bold; }
+
+sub, sup { @extend %smol; }
+sub { vertical-align: sub; }
+sup { vertical-align: super; }
+
+// lol
+// https://groups.google.com/g/comp.text.tex/c/kDUXuswS1HI/m/uHu4foX9WI4J
+var {
+	@extend %italic;
+	&.const { font-style: normal; }
+	&.vector, &.matrix, &.tensor
+	{ @extend %bold; }
+	&.tensor { font-family: sans-serif; }
+}
+
+
 //// by the end, there should be nothing below this line? i think?
 // TODO make sure every combination of monospace italics has a margin-right
 

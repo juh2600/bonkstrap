@@ -1,0 +1,24 @@
+@use 'constants' as c;
+@use 'util';
+
+table {
+	margin-bottom: 0.5em;
+}
+
+table, tbody {
+	background: c.$off-bg-tint;
+}
+tbody, td, th {
+	padding: 1rem;
+}
+tbody tr:nth-of-type(2n) {
+	background: c.$off-bg-tint;
+}
+tbody tr:hover {
+	background: c.$accent-tint;
+}
+
+th {
+@extend %semibold;
+background: c.$accented-bg;
+}

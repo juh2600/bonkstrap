@@ -876,6 +876,10 @@ pre code {
   tab-size: 2;
 }
 
+p code {
+  font-size: larger;
+}
+
 mark {
   background-color: #105990;
   color: #eeeeee;
@@ -955,7 +959,7 @@ th {
   background: #105990;
 }
 
-form fieldset, form {
+form.easy fieldset, form.easy {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: minmax(2em, auto);
@@ -964,41 +968,41 @@ form fieldset, form {
   margin: 0.75rem;
 }
 
-form label, form p {
+form.easy label, form.easy p {
   margin-bottom: 0.25rem;
   text-align: right;
 }
-form label {
+form.easy label {
   align-self: center;
 }
-form .radiogroup label {
+form.easy .radiogroup label {
   display: block;
   text-align: left;
 }
-form input, form button, form select {
+form.easy input, form.easy button, form.easy select {
   max-width: 10rem;
   margin-bottom: 0.75rem;
   padding: 0.25rem;
 }
-form progress {
+form.easy progress {
   height: 100%;
 }
-form button {
+form.easy button {
   grid-column: 2/3;
 }
-form button.centered {
+form.easy button.centered {
   grid-column: 1/3;
   width: fit-content;
   min-width: 20%;
   justify-self: center;
 }
-form fieldset {
+form.easy fieldset {
   grid-column: 1/3;
   border: 2px solid #0091ff;
   padding: 0.5rem 0.75rem;
   margin: 0.5rem 0;
 }
-form fieldset legend {
+form.easy fieldset legend {
   grid-column: 1/3;
   padding: 0 0.3rem;
 }
@@ -1011,6 +1015,30 @@ details summary {
 }
 details[open] summary {
   margin-bottom: 0.5rem;
+}
+
+.syntax-html-bracket {
+  color: cyan;
+}
+
+.syntax-html-tag {
+  color: yellow;
+}
+
+.syntax-html-attribute-key {
+  color: lightgreen;
+}
+
+.syntax-html-attribute-equals {
+  color: cyan;
+}
+
+.syntax-html-attribute-value {
+  color: magenta;
+}
+
+.syntax-html-quotation {
+  color: magenta;
 }
 
 .grid-row {

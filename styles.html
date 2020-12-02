@@ -29,6 +29,11 @@
 					<p>
 					The <code>address</code> element marks up contact information, such as for an article's author.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">address</span><span class="syntax-html-bracket">&gt;</span>
+	Kate of the Southern Isles<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">br</span><span class="syntax-html-bracket">/&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">mailto:kate@contoso.com</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>kate@contoso.com<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">br</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">tel:+19118675309</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>(911) 867-5309<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">address</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<address>
 						Kate of the Southern Isles<br />
 						<a href="mailto:kate@contoso.com">kate@contoso.com</a><br>
@@ -44,15 +49,35 @@
 					<p>
 					An aside is a portion of content that is related to its parent, but does not fit into the flow of its surrounding content.
 					</p>
-					<aside><p>The <code>hgroup</code> element was removed from the W3C HTML5 spec, but remains in the WHATWG HTML spec. Moreover, no browsers implement its semantics, so it's pretty much useless. (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup#Usage_notes">MDN</a>)</p></aside>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">aside</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;
+	</span>The <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>hgroup<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> element was removed from the W3C HTML5 spec, but remains in the WHATWG HTML spec.
+	Moreover, no browsers implement its semantics, so it's pretty much useless.
+	(Source: <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup#Usage_notes</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>MDN<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span>)
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">aside</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+					<aside>
+						<p>
+						The <code>hgroup</code> element was removed from the W3C HTML5 spec, but remains in the WHATWG HTML spec.
+						Moreover, no browsers implement its semantics, so it's pretty much useless.
+						(Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup#Usage_notes">MDN</a>)
+						</p>
+					</aside>
 
 					<h3 id="Section_header_and_footer"><code id="section">section</code>, <code id="header">header</code>, and <code id="footer">footer</code></h3>
 					<p>
 					There's not much to look at here. Notice that the <code>section</code> is indented slightly from the surrounding content. The <code>header</code> and <code>footer</code> tags are more for semantics than for display, so they don't really show up. Styling a footer is also very context-dependent, and footers can show up in all sorts of places, so it makes more sense to write styles for them as their use cases are discovered.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">section</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">header</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">h4</span><span class="syntax-html-bracket">&gt;</span>A sample section<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">h4</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">header</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings
+	are too small to get its fat little body off the ground. The bee, of course, flies anyway, because
+	bees don't care what humans think is impossible.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">footer</span><span class="syntax-html-bracket">&gt;</span>&amp;copy; 2020 Seinfeld probably. What a guy.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">footer</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">section</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<section>
 						<header><h4>A sample section</h4></header>
-						<p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.</p>
+						<p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway, because bees don't care what humans think is impossible.</p>
 						<footer>&copy; 2020 Seinfeld probably. What a guy.</footer>
 					</section>
 
@@ -60,6 +85,14 @@
 					<p>
 					These headings are grouped by an <code>hgroup</code>; they are slightly closer together but retain the same padding at the top and bottom of the group as if they were separate. Perhaps <code>hgroup</code> shouldn't affect styling at all, since it's kinda worthless. Fake element.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">hgroup</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">h1</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">h1</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>&amp;lt;h1&amp;gt;<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> &amp;ndash; Heading level 1<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">h1</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">h2</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">h2</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>&amp;lt;h2&amp;gt;<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> &amp;ndash; Heading level 2<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">h2</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">h3</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">h3</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>&amp;lt;h3&amp;gt;<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> &amp;ndash; Heading level 3<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">h3</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">h4</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">h4</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>&amp;lt;h4&amp;gt;<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> &amp;ndash; Heading level 4<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">h4</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">h5</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">h5</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>&amp;lt;h5&amp;gt;<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> &amp;ndash; Heading level 5<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">h5</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">h6</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">h6</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>&amp;lt;h6&amp;gt;<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> &amp;ndash; Heading level 6<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">h6</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">hgroup</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<hgroup>
 						<h1 id="h1"><code>&lt;h1&gt;</code> &ndash; Heading level 1</h1>
 						<h2 id="h2"><code>&lt;h2&gt;</code> &ndash; Heading level 2</h2>
@@ -88,20 +121,30 @@
 
 					<h3 id="Blockquote"><code id="blockquote">blockquote</code></h3>
 					<p>
-					A block quote is used to quote a longer passage, where an inline quote would be inappropriate.
+					A block quote is used to quote a longer passage, where an <a href="#Quote">inline quote</a> would be inappropriate.
 					</p>
-					<blockquote cite="https://www.imdb.com/title/tt1245907/characters/nm0825998"><p>You've got a 33.3% chance of winning. But I, I've got a 66 and two third chance of winning, cause Kurt Angle KNOWS he can't beat me, and he's not even gonna try. So Samoa Joe, you take your 33 and a third chance, minus my 25% chance, and you've got an eight and a third chance of winning, at Sacrifice. But then you take my 75 per chance chance of winning, if we was to go one on one, and then add 66 and two thirds... per cents, I got a 141 and two thirds chance of winning, at Sacrifice. The numbers don't lie, and they spell disaster for you!</p></blockquote>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">blockquote</span> <span class="syntax-html-attribute-key">cite</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">https://www.imdb.com/title/tt1245907/characters/nm0825998</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>You've got a 33.3% chance of winning. But I, I've got a 66 and two third chance of winning, cause Kurt Angle KNOWS he can't beat me, and he's not even gonna try. So Samoa Joe, you take your 33 and a third chance, minus my 25% chance, and you've got an eight and a third chance of winning, at Sacrifice. But then you take my 75 per chance chance of winning, if we was to go one on one, and then add 66 and two thirds... per cents, I got a 141 and two thirds chance of winning, at Sacrifice. The numbers don't lie, and they spell disaster for you!<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">blockquote</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+					<blockquote cite="https://www.imdb.com/title/tt1245907/characters/nm0825998">
+						<p>You've got a 33.3% chance of winning. But I, I've got a 66 and two third chance of winning, cause Kurt Angle KNOWS he can't beat me, and he's not even gonna try. So Samoa Joe, you take your 33 and a third chance, minus my 25% chance, and you've got an eight and a third chance of winning, at Sacrifice. But then you take my 75 per chance chance of winning, if we was to go one on one, and then add 66 and two thirds... per cents, I got a 141 and two thirds chance of winning, at Sacrifice. The numbers don't lie, and they spell disaster for you!</p>
+					</blockquote>
 
 					<h3 id="Div"><code id="div">div</code></h3>
 					<p>
 					The <code>div</code> element is a generic container without any semantic value. As such, it probably should not have any default styling. I'm tempted, though, to add some weird little buggy behavior to discourage <a href="https://google.com/search?q=divitis">divitis</a>.
 					</p>
-					<div>🦀 divs are cancelled 🦀</div>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">div</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>🦀 divs are cancelled 🦀<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">div</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+					<div><p>🦀 divs are cancelled 🦀</p></div>
 
 					<h3 id="Figures">Figures: <code id="figure">figure</code> and <code id="figcaption">figcaption</code></h3>
 					<p>
 					A figure consists of some sort of illustration, diagram, or other chomk of information that doesn't make sense as inline text, along with an optional caption. The caption may come before or after the other contents of the figure, but not between (if a figure has multiple items).
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">figure</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">figcaption</span><span class="syntax-html-bracket">&gt;</span>The Linux project almost had a fox as its mascot.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">figcaption</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">img</span> <span class="syntax-html-attribute-key">src</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">images/almost-linux.png</span><span class="syntax-html-quotation">"</span> <span class="syntax-html-attribute-key">alt</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">Linux fox</span><span class="syntax-html-quotation">"</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">max-width-20rem</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">/&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">figure</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<figure>
 						<figcaption>The Linux project almost had a fox as its mascot.</figcaption>
 						<img src="images/almost-linux.png" alt="Linux fox" class="max-width-20rem" />
@@ -111,6 +154,7 @@
 					<p>
 					A horizontal rule indicates a shift in topic.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">hr</span><span class="syntax-html-bracket">/&gt;</span></code></pre>
 					<hr />
 
 					<h3 id="Preformatted_text">Preformatted text: <code id="pre">pre</code></h3>
@@ -141,6 +185,33 @@
 					<p>
 					Ordered and unordered lists are just that&mdash;lists. An unordered list may be reordered without affecting its meaning; an ordered list may not. Lists may be nested.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ol</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>First<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>Second<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>Third
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ol</span><span class="syntax-html-bracket">&gt;</span>
+			<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>Third-first<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+			<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>Third-second<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+		<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ol</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ol</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>An item<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>An item<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>An item
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+			<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>A sub-item
+				<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ol</span><span class="syntax-html-bracket">&gt;</span>
+					<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>This<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+					<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>item<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+					<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>has<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+					<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>steps<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+				<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ol</span><span class="syntax-html-bracket">&gt;</span>
+			<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+			<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>A sub-item<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+		<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<ol>
 						<li>First</li>
 						<li>Second</li>
@@ -169,18 +240,49 @@
 						</li>
 					</ul>
 
-					<h3 id="Description_list">Description list: <code>dl</code>, <code>dt</code>, and <code>dd</code></h3>
+					<h3 id="Description_list">Description list: <code id="dl">dl</code>, <code id="dt">dt</code>, and <code id="dd">dd</code></h3>
 					<p>
 					A description list is a collection of key-value pairs, where the keys are terms and the values are descriptions or definitions. I dunno how I've never heard of these tags before this project. They make so much sense!
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">dl</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">dt</span><span class="syntax-html-bracket">&gt;</span>Amiga<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">dt</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">dd</span><span class="syntax-html-bracket">&gt;</span>A series of personal computer models originally sold by Commodore,
+		based on 680x0 processors, custom support chips and an operating system
+		that combined some of the best features of Macintosh and Unix with
+		compatibility with neither. (from the
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">http://catb.org/jargon/html/A/Amiga.html</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Jargon File<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span>)
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">dd</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">dt</span><span class="syntax-html-bracket">&gt;</span>toaster<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">dt</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">dd</span><span class="syntax-html-bracket">&gt;</span>The archetypal really stupid application for an embedded microprocessor
+		controller; often used in comments that imply that a scheme is
+		inappropriate technology. (from the
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">http://catb.org/jargon/html/T/toaster.html</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Jargon File<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span>)
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">dd</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">dt</span><span class="syntax-html-bracket">&gt;</span>TOPS-10<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">dt</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">dd</span><span class="syntax-html-bracket">&gt;</span>DEC's proprietary OS for the fabled PDP-10 machines, long a favorite of
+		hackers but now long extinct. (from the
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">http://catb.org/jargon/html/T/TOPS-10.html</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Jargon File<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span>)
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">dd</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">dl</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<dl>
 						<dt>Amiga</dt>
-						<dd>A series of personal computer models originally sold by Commodore, based on 680x0 processors, custom support chips and an operating system that combined some of the best features of Macintosh and Unix with compatibility with neither. (from <a href="http://catb.org/jargon/html/A/Amiga.html">Jargon File</a>)</dd>
+						<dd>A series of personal computer models originally sold by Commodore,
+							based on 680x0 processors, custom support chips and an operating system
+							that combined some of the best features of Macintosh and Unix with
+							compatibility with neither. (from the
+							<cite><a href="http://catb.org/jargon/html/A/Amiga.html">Jargon File</a></cite>)
+						</dd>
 						<dt>toaster</dt>
-						<dd>The archetypal really stupid application for an embedded microprocessor controller; often used in comments that imply that a scheme is inappropriate technology (from <a href="http://catb.org/jargon/html/T/toaster.html">Jargon File</a>)</dd>
+						<dd>The archetypal really stupid application for an embedded microprocessor
+							controller; often used in comments that imply that a scheme is
+							inappropriate technology. (from the
+							<cite><a href="http://catb.org/jargon/html/T/toaster.html">Jargon File</a></cite>)
+						</dd>
 						<dt>TOPS-10</dt>
-						<dd>DEC's proprietary OS for the fabled PDP-10 machines, long a favorite of hackers but now long extinct. (from <a href="http://catb.org/jargon/html/T/TOPS-10.html">Jargon File</a>)</dd>
-						<!-- FIXME <cite> the above? -->
+						<dd>DEC's proprietary OS for the fabled PDP-10 machines, long a favorite of
+							hackers but now long extinct. (from the
+							<cite><a href="http://catb.org/jargon/html/T/TOPS-10.html">Jargon File</a></cite>)
+						</dd>
 					</dl>
 				</section>
 
@@ -190,8 +292,12 @@
 
 					<h3 id="Anchor">Anchor: <code id="a">a</code></h3>
 					<p>
-					Anchor tags, more commonly known as "hyperlinks" or simply "links", are widely used. Bonkstrap styles them using a semi-bold font weight and the accent color. External links are identified by CSS as having an <code>href</code> attribute beginning with <code>http</code> or some other URI protocol schemes, which isn't the most technically correct assumption, but it works enough&tm;. Anyways, these anchors that are identified as "external" are marked with an icon.
+					Anchor tags, more commonly known as "hyperlinks" or simply "links", are widely used. Bonkstrap styles them using a semi-bold font weight and the accent color. External links are identified by CSS as having an <code>href</code> attribute beginning with <code>http</code> or some other URI protocol schemes, which isn't the most technically correct assumption, but it works enough&trade;. Anyways, these anchors that are identified as "external" are marked with an icon.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">index.html</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Bonkstrap home page<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">https://teaandkittens.co.uk/</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>An external link<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<ul>
 						<li><a href="index.html">Bonkstrap home page</a></li>
 						<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">An external link</a></li>
@@ -201,10 +307,29 @@
 					<p>
 					The abbreviation tag is used to mark up an abbreviation. The definition corresponding to the abbreviated term can either be present in surrounding in-line text, or may be added to the element's <code>title</code> attribute, or both. This tag may also be used together with the <a href="#Definition">definition</a> tag.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">abbr</span><span class="syntax-html-bracket">&gt;</span>XML<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">abbr</span><span class="syntax-html-bracket">&gt;</span> is short for Extensible Markup Language.
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">abbr</span> <span class="syntax-html-attribute-key">title</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">Hypertext Transfer Protocol</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>HTTP<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">abbr</span><span class="syntax-html-bracket">&gt;</span> is a
+		common protocol for information exchange on the World Wide Web.
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>XMLHttpRequest, or <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">abbr</span> <span class="syntax-html-attribute-key">title</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">XMLHttpRequest</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>XHR<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">abbr</span><span class="syntax-html-bracket">&gt;</span>, is
+		a type of object found in JavaScript web programming.
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<ul>
-						<li><abbr>XML</abbr> is short for Extensible Markup Language.</li>
-						<li><abbr title="Hypertext Transfer Protocol">HTTP</abbr> is a common protocol for information exchange on the World Wide Web.</li>
-						<li>XMLHttpRequest, or <abbr title="XMLHttpRequest">XHR</abbr>, is a type of object found in JavaScript web programming.</li>
+						<li>
+							<abbr>XML</abbr> is short for Extensible Markup Language.
+						</li>
+						<li>
+							<abbr title="Hypertext Transfer Protocol">HTTP</abbr> is a
+							common protocol for information exchange on the World Wide Web.
+						</li>
+						<li>XMLHttpRequest, or <abbr title="XMLHttpRequest">XHR</abbr>, is
+							a type of object found in JavaScript web programming.
+						</li>
 					</ul>
 
 					<h3 id="Bring_attention_to">Bring attention to: <code id="b">b</code></h3>
@@ -219,23 +344,49 @@
 					<p>
 					See also <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong#Usage_notes">MDN's usage notes on <code>strong</code></a> for a more detailed explanation of the uses of these tags.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>This document demonstrates <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">b</span><span class="syntax-html-bracket">&gt;</span>styles<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">b</span><span class="syntax-html-bracket">&gt;</span> defined by the Bonkstrap framework.<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<p>This document demonstrates <b>styles</b> defined by the Bonkstrap framework.<p>
-					<!-- FIXME this example was very not obvious. find some way to wrap all the examples consistently -->
 
 					<h3 id="Citation">Citation: <code id="cite">cite</code></h3>
 					<p>
 					A citation element is used to mark up a reference to another work. The element must contain the title of the work. The W3C spec says that it may also contain the author, but the WHATWG spec says it must never do this. I'd avoid it just to be safe, I guess. Citations may appear in a variety of places. To cite content in a <code>blockquote</code> or <code>q</code> tag using a URL, use the <code>cite</code> attribute on those elements. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">MDN's example</a> doesn't do this, so, uh, I dunno what to say about that.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">blockquote</span> <span class="syntax-html-attribute-key">cite</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+	The HTML Citation element (<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>&amp;lt;cite&amp;gt;<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>) is used to describe a
+	reference to a cited creative work, and must include the title of that work.
+	The reference may be in an abbreviated form according to context-appropriate
+	conventions related to citation metadata.
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">footer</span><span class="syntax-html-bracket">&gt;</span>
+		Description of
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span>
+			<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>
+				The Citation element
+			<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span>
+		<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span> from MDN.
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">footer</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">blockquote</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">
-						<p>The HTML Citation element (<code>&lt;cite&gt;</code>) is used to describe a reference to a cited creative work, and must include the title of that work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.</p>
+						<p>
+						The HTML Citation element (<code>&lt;cite&gt;</code>) is used to describe a
+						reference to a cited creative work, and must include the title of that work.
+						The reference may be in an abbreviated form according to context-appropriate
+						conventions related to citation metadata.
+						</p>
 						<footer>
-							Description of <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">The Citation element</a></cite> from MDN.
+							Description of
+							<cite>
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">
+									The Citation element
+								</a>
+							</cite> from MDN.
 						</footer>
 					</blockquote>
 
 					<h3 id="Code">Code: <code id="code">code</code></h3>
 					<p>
-					The <code>code</code> tag is used to mark up, you guessed it, computer code. By itself, this element is used for short snippets of inline code. It may be nested inside a <a href="#Preformatted_text"><code>pre</code></a> tag to mark up a block of code. "code" and "pre" in this paragraph are marked up with the <code>code</code> tag. Below is an example of a code block, from Joe Reed's <a href="https://github.com/josephreed2600/express-template/blob/master/routes/manager.js"><cite>express-template</cite></a> repository. Code blocks are styled with a tab width of 2, meaning that tab characters in the source code will translate to the same width as two spaces.
+					The <code>code</code> tag is used to mark up, you guessed it, computer code. By itself, this element is used for short snippets of inline code. It may be nested inside a <a href="#Preformatted_text"><code>pre</code></a> tag to mark up a block of code. "code" and "pre" in this paragraph are marked up with the <code>code</code> tag. Below is an example of a code block, from Joe Reed's <cite><a href="https://github.com/josephreed2600/express-template/blob/master/routes/manager.js">express-template</a></cite> repository. Code blocks are styled with a tab width of 2, meaning that tab characters in the source code will translate to the same width as two spaces.
 					</p>
 					<pre><code>const apply = (app, component) =&gt; {
 	component.routes.forEach((route) =&gt; {
@@ -256,28 +407,48 @@
 };
 
 
-module.exports = { apply };
-					</code></pre>
+module.exports = { apply };</code></pre>
 
 					<h3 id="Definition">Definition: <code id="dfn">dfn</code></h3>
 					<p>
-					The <code><dfn>dfn</dfn></code> tag is used to indicate a term being defined. The nearest ancestor that is one of <code>p</code>, <code>dt</code>/<code>dd</code>, or <code>section</code> is considered to be the definition of the term.
+					The <code><dfn>dfn</dfn></code> tag is used to indicate a term being defined.
+					The nearest ancestor that is one of <code>p</code>,
+					<code>dt</code>/<code>dd</code>, or <code>section</code> is considered to be
+					the definition of the term.
 					</p>
+					<pre><code>The <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">dfn</span><span class="syntax-html-bracket">&gt;</span>dfn<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">dfn</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> tag is used to indicate a term being defined.
+The nearest ancestor that is one of <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>p<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>,
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>dt<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>/<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>dd<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>, or <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>section<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> is considered to be
+the definition of the term.</code></pre>
 
 					<h3 id="Emphasis">Emphasis: <code id="em">em</code></h3>
 					<p>
 					The <code>em</code> tag should be used for text that would be pronounced aloud with emphasized stress. For a comparison of similar tags, see the <a href="#Bring_attention_to">Bring attention to</a> element.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>Ugh, fine. I guess you <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">em</span><span class="syntax-html-bracket">&gt;</span>are<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">em</span><span class="syntax-html-bracket">&gt;</span> my little pogchamp. Come here.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<p>Ugh, fine. I guess you <em>are</em> my little pogchamp. Come here.</p>
 
 					<h3 id="Idiomatic_text">Idiomatic text: <code id="i">i</code></h3>
 					<p>
 					The <code>i</code> tag should be used to offset text that is different somehow. That's really vague, so have some examples to clarify the specific meaning:
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">i</span><span class="syntax-html-bracket">&gt;</span>It's a little late for my family to abandon me in a restaurant<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">i</span><span class="syntax-html-bracket">&gt;</span>,
+		she thought.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>The <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">i</span><span class="syntax-html-bracket">&gt;</span>Axiom<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">i</span><span class="syntax-html-bracket">&gt;</span> had been at sea for seven hundred years around the time
+		WALL-E arrived.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>"<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">i</span><span class="syntax-html-bracket">&gt;</span>Alohamora<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">i</span><span class="syntax-html-bracket">&gt;</span>," Hermione muttered as Mr. Weasely fumbled with his
+		Muggle keyring.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<ul>
-						<li><i>It's a little late for my family to abandon me in a restaurant</i>, she thought.</li>
-						<li>The <i>Axiom</i> had been at sea for seven hundred years around the time WALL-E arrived.</li>
-						<li>"<i>Alohamora</i>," Hermione muttered as Mr. Weasely fumbled with his Muggle keyring.</li>
+						<li>
+							<i>It's a little late for my family to abandon me in a restaurant</i>,
+							she thought.</li>
+						<li>The <i>Axiom</i> had been at sea for seven hundred years around the time
+							WALL-E arrived.</li>
+						<li>"<i>Alohamora</i>," Hermione muttered as Mr. Weasely fumbled with his
+							Muggle keyring.</li>
 					</ul>
 					<p>
 					For a comparison of similar tags, see the <a href="#Bring_attention_to">Bring attention to</a> element. <code>i</code> should <em>not</em> be used simply to italicize or apply other styling to its contents; doing so makes you a horrible person and you deserve to rot in some forgotten three-pixel cell of an HTML4 layout table. It is true that <code>i</code> was originally a stylistic tag, intended for italicization. However, this is no longer the case. Get with the times.
@@ -287,22 +458,69 @@ module.exports = { apply };
 					<p>
 					Okay, so, uh, this one is weird. Definitely check out <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd">MDN</a> for examples if you think this might be appropriate in your content. I've done some very basic styling, because even I can't be bothered to read and grok all that. Not in the mood tonight.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>To exit vim, use <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">kbd</span><span class="syntax-html-bracket">&gt;</span>&lt;Esc&gt;:wq<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">kbd</span><span class="syntax-html-bracket">&gt;</span>.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<p>To exit vim, use <kbd>&lt;Esc&gt;:wq</kbd>.</p>
 
 					<h3 id="Mark">Mark: <code id="mark">mark</code></h3>
 					<p>
-					Think of <code>mark</code> as a highlighter (but not in a stylish way!). Use it to mark up text that has <mark>particular relevance</mark> to the surrounding content, as you would if you were highlighting notes while styding for an exam. For a comparison of similar tags, see the <a href="#Bring_attention_to">Bring attention to</a> element.
+					Think of <code>mark</code> as a highlighter (but not in a stylish way!). Use it
+					to mark up text that has <mark>particular relevance</mark> to the surrounding
+					content, as you would if you were highlighting notes while styding for an exam.
+					For a comparison of similar tags, see the
+					<a href="#Bring_attention_to">Bring attention to</a> element.
 					</p>
+					<pre><code>Think of <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>mark<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> as a highlighter (but not in a stylish way!). Use it
+to mark up text that has <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">mark</span><span class="syntax-html-bracket">&gt;</span>particular relevance<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">mark</span><span class="syntax-html-bracket">&gt;</span> to the surrounding
+content, as you would if you were highlighting notes while styding for an exam.</code></pre>
 
 					<h3 id="Quote">Quote: <code id="q">q</code></h3>
 					<p>
-					The inline quote element <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">indicates that the enclosed text is a short inline quotation</q>, according to MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"><cite>Inline Quotation element</cite></a> reference. Bonkstrap adds quotation marks around the content, which is a common practice.
+					The inline quote element
+					<q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+						>indicates that the enclosed text is a short inline quotation</q>,
+					according to MDN's <cite>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+							Inline Quotation element
+						</a>
+					</cite> reference. Bonkstrap adds quotation marks around the content,
+					which is a common practice.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+The inline quote element
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">q</span> <span class="syntax-html-attribute-key">cite</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q</span><span class="syntax-html-quotation">"</span>
+<span class="syntax-html-bracket">&gt;</span>indicates that the enclosed text is a short inline quotation<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">q</span><span class="syntax-html-bracket">&gt;</span>,
+according to MDN's <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>
+		Inline Quotation element
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">cite</span><span class="syntax-html-bracket">&gt;</span> reference. Bonkstrap adds quotation marks around the content,
+which is a common practice.
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 
 					<h3 id="Ruby">Ruby: <code id="ruby">ruby</code>, <code id="rt">rt</code>, <code id="rp">rp</code>, and <code id="rtc">rtc</code></h3>
 					<p>
 					Ruby is a system for annotating East Asian characters to aid in pronunciation and sometimes interpretation. The reset seems not to have screwed with the defaults for these, which is fortunate because it looks like a small nightmare. Thank goodness.
 					</p>
+
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ruby</span><span class="syntax-html-bracket">&gt;</span>
+	漢 <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>(<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span>kan<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>)<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>
+	字 <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>(<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span>ji<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>)<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ruby</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ruby</span> <span class="syntax-html-attribute-key">xml:lang</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">zh-Hant</span><span class="syntax-html-quotation">"</span> <span class="syntax-html-attribute-key">style</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">ruby-position: under;</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rbc</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rb</span><span class="syntax-html-bracket">&gt;</span>馬<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rb</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>(<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span>mǎ<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>)<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rb</span><span class="syntax-html-bracket">&gt;</span>來<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rb</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>(<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span>lái<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>)<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rb</span><span class="syntax-html-bracket">&gt;</span>西<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rb</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>(<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span>xī<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>)<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rb</span><span class="syntax-html-bracket">&gt;</span>亞<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rb</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>(<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span>yà<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>)<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rbc</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rtc</span> <span class="syntax-html-attribute-key">xml:lang</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">en</span><span class="syntax-html-quotation">"</span> <span class="syntax-html-attribute-key">style</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">ruby-position: over;</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>(<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span>Malaysia<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rt</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>)<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rp</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">rtc</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ruby</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 
 					<p>
 					<ruby>
@@ -328,60 +546,142 @@ module.exports = { apply };
 					<p>
 					The strikethrough element is used to indicate text that is no longer relevant or correct. This is not to be confused with the role of the <a href="#Insertion_and_deletion">deletion</a> tag, which is used to mark up edits to a document.
 					</p>
-					<p><q><s>we're setting pumpkins on fire in the courtyard tonight</s> just kidding um we're not going to do that</q></p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">q</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">s</span><span class="syntax-html-bracket">&gt;</span>we're setting pumpkins on fire in the courtyard tonight<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">s</span><span class="syntax-html-bracket">&gt;</span>
+	just kidding um we're not going to do that<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">q</span><span class="syntax-html-bracket">&gt;</span>
+</code></pre>
+					<p>
+					<q><s>we're setting pumpkins on fire in the courtyard tonight</s>
+						just kidding um we're not going to do that</q>
+					</p>
 
 					<h3 id="Insertion_and_deletion">Insertion and deletion: <code id="ins">ins</code> and <code id="del">del</code></h3>
 					<p>
 					It may be useful to mark up changes to a document, in the form of insertions and deletions. A common example of this is a diff between two versions of a file.
 					</p>
 
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">pre</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">del</span><span class="syntax-html-bracket">&gt;</span>foo<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">del</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ins</span><span class="syntax-html-bracket">&gt;</span>bar<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ins</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">pre</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<pre><code><del>foo</del>
-<ins>bar</ins>
-					</code></pre>
+<ins>bar</ins></code></pre>
 
 					<h3 id="Sample_output">Sample output: <code id="samp">samp</code></h3>
 					<p>
 					The <code>samp</code> tag is used to mark up output from a computer program. It may be combined in various ways with <a href="#Keyboard_input"><code>kbd</code></a>.
 					</p>
-					<p>A typical sudo prompt looks something like <samp>[sudo] password for jtreed:</samp>.</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>A typical sudo prompt looks something like
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">samp</span><span class="syntax-html-bracket">&gt;</span>[sudo] password for jtreed:<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">samp</span><span class="syntax-html-bracket">&gt;</span>.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+					<p>A typical sudo prompt looks something like
+					<samp>[sudo] password for jtreed:</samp>.</p>
 
 					<h3 id="Side_comment">Side comment: <code id="small">small</code></h3>
 					<p>
-					Think of <code>small</code> as a "fine print" tag. It's not to be used just to change font size; it's meant for things like copyright notices or legal text. <small>This message was paid for by Eazy-E for President.</small>
+					Think of <code>small</code> as a "fine print" tag. It's not to be used just to
+					change font size; it's meant for things like copyright notices or legal text.
+					<small>
+						This message was paid for by Eazy-E for President.
+					</small>
 					</p>
-					<p>
-					</p>
+					<pre><code>Think of <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>small<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> as a "fine print" tag. It's not to be used just to
+change font size; it's meant for things like copyright notices or legal text.
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">small</span><span class="syntax-html-bracket">&gt;</span>
+	This message was paid for by Eazy-E for President.
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">small</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 
 					<h3 id="Span">Span: <code id="span">span</code></h3>
 					<p>
 					<span>Span ain't nothin' but a thing.</span>
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">span</span><span class="syntax-html-bracket">&gt;</span>Span ain't nothin' but a thing.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">span</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 
 					<h3 id="Strong_importance">Strong importance: <code id="strong">strong</code></h3>
 					<p>
-					The <code>strong</code> tag should be used for text that bears particular importance, such as a warning. For a comparison of similar tags, see the <a href="#Bring_attention_to">Bring attention to</a> element. <strong>Do not use this tag simply for styling.</strong>
+					The <code>strong</code> tag should be used for text that bears particular
+					importance, such as a warning. For a comparison of similar tags, see the
+					<a href="#Bring_attention_to">Bring attention to</a> element.
+					<strong>Do not use this tag simply for styling.</strong>
 					</p>
+
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+The <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>strong<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> tag should be used for text that bears particular
+importance, such as a warning. For a comparison of similar tags, see the
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">#Bring_attention_to</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Bring attention to<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span> element.
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">strong</span><span class="syntax-html-bracket">&gt;</span>Do not use this tag simply for styling.<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">strong</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 
 					<h3 id="Subscript_and_superscript">Subscript and superscript: <code id="sub">sub</code> and <code id="sup">sup</code></h3>
 					<p>
-					The subscript and superscript tags mark up text that should be subscripted or superscripted solely for reasons of compliance with typographical conventions. For example, it is appropriate to use <code>sub</code> when writing H<sub>2</sub>O, and <code>sup</code> for writing <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>, but neither when writing L<span style="vertical-align: text-bottom;">A</span>T<span style="vertical-align: text-top;">E</span>X.
+					The subscript and superscript tags mark up text that should be subscripted or
+					superscripted solely for reasons of compliance with typographical conventions.
+					For example, it is appropriate to use <code>sub</code> when writing
+					H<sub>2</sub>O, and <code>sup</code> for writing
+					<var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>,
+					but neither when writing
+					L<span style="vertical-align: text-bottom;">A</span>T<span style="vertical-align: text-top;">E</span>X.
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+The subscript and superscript tags mark up text that should be subscripted or
+superscripted solely for reasons of compliance with typographical conventions.
+For example, it is appropriate to use <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>sub<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> when writing
+H<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">sub</span><span class="syntax-html-bracket">&gt;</span>2<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">sub</span><span class="syntax-html-bracket">&gt;</span>O, and <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>sup<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> for writing
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>a<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">sup</span><span class="syntax-html-bracket">&gt;</span>2<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">sup</span><span class="syntax-html-bracket">&gt;</span> + <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>b<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">sup</span><span class="syntax-html-bracket">&gt;</span>2<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">sup</span><span class="syntax-html-bracket">&gt;</span> = <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>c<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">sup</span><span class="syntax-html-bracket">&gt;</span>2<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">sup</span><span class="syntax-html-bracket">&gt;</span>,
+but neither when writing
+L<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">span</span> <span class="syntax-html-attribute-key">style</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">vertical-align: text-bottom;</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>A<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">span</span><span class="syntax-html-bracket">&gt;</span>T<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">span</span> <span class="syntax-html-attribute-key">style</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">vertical-align: text-top;</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>E<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">span</span><span class="syntax-html-bracket">&gt;</span>X.
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+</code></pre>
 
 					<h3 id="Unarticulated_annotation">Unarticulated annotation: <code id="u">u</code></h3>
 					<p>
-					<code>u</code> used to stand for "underline", and as such was deprecated in HTML4. However, for some reason, it's back in HTML5 with a shiny new semantic meaning: unarticulated annotation. For the life of me, I can't figure out what that really means. MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u">best example</a> seems to be marking up spelling errors. I guess <u>we'l</u>l ju<u>st give </u>it a re<u>gul</u>ar kind of <u>style and</u> call it a <u>day?</u>
+					<code>u</code> used to stand for "underline", and as such was deprecated in
+					HTML4. However, for some reason, it's back in HTML5 with a shiny new semantic
+					meaning: unarticulated annotation. For the life of me, I can't figure out what
+					that really means.
+					<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u">
+						MDN's best example
+					</a> seems to be marking up spelling errors. I guess <u>we'l</u>l
+					ju<u>st give </u>it a re<u>gul</u>ar kind of <u>style and</u> call it a
+					<u>day?</u>
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>u<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span> used to stand for "underline", and as such was deprecated in
+HTML4. However, for some reason, it's back in HTML5 with a shiny new semantic
+meaning: unarticulated annotation. For the life of me, I can't figure out what
+that really means.
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>
+	MDN's best example
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span> seems to be marking up spelling errors. I guess <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>we'l<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>l
+ju<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>st give <span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>it a re<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>gul<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>ar kind of <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>style and<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span> call it a
+<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>day?<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">u</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 
 					<h3 id="Variable">Variable: <code id="var">var</code></h3>
 					<p>
 					The variable tag marks up variables in math or computer code. Bonkstrap italicizes variables by default, but a few additional built-in classes may be used to alter their behavior:
 					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>var<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>: <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>x<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>, <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>y<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>var.const<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>:
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">const</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>a<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>, <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">const</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>&pi;<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>var.vector<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>:
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">vector</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>u<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>, <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">vector</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>v<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>var.matrix<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>:
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">matrix</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>A<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>, <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">matrix</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>B<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>var.tensor<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>:
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">tensor</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>p<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>, <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">var</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">tensor</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>q<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">var</span><span class="syntax-html-bracket">&gt;</span>
+		(tensors will be sans-serif everywhere)<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span></code></pre>
 					<ul>
 						<li><code>var</code>: <var>x</var>, <var>y</var></li>
-						<li><code>var.const</code>: <var class="const">a</var>, <var class="const">&pi;</var></li>
-						<li><code>var.vector</code>: <var class="vector">u</var>, <var class="vector">v</var></li>
-						<li><code>var.matrix</code>: <var class="matrix">A</var>, <var class="matrix">B</var></li>
-						<li><code>var.tensor</code>: <var class="tensor">p</var>, <var class="tensor">q</var> (tensors will be sans-serif everywhere)</li>
+						<li><code>var.const</code>:
+							<var class="const">a</var>, <var class="const">&pi;</var></li>
+						<li><code>var.vector</code>:
+							<var class="vector">u</var>, <var class="vector">v</var></li>
+						<li><code>var.matrix</code>:
+							<var class="matrix">A</var>, <var class="matrix">B</var></li>
+						<li><code>var.tensor</code>:
+							<var class="tensor">p</var>, <var class="tensor">q</var>
+							(tensors will be sans-serif everywhere)</li>
 					</ul>
 					<p>
 					These styles are derived largely from <a href="https://groups.google.com/g/comp.text.tex/c/kDUXuswS1HI/m/uHu4foX9WI4J">a 2004 post to comp.text.tex</a>.
@@ -392,7 +692,7 @@ module.exports = { apply };
 				<section id="Tables">
 					<h2>Tables</h2>
 					<p>
-					These tables are yoinked straight from MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">reference on HTML tables</a>, including the bizarre green, which was a demo for <code>colgroup</code>s. (I added some extra rows to demo the alternating colors.) Bonkstrap doesn't style tables very heavily, and there's a reason for that. If you want a quick and simple table, you can slap your markup into the page and off you go. If you want a complex table, you're going to need to style it yourself anyways, so it's more helpful to have fewer style rules preset that you'll have to track down and override. You're welcome.
+					These tables are yoinked straight from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN's reference on HTML tables</a>, including the bizarre green, which was a demo for <code>colgroup</code>s. (I added some extra rows to demo the alternating colors.) Bonkstrap doesn't style tables very heavily, and there's a reason for that. If you want a quick and simple table, you can slap your markup into the page and off you go. If you want a complex table, you're going to need to style it yourself anyways, so it's more helpful to have fewer style rules preset that you'll have to track down and override. You're welcome.
 					</p>
 					<p>Simple table with header</p>
 					<table>
@@ -508,158 +808,202 @@ module.exports = { apply };
 					</table>
 				</section>
 
-<section id="Forms">
-<h2>Forms</h2>
-<p>epcot</p>
-<form>
-	<fieldset>
-		<legend>Customize your dinosaur</legend>
+				<section id="Forms">
+					<h2>Forms</h2>
+					<p>Bonkstrap recognizes that every form is different. Form elements are styled so that they aren't horribly ugly if you just need a quick one-and-done, but you can also disable these styles (remove the <code>easy</code> class from the form element) if you wish to craft a tidier form yourself. The default styles look better in a narrower context than most full screens; try wrapping the form in a <a href="index.html#Responsive_design">smaller column</a>. Code samples for forms have not been provided; please just inspect the page like a normal web designer.</p>
+					<form class="easy">
+						<fieldset>
+							<legend>Customize your dinosaur</legend>
 
-		<label for="dino-select">Choose a dinosaur:</label>
-		<select id="dino-select">
-			<optgroup label="Theropods">
-				<option>Tyrannosaurus</option>
-				<option>Velociraptor</option>
-				<option>Deinonychus</option>
-			</optgroup>
-			<optgroup label="Sauropods">
-				<option>Diplodocus</option>
-				<option>Saltasaurus</option>
-				<option>Apatosaurus</option>
-			</optgroup>
-		</select>
+							<label for="dino-select">Choose a dinosaur:</label>
+							<select id="dino-select">
+								<optgroup label="Theropods">
+									<option>Tyrannosaurus</option>
+									<option>Velociraptor</option>
+									<option>Deinonychus</option>
+								</optgroup>
+								<optgroup label="Sauropods">
+									<option>Diplodocus</option>
+									<option>Saltasaurus</option>
+									<option>Apatosaurus</option>
+								</optgroup>
+							</select>
 
-		<label for="ice-cream-choice">Choose a flavor:</label>
-		<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
-		<datalist id="ice-cream-flavors">
-			<option value="Chocolate">
-			<option value="Coconut">
-			<option value="Mint">
-			<option value="Strawberry">
-			<option value="Vanilla">
-		</datalist>
-	</fieldset>
-	<fieldset>
-		<legend>
-			Yeehaw
-		</legend>
-	<label for="story">Tell us your story:</label>
-<textarea id="story" name="story"
-          rows="5" cols="33">
-It was a dark and stormy night...
-</textarea>
-<label for="file">File progress:</label>
+							<label for="ice-cream-choice">Choose a flavor:</label>
+							<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+							<datalist id="ice-cream-flavors">
+								<option value="Chocolate">
+								<option value="Coconut">
+								<option value="Mint">
+								<option value="Strawberry">
+								<option value="Vanilla">
+							</datalist>
+						</fieldset>
+						<fieldset>
+							<legend>
+								Yeehaw
+							</legend>
+							<label for="story">Tell us your story:</label>
+							<textarea id="story" name="story" rows="5" cols="33">It was a dark and stormy night...</textarea>
+							<label for="file">File progress:</label>
 
-<progress id="file" max="100" value="70"> 70% </progress>
+							<progress id="file" max="100" value="70"> 70% </progress>
 
-	</fieldset>
+						</fieldset>
 
-<label for="input-demo-checkbox">checkbox</label>
-<input type="checkbox" id="input-demo-checkbox" />
+						<label for="input-demo-checkbox">checkbox</label>
+						<input type="checkbox" id="input-demo-checkbox" />
 
-<label for="input-demo-color">color</label>
-<input type="color" id="input-demo-color" />
+						<label for="input-demo-color">color</label>
+						<input type="color" id="input-demo-color" />
 
-<label for="input-demo-date">date</label>
-<input type="date" id="input-demo-date" />
+						<label for="input-demo-date">date</label>
+						<input type="date" id="input-demo-date" />
 
-<label for="input-demo-datetime-local">datetime-local</label>
-<input type="datetime-local" id="input-demo-datetime-local" />
+						<label for="input-demo-datetime-local">datetime-local</label>
+						<input type="datetime-local" id="input-demo-datetime-local" />
 
-<label for="input-demo-email">email</label>
-<input type="email" id="input-demo-email" />
+						<label for="input-demo-email">email</label>
+						<input type="email" id="input-demo-email" />
 
-<label for="input-demo-file">file</label>
-<input type="file" id="input-demo-file" />
+						<label for="input-demo-file">file</label>
+						<input type="file" id="input-demo-file" />
 
-<label for="input-demo-month">month</label>
-<input type="month" id="input-demo-month" />
+						<label for="input-demo-month">month</label>
+						<input type="month" id="input-demo-month" />
 
-<label for="input-demo-number">number</label>
-<input type="number" id="input-demo-number" />
+						<label for="input-demo-number">number</label>
+						<input type="number" id="input-demo-number" />
 
-<label for="input-demo-password">password</label>
-<input type="password" id="input-demo-password" />
+						<label for="input-demo-password">password</label>
+						<input type="password" id="input-demo-password" />
 
-<p>radio</p>
-<div class="radiogroup">
-<label for="input-demo-radio-1">
-<input type="radio" name="input-demo-radio" id="input-demo-radio-1" />
-	radio
-</label>
-<label for="input-demo-radio-2">
-<input type="radio" name="input-demo-radio" id="input-demo-radio-2" />
-	radio
-</label>
-<label for="input-demo-radio-3">
-<input type="radio" name="input-demo-radio" id="input-demo-radio-3" />
-	radio
-</label>
-</div>
+						<p>radio</p>
+						<div class="radiogroup">
+							<label for="input-demo-radio-1">
+								<input type="radio" name="input-demo-radio" id="input-demo-radio-1" />
+								radio
+							</label>
+							<label for="input-demo-radio-2">
+								<input type="radio" name="input-demo-radio" id="input-demo-radio-2" />
+								radio
+							</label>
+							<label for="input-demo-radio-3">
+								<input type="radio" name="input-demo-radio" id="input-demo-radio-3" />
+								radio
+							</label>
+						</div>
 
-<label for="input-demo-range">range</label>
-<input type="range" id="input-demo-range" />
+						<label for="input-demo-range">range</label>
+						<input type="range" id="input-demo-range" />
 
-<label for="input-demo-search">search</label>
-<input type="search" id="input-demo-search" />
+						<label for="input-demo-search">search</label>
+						<input type="search" id="input-demo-search" />
 
-<label for="input-demo-tel">tel</label>
-<input type="tel" id="input-demo-tel" />
+						<label for="input-demo-tel">tel</label>
+						<input type="tel" id="input-demo-tel" />
 
-<label for="input-demo-text">text</label>
-<input type="text" id="input-demo-text" />
+						<label for="input-demo-text">text</label>
+						<input type="text" id="input-demo-text" />
 
-<label for="input-demo-time">time</label>
-<input type="time" id="input-demo-time" />
+						<label for="input-demo-time">time</label>
+						<input type="time" id="input-demo-time" />
 
-	<button type="button">Not Centered Butan</button>
-	<button type="button" class="centered">Centered Butan</button>
-</form>
-</section>
+						<button type="button">Not Centered Butan</button>
+						<button type="button" class="centered">Centered Butan</button>
+					</form>
+				</section>
 
 				<section id="Interactive_elements">
 					<h2>Interactive elements</h2>
-yooo, whaaaaaat? neat!
+					yooo, whaaaaaat? neat!
 					<h3 id="Details_and_summary">Twisty bois! <code id="details">details</code> and <code id="summary">summary</code></h3>
 					<p>
 					The <code>details</code> element contains a <code>summary</code> element (the latter holding the content "Details" in the example below), and some other flow content thereafter. Clicking on the summary toggles the expansion of the rest of the content. It's pretty cool! Had no idea this was built into HTML.
 					</p>
-<details>
-    <summary>Details</summary>
-		Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. et harum quidem rerum facilis est et expedita distinctio. nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. (From Cicero's <a href="https://www.thelatinlibrary.com/cicero/fin1.shtml"><cite href="https://www.thelatinlibrary.com/cicero/fin1.shtml">de Finibus Bonorum et Malorum</cite></a>)
-</details>
+					<details>
+						<summary>Details</summary>
+						Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. et harum quidem rerum facilis est et expedita distinctio. nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. (From Cicero's <cite><a href="https://www.thelatinlibrary.com/cicero/fin1.shtml">de Finibus Bonorum et Malorum</a></cite>)
+					</details>
 				</section>
+
 				<section>
 					<h2 id="Conclusion">Conclusion</h2>
 					<p>
 					I hope you have enjoyed this catalogue of my decline into madness. We'll see you next time in "Custom Web Part II: This Feels Scripted"!
 					</p>
 				</section>
+
 				<nav>
 					<input type="checkbox" id="article-nav-toggle-Sass"/>
 					<label for="article-nav-toggle-Sass"></label>
 					<ul>
-						<li><a href="#Configuring_Bonkstraps_behavior_with_Sass">Configuring Bonkstrap's behavior with Sass</a>
+						<li><a href="#Default_styles">Default styles</a>
+
 							<ul>
-								<li><a href="#Sass_compiling">Sass (compiling)</a></li>
-								<li><a href="#Modular_system">Modular system</a></li>
-								<li><a href="#Default_styles">Default styles</a>
+								<li><a href="#Roots"                                >Roots</a></li>
+
+								<li><a href="#Content_sectioning"                   >Content sectioning</a>
 									<ul>
-										<li><a href="#Hyperlinks">Hyperlinks</a></li>
-										<li><a href="#Tables">Tables</a></li>
-										<li><a href="#Articles_sections_and_paragraphs">Articles, sections, and paragraphs</a></li>
-										<li><a href="#Headings">Headings</a></li>
-										<li><a href="#Forms">Forms</a></li>
-										<li><a href="#Code">Code</a></li>
-										<li><a href="#Images">Images</a></li>
-										<li><a href="#Nav_bars_and_menus">Nav bars and menus</a></li>
+										<li><a href="#Address"                              ><code>address</code></a></li>
+										<li><a href="#Article"                              ><code>article</code></a></li>
+										<li><a href="#Aside"                                ><code>aside</code></a></li>
+										<li><a href="#Section_header_and_footer"            ><code>section</code>, <code>header</code>, and <code>footer</code></a></li>
+										<li><a href="#Headings"                             >Headings</a></li>
+										<li><a href="#Main_and_nav"                         ><code>main</code> and <code>nav</code></a></li>
 									</ul>
 								</li>
-								<li><a href="#Theme_colors">Theme colors</a></li>
-								<li><a href="#Vendor_prefix_mixin">Vendor prefix mixin</a></li>
-								<li><a href="#Use_of_shared_properties">Use of shared properties</a></li>
+
+								<li><a href="#Text_content"                         >Text content</a>
+									<ul>
+										<li><a href="#Paragraph"                            >Paragraph</a></li>
+										<li><a href="#Blockquote"                           >Block quote</a></li>
+										<li><a href="#Div"                                  ><code>div</code></a></li>
+										<li><a href="#Figures"                              >Figures</a></li>
+										<li><a href="#Horizontal_rule"                      >Horizontal rule</a></li>
+										<li><a href="#Preformatted_text"                    >Preformatted text</a></li>
+										<li><a href="#Ordered_and_unordered_lists"          >Ordered and unordered lists</a></li>
+										<li><a href="#Description_list"                     >Description list</a></li>
+									</ul>
+								</li>
+
+								<li><a href="#Inline_text"                          >Inline text</a>
+									<ul>
+										<li><a href="#Anchor"                               >Anchor</a></li>
+										<li><a href="#Abbreviation"                         >Abbreviation</a></li>
+										<li><a href="#Bring_attention_to"                   >Bring attention to</a></li>
+										<li><a href="#Citation"                             >Citation</a></li>
+										<li><a href="#Code"                                 >Code</a></li>
+										<li><a href="#Definition"                           >Definition</a></li>
+										<li><a href="#Emphasis"                             >Emphasis</a></li>
+										<li><a href="#Idiomatic_text"                       >Idiomatic text</a></li>
+										<li><a href="#Keyboard_input"                       >Keyboard input</a></li>
+										<li><a href="#Mark"                                 >Mark</a></li>
+										<li><a href="#Quote"                                >Quote</a></li>
+										<li><a href="#Ruby"                                 >Ruby</a></li>
+										<li><a href="#Strikethrough"                        >Strikethrough</a></li>
+										<li><a href="#Insertion_and_deletion"               >Insertion and deletion</a></li>
+										<li><a href="#Sample_output"                        >Sample output</a></li>
+										<li><a href="#Side_comment"                         >Side comment</a></li>
+										<li><a href="#Span"                                 ><code>span</code></a></li>
+										<li><a href="#Strong_importance"                    >Strong importance</a></li>
+										<li><a href="#Subscript_and_superscript"            >Subscript and superscript</a></li>
+										<li><a href="#Unarticulated_annotation"             >Unarticulated annotation</a></li>
+										<li><a href="#Variable"                             >Variable</a></li>
+									</ul>
+								</li>
+
+								<li><a href="#Tables"                               >Tables</a></li>
+								<li><a href="#Forms"                                >Forms</a></li>
+								<li><a href="#Interactive_elements"                 >Interactive elements</a>
+									<ul>
+										<li><a href="#Details_and_summary"                  ><code>details</code> and <code>summary</code></a></li>
+									</ul>
+								</li>
+								<li><a href="#Conclusion"                           >Conclusion</a></li>
 							</ul>
 						</li>
+
 					</ul>
 				</nav>
 			</article>
@@ -669,6 +1013,7 @@ yooo, whaaaaaat? neat!
 				<li><img src="images/logo.svg" alt="Bonkstrap logo" /></li>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="sass.html">Sass</a></li>
+				<li><a href="styles.html">Styles</a></li>
 			</ul>
 		</nav>
 	</body>

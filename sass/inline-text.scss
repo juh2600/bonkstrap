@@ -41,6 +41,10 @@ pre code {
 	tab-size: 2;
 }
 
+p code {
+	font-size: larger;
+}
+
 dfn, em, i {
 	@extend %italic;
 }

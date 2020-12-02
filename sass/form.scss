@@ -10,7 +10,7 @@
 	margin: 0.75rem;
 }
 
-form {
+form.easy {
 	@extend %form-table;
 
 	label, p {

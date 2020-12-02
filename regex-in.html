@@ -1,0 +1,152 @@
+The <code><dfn>dfn</dfn></code> tag is used to indicate a term being defined.
+The nearest ancestor that is one of <code>p</code>,
+<code>dt</code>/<code>dd</code>, or <code>section</code> is considered to be
+the definition of the term.
+
+
+
+
+<p>Ugh, fine. I guess you <em>are</em> my little pogchamp. Come here.</p>
+
+
+
+<ul>
+	<li>
+		<i>It's a little late for my family to abandon me in a restaurant</i>,
+		she thought.</li>
+	<li>The <i>Axiom</i> had been at sea for seven hundred years around the time
+		WALL-E arrived.</li>
+	<li>"<i>Alohamora</i>," Hermione muttered as Mr. Weasely fumbled with his
+		Muggle keyring.</li>
+</ul>
+
+
+
+<p>To exit vim, use <kbd>&lt;Esc&gt;:wq</kbd>.</p>
+
+
+
+Think of <code>mark</code> as a highlighter (but not in a stylish way!). Use it
+to mark up text that has <mark>particular relevance</mark> to the surrounding
+content, as you would if you were highlighting notes while styding for an exam.
+For a comparison of similar tags, see the
+<a href="#Bring_attention_to">Bring attention to</a> element.
+
+
+
+<p>
+The inline quote element
+<q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+	>indicates that the enclosed text is a short inline quotation</q>,
+according to MDN's <cite>
+	<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+		Inline Quotation element
+	</a>
+</cite> reference. Bonkstrap adds quotation marks around the content,
+which is a common practice.
+</p>
+
+
+
+<p>
+<ruby>
+	漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
+	字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+</p>
+<p>
+<ruby xml:lang="zh-Hant" style="ruby-position: under;">
+	<rbc>
+	<rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+	<rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+	<rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+	<rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+	</rbc>
+	<rtc xml:lang="en" style="ruby-position: over;">
+	<rp>(</rp><rt>Malaysia</rt><rp>)</rp>
+	</rtc>
+</ruby>
+</p>
+
+
+
+<q><s>we're setting pumpkins on fire in the courtyard tonight</s>
+	just kidding um we're not going to do that</q>
+
+
+
+<pre><code><del>foo</del>
+<ins>bar</ins></code></pre>
+
+
+
+<p>A typical sudo prompt looks something like
+<samp>[sudo] password for jtreed:</samp>.</p>
+
+
+
+Think of <code>small</code> as a "fine print" tag. It's not to be used just to
+change font size; it's meant for things like copyright notices or legal text.
+<small>
+	This message was paid for by Eazy-E for President.
+</small>
+
+
+
+<p>
+<span>Span ain't nothin' but a thing.</span>
+</p>
+
+
+
+<p>
+The <code>strong</code> tag should be used for text that bears particular
+importance, such as a warning. For a comparison of similar tags, see the
+<a href="#Bring_attention_to">Bring attention to</a> element.
+<strong>Do not use this tag simply for styling.</strong>
+</p>
+
+
+
+<p>
+The subscript and superscript tags mark up text that should be subscripted or
+superscripted solely for reasons of compliance with typographical conventions.
+For example, it is appropriate to use <code>sub</code> when writing
+H<sub>2</sub>O, and <code>sup</code> for writing
+<var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>,
+but neither when writing
+L<span style="vertical-align: text-bottom;">A</span>
+T<span style="vertical-align: text-top;">E</span>X.
+</p>
+
+
+
+<p>
+<code>u</code> used to stand for "underline", and as such was deprecated in
+HTML4. However, for some reason, it's back in HTML5 with a shiny new semantic
+meaning: unarticulated annotation. For the life of me, I can't figure out what
+that really means. MDN's
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u">
+	best example
+</a> seems to be marking up spelling errors. I guess <u>we'l</u>l
+ju<u>st give </u>it a re<u>gul</u>ar kind of <u>style and</u> call it a
+<u>day?</u>
+</p>
+
+
+
+<ul>
+	<li><code>var</code>: <var>x</var>, <var>y</var></li>
+	<li><code>var.const</code>:
+		<var class="const">a</var>, <var class="const">&pi;</var></li>
+	<li><code>var.vector</code>:
+		<var class="vector">u</var>, <var class="vector">v</var></li>
+	<li><code>var.matrix</code>:
+		<var class="matrix">A</var>, <var class="matrix">B</var></li>
+	<li><code>var.tensor</code>:
+		<var class="tensor">p</var>, <var class="tensor">q</var>
+		(tensors will be sans-serif everywhere)</li>
+</ul>
+
+
+

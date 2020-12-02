@@ -508,20 +508,132 @@ module.exports = { apply };
 					</table>
 				</section>
 
-				<section id="Forms">
-					<h2>Forms</h2>
-					<p>epcot</p>
-					<form>
+<section id="Forms">
+<h2>Forms</h2>
+<p>epcot</p>
+<form>
+	<fieldset>
+		<legend>Customize your dinosaur</legend>
 
-						<fieldset>
-						</fieldset>
-						<fieldset>
-						</fieldset>
-					</form>
-				</section>
+		<label for="dino-select">Choose a dinosaur:</label>
+		<select id="dino-select">
+			<optgroup label="Theropods">
+				<option>Tyrannosaurus</option>
+				<option>Velociraptor</option>
+				<option>Deinonychus</option>
+			</optgroup>
+			<optgroup label="Sauropods">
+				<option>Diplodocus</option>
+				<option>Saltasaurus</option>
+				<option>Apatosaurus</option>
+			</optgroup>
+		</select>
+
+		<label for="ice-cream-choice">Choose a flavor:</label>
+		<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+		<datalist id="ice-cream-flavors">
+			<option value="Chocolate">
+			<option value="Coconut">
+			<option value="Mint">
+			<option value="Strawberry">
+			<option value="Vanilla">
+		</datalist>
+	</fieldset>
+	<fieldset>
+		<legend>
+			Yeehaw
+		</legend>
+	<label for="story">Tell us your story:</label>
+<textarea id="story" name="story"
+          rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70"> 70% </progress>
+
+	</fieldset>
+
+<label for="input-demo-checkbox">checkbox</label>
+<input type="checkbox" id="input-demo-checkbox" />
+
+<label for="input-demo-color">color</label>
+<input type="color" id="input-demo-color" />
+
+<label for="input-demo-date">date</label>
+<input type="date" id="input-demo-date" />
+
+<label for="input-demo-datetime-local">datetime-local</label>
+<input type="datetime-local" id="input-demo-datetime-local" />
+
+<label for="input-demo-email">email</label>
+<input type="email" id="input-demo-email" />
+
+<label for="input-demo-file">file</label>
+<input type="file" id="input-demo-file" />
+
+<label for="input-demo-month">month</label>
+<input type="month" id="input-demo-month" />
+
+<label for="input-demo-number">number</label>
+<input type="number" id="input-demo-number" />
+
+<label for="input-demo-password">password</label>
+<input type="password" id="input-demo-password" />
+
+<p>radio</p>
+<div class="radiogroup">
+<label for="input-demo-radio-1">
+<input type="radio" name="input-demo-radio" id="input-demo-radio-1" />
+	radio
+</label>
+<label for="input-demo-radio-2">
+<input type="radio" name="input-demo-radio" id="input-demo-radio-2" />
+	radio
+</label>
+<label for="input-demo-radio-3">
+<input type="radio" name="input-demo-radio" id="input-demo-radio-3" />
+	radio
+</label>
+</div>
+
+<label for="input-demo-range">range</label>
+<input type="range" id="input-demo-range" />
+
+<label for="input-demo-search">search</label>
+<input type="search" id="input-demo-search" />
+
+<label for="input-demo-tel">tel</label>
+<input type="tel" id="input-demo-tel" />
+
+<label for="input-demo-text">text</label>
+<input type="text" id="input-demo-text" />
+
+<label for="input-demo-time">time</label>
+<input type="time" id="input-demo-time" />
+
+	<button type="button">Not Centered Butan</button>
+	<button type="button" class="centered">Centered Butan</button>
+</form>
+</section>
 
 				<section id="Interactive_elements">
 					<h2>Interactive elements</h2>
+yooo, whaaaaaat? neat!
+					<h3 id="Details_and_summary">Twisty bois! <code id="details">details</code> and <code id="summary">summary</code></h3>
+					<p>
+					The <code>details</code> element contains a <code>summary</code> element (the latter holding the content "Details" in the example below), and some other flow content thereafter. Clicking on the summary toggles the expansion of the rest of the content. It's pretty cool! Had no idea this was built into HTML.
+					</p>
+<details>
+    <summary>Details</summary>
+		Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. et harum quidem rerum facilis est et expedita distinctio. nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. (From Cicero's <a href="https://www.thelatinlibrary.com/cicero/fin1.shtml"><cite href="https://www.thelatinlibrary.com/cicero/fin1.shtml">de Finibus Bonorum et Malorum</cite></a>)
+</details>
+				</section>
+				<section>
+					<h2 id="Conclusion">Conclusion</h2>
+					<p>
+					I hope you have enjoyed this catalogue of my decline into madness. We'll see you next time in "Custom Web Part II: This Feels Scripted"!
+					</p>
 				</section>
 				<nav>
 					<input type="checkbox" id="article-nav-toggle-Sass"/>

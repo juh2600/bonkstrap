@@ -559,7 +559,7 @@ dd {
   padding-bottom: 1rem;
 }
 
-blockquote, dd, address, aside {
+details, blockquote, dd, address, aside {
   margin-left: 0.5rem;
   border-left: 2px solid #105990;
   padding-left: 1rem;
@@ -789,7 +789,7 @@ nav ul li {
   line-height: 1rem;
 }
 
-p {
+p, details {
   line-height: 1.5em;
   padding-bottom: 0.5em;
 }
@@ -953,6 +953,64 @@ tbody tr:hover {
 
 th {
   background: #105990;
+}
+
+form fieldset, form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(2em, auto);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  margin: 0.75rem;
+}
+
+form label, form p {
+  margin-bottom: 0.25rem;
+  text-align: right;
+}
+form label {
+  align-self: center;
+}
+form .radiogroup label {
+  display: block;
+  text-align: left;
+}
+form input, form button, form select {
+  max-width: 10rem;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem;
+}
+form progress {
+  height: 100%;
+}
+form button {
+  grid-column: 2/3;
+}
+form button.centered {
+  grid-column: 1/3;
+  width: fit-content;
+  min-width: 20%;
+  justify-self: center;
+}
+form fieldset {
+  grid-column: 1/3;
+  border: 2px solid #0091ff;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+}
+form fieldset legend {
+  grid-column: 1/3;
+  padding: 0 0.3rem;
+}
+
+details {
+  margin: 1rem;
+}
+details summary {
+  line-height: 1.5em;
+}
+details[open] summary {
+  margin-bottom: 0.5rem;
 }
 
 .grid-row {

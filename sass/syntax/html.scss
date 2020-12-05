@@ -2,7 +2,7 @@
 @use 'colors' as c;
 
 .syntax-html-bracket          { color: c.$bracket; }
-.syntax-html-tag              { color: c.$tag; }
+.syntax-html-tag              { color: c.$keyword; }
 .syntax-html-attribute-key    { color: c.$key; }
 .syntax-html-attribute-equals { color: c.$bracket; }
 .syntax-html-attribute-value  { color: c.$value; }

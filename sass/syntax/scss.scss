@@ -1,0 +1,13 @@
+@forward 'colors';
+@use 'colors' as c;
+
+.syntax-scss-directive     { color: c.$directive; }
+.syntax-scss-variable      { color: c.$key; }
+.syntax-scss-selector      { color: c.$key; }
+.syntax-scss-property      { color: c.$key; }
+.syntax-scss-string        { color: c.$string; }
+.syntax-scss-number        { color: c.$number; }
+.syntax-scss-color         { color: c.$number; }
+.syntax-scss-value         { color: c.$value; }
+.syntax-scss-bracket       { color: c.$bracket; }
+.syntax-scss-delimiter     { color: c.$bracket; }

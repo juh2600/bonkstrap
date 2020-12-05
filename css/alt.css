@@ -7,6 +7,7 @@ $bg: #eeeeee !default;
 $accent: #ff0091 !default;
 /**/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1066,11 +1067,8 @@ small, sub, sup, article > nav > ul > li ul ul {
 }
 
 code, kbd, samp, pre {
-  font-family: monospace;
-  font-size: larger;
-}
-code cite, kbd cite, samp cite, pre cite, code em, kbd em, samp em, pre em, code dfn, kbd dfn, samp dfn, pre dfn, code i, kbd i, samp i, pre i, code var, kbd var, samp var, pre var, code article > nav > ul > li ul ul ul, article > nav > ul > li ul ul code ul, kbd article > nav > ul > li ul ul ul, article > nav > ul > li ul ul kbd ul, samp article > nav > ul > li ul ul ul, article > nav > ul > li ul ul samp ul, pre article > nav > ul > li ul ul ul, article > nav > ul > li ul ul pre ul, code figure::before, kbd figure::before, samp figure::before, pre figure::before, code dt, kbd dt, samp dt, pre dt {
-  margin-right: 0.1em;
+  font-family: "Roboto Mono", monospace;
+  /*font-size: larger; %italic { margin-right: 0.1em; }*/
 }
 
 address {
@@ -1317,7 +1315,11 @@ ul {
 
 ol > li, ul > li {
   margin-left: 2rem;
+  margin-bottom: 0.5rem;
   line-height: 1.35em;
+}
+ol:last-of-type, ul:last-of-type {
+  margin-bottom: 0.5rem;
 }
 
 dl {
@@ -1357,15 +1359,6 @@ b {
 pre code {
   tab-size: 2;
   font-size: 1rem;
-}
-
-/*
-p code {
-	font-size: larger;
-}
-*/
-p samp, p kbd, p code {
-  font-size: larger;
 }
 
 mark {
@@ -1516,6 +1509,46 @@ details:not(.well):not(.alert) {
 
 .syntax-html-quotation {
   color: darkmagenta;
+}
+
+.syntax-scss-directive {
+  color: lightblue;
+}
+
+.syntax-scss-variable {
+  color: darkred;
+}
+
+.syntax-scss-selector {
+  color: darkred;
+}
+
+.syntax-scss-property {
+  color: darkred;
+}
+
+.syntax-scss-string {
+  color: magenta;
+}
+
+.syntax-scss-number {
+  color: magenta;
+}
+
+.syntax-scss-color {
+  color: magenta;
+}
+
+.syntax-scss-value {
+  color: darkmagenta;
+}
+
+.syntax-scss-bracket {
+  color: darkblue;
+}
+
+.syntax-scss-delimiter {
+  color: darkblue;
 }
 
 .grid-row {
@@ -1762,10 +1795,19 @@ details:not(.well):not(.alert) {
   box-shadow: inset 0px 0px 1px 1px #800049;
 }
 
-.bonk {
+.bonk-static {
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   transform: rotate(30deg);
+}
+
+.bonk-dynamic {
+  transition: 3s ease-in-out;
+  transition-property: transform;
+}
+.bonk-dynamic:hover {
+  transform: rotate(1080deg);
+  transform-origin: 0% 0%;
 }
 
 /*# sourceMappingURL=alt.css.map */

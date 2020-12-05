@@ -37,7 +37,16 @@
 }
 
 // demo that it works/compiles
-.bonk {
+.bonk-static {
 	@include prefix((transform: rotate(30deg)), webkit moz);
 }
-// other people can use this i guess, but i don't think i do anything that would be improved by it
+
+$stupid-transition: 3s ease-in-out;
+.bonk-dynamic {
+	transition: $stupid-transition;
+	transition-property: transform;
+	&:hover {
+		transform: rotate(1080deg);
+		transform-origin: 0% 0%;
+	}
+}

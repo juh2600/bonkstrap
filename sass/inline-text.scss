@@ -50,18 +50,6 @@ pre code {
 	font-size: 1rem;
 }
 
-/*
-p code {
-	font-size: larger;
-}
-*/
-
-p {
-	%mono {
-		font-size: larger;
-	}
-}
-
 dfn, em, i {
 	@extend %italic;
 }

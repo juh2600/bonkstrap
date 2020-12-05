@@ -33,4 +33,4 @@ $bar-padding: 1rem;
 %semibold { font-weight: 500; }
 %bold { font-weight: bold; }
 %smol { font-size: smaller; }
-%mono { font-family: monospace; font-size: larger; %italic { margin-right: 0.1em; } }
+%mono { font-family: c.$monospace-font; /*font-size: larger; %italic { margin-right: 0.1em; }*/ }

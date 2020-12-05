@@ -13,7 +13,7 @@
 				<section id="Bonkstrap">
 					<h1>Bonkstrap</h1>
 					<p>
-					Bonkstrap is a CSS framework to ease the design of responsive web sites. It is written in <a href="https://sass-lang.com/">SCSS</a> and divided into <a href="sass.html#modules">modules</a>. Bonkstrap also employs <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Eric Meyer's CSS reset</a> to mask vendor-default styles, helping to produce consistent appearances across browsers.
+					Bonkstrap is a CSS framework to ease the design of responsive web sites. It is written in <a target="_blank" rel="noreferrer noopener" href="https://sass-lang.com/">SCSS</a> and divided into <a href="sass.html#Modular_system">modules</a>. Bonkstrap also employs <a target="_blank" rel="noreferrer noopener" href="https://cssreset.com/scripts/eric-meyer-reset-css/">Eric Meyer's CSS reset</a> to mask vendor-default styles, helping to produce consistent appearances across browsers.
 					</p>
 				</section>
 
@@ -73,7 +73,7 @@
 				<section id="CSS_reset">
 					<h2>CSS reset</h2>
 					<p>
-					The <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Meyer reset</a> works to undo all or most of the default styles that browsers apply. This leaves us with a clean slate on which to design everything else. Because changing the contents of the reset could affect how Bonkstrap's styles are interpreted, we treat it as an integral part of the framework and compile it in with the rest of the Sass code, as opposed to linking it separately.
+					The <a target="_blank" rel="noreferrer noopener" href="https://cssreset.com/scripts/eric-meyer-reset-css/">Meyer reset</a> works to undo all or most of the default styles that browsers apply. This leaves us with a clean slate on which to design everything else. Because changing the contents of the reset could affect how Bonkstrap's styles are interpreted, we treat it as an integral part of the framework and compile it in with the rest of the Sass code, as opposed to linking it separately.
 					</p>
 				</section>
 
@@ -84,9 +84,9 @@
 					</p>
 
 					<ul>
-						<li><code>.{above|below}-{<var>n</var>}[r]em</code>: If the viewport is not above/below <var>n</var> em/rem wide, then hide the element with <code>display: none</code>. For example, there's a line break in the heading of <a href="CSS_transitions_transforms">CSS transitions/transforms</a> that is marked with <code>.below-40rem</code>, so the line will only break when the window is narrower than 40rem. These classes are available for multiples of 10 up through 100.</li>
+						<li><code>.{above|below}-{<var>n</var>}[r]em</code>: If the viewport is not above/below <var>n</var> em/rem wide, then hide the element with <code>display: none</code>. For example, there's a line break in the heading of <a href="#CSS_transitions_transforms">CSS transitions/transforms</a> that is marked with <code>.below-40rem</code>, so the line will only break when the window is narrower than 40rem. These classes are available for multiples of 10 up through 100.</li>
 						<li><code>.[{max|min}-]{width|height}-{<var>n</var>}{em|rem|pct}</code>: Sets the corresponding style rule on the selected element. For example, the image in the <a href="styles.html#Figures">demo figure</a> has <code>.max-width-20rem</code> applied to keep it from growing ridiculously large on wider screens. These are available for multiples of 5 up through 50 for em and rem, and up through 100 for percent.</li>
-						<li>The classes described in <a href=#Responsive_design">Responsive design</a> allow rapid design of grid-based systems.</li>
+						<li>The classes described in <a href="#Responsive_design">Responsive design</a> allow rapid design of grid-based systems.</li>
 						<li><code>form.easy</code>: Apply <a href="styles.html#Forms">simple styles</a> to form elements automatically. This is opt-in so that users may easily choose to design their own forms.</li>
 						<li><code>.well</code>: <div class="well">Place content in a Bootstrap-style well.</div></li>
 						<li><code>.alert</code>:
@@ -109,11 +109,14 @@
 					<p>
 					Bonkstrap is built around the philosophy that good design is simple. In the extreme, adding too many CSS transitions to a page will result in every movement of the mouse causing something to move and grab the user's attention. This is undesirable. There are few places in a hypertext document where it makes sense to catch the user's eye like this. As such, Bonkstrap keeps transitions to a minimum, but does demonstrate one for the purpose of the assignment: the items in the nav menu on the left move out to the side when hovered over. The transition is subtle and quick, and helps the user see where they're about to click rather than distracting them from the content of the page. Information about configuring this transition can be found on the <a href="sass.html">Sass page</a>.
 					</p>
+					<p class="bonk-dynamic">
+					Update: I read the rubric again, and it requires a second transition. Hover here for the other one.
+					</p>
 				</section>
 
 				<nav>
 					<input type="checkbox" id="article-nav-toggle-Bonkstrap"/>
-					<label for="article-nav-toggle-Bonkstrap"></label>
+					<label for="article-nav-toggle-Bonkstrap">Navigate within this article: Bonkstrap</label>
 					<ul>
 						<li><a href="#Bonkstrap">Bonkstrap</a>
 							<ul>

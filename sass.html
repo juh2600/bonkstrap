@@ -9,140 +9,87 @@
 	<body>
 		<main>
 			<article>
+
 				<section id="Configuring_Bonkstraps_behavior_with_Sass">
 					<h1>Configuring Bonkstrap's behavior with Sass</h1>
 					<p>
-					<a href="https://sass-lang.com/">Sass</a> extends vanilla CSS in several ways that create opportunities for flexibility in libraries. Bonkstrap leverages Sass
-					<a href="https://sass-lang.com/documentation/variables">variables</a>,
-					<a href="https://sass-lang.com/documentation/at-rules/use">modules</a>,
-					<a href="https://sass-lang.com/documentation/at-rules/mixin">mixins</a>, and
-					<a href="https://sass-lang.com/documentation/at-rules/extend">shared properties</a>.
+					<a target="_blank" rel="noreferrer noopener" href="https://sass-lang.com/">Sass</a> extends vanilla CSS in several ways that create opportunities for flexibility in libraries. Bonkstrap leverages Sass
+					<a target="_blank" rel="noreferrer noopener" href="https://sass-lang.com/documentation/variables">variables</a>,
+					<a target="_blank" rel="noreferrer noopener" href="https://sass-lang.com/documentation/at-rules/use">modules</a>,
+					<a target="_blank" rel="noreferrer noopener" href="https://sass-lang.com/documentation/at-rules/mixin">mixins</a>, and
+					<a target="_blank" rel="noreferrer noopener" href="https://sass-lang.com/documentation/at-rules/extend">shared properties</a>. The framework is available to use as a module with several overridable options.
 					</p>
 				</section>
-				<section id="Sass_compiling">
-					<h2>Sass (compiling)</h2>
+
+				<section id="Compiling">
+					<h2>Compiling</h2>
 					<p>
-					Bonkstrap offers a <a href="sass/">collection of Sass modules</a>, with a central entry point at <a href="sass/main.scss"><code>main.scss</code></a>. The library can be compiled quite simply from the command line:
-					<pre><code>$ sass main.scss ../css/style.css [--watch]</code></pre>
+					Bonkstrap offers a <a href="sass/">collection of Sass modules</a>, with a central entry point at <a href="sass/bonkstrap.scss">sass/bonkstrap.scss</a>. The library can be compiled quite simply from the command line:
+					</p>
+					<pre><code>$ sass bonkstrap.scss ../css/style.css [--watch]</code></pre>
+					<p>
+					You can include the bulk of Bonkstrap into your own Sass project with the <code>@use</code> directive, and you can override several variables to choose your own color scheme and other properties:
+					</p>
+					<pre><code><span class="syntax-scss-directive">@use</span> <span class="syntax-scss-string">'bonkstrap'</span> <span class="syntax-scss-directive">with</span> <span class="syntax-scss-bracket">(</span>
+	<span class="syntax-scss-variable">$fg</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-color">#222</span><span class="syntax-scss-delimiter">,</span>
+	<span class="syntax-scss-variable">$bg</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-color">#eee</span><span class="syntax-scss-delimiter">,</span>
+	<span class="syntax-scss-variable">$accent</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-color">#ff0091</span><span class="syntax-scss-delimiter">,</span>
+	<span class="syntax-scss-variable">$bracket</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-color">darkblue</span><span class="syntax-scss-delimiter">,</span>
+	<span class="syntax-scss-variable">$tag</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-color">darkgreen</span><span class="syntax-scss-delimiter">,</span>
+	<span class="syntax-scss-variable">$key</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-color">darkred</span><span class="syntax-scss-delimiter">,</span>
+	<span class="syntax-scss-variable">$value</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-color">darkmagenta</span><span class="syntax-scss-delimiter">,</span>
+	<span class="syntax-scss-variable">$ui-transition</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-color">0.5s</span> <span class="syntax-scss-value">linear</span>
+<span class="syntax-scss-bracket">);</span></code></pre>
+					<p>
+					This example can be found in <a href="sass/alt.scss">sass/alt.scss</a>, or compiled as <a href="css/alt.css">css/alt.css</a>. You can preview the styles above at <a href="styles-alt.html">this clone of the default styles page</a>. I suggest waiting until you've read through the <a href="styles.html">original copy</a> first, since the alternate styles are more of a demonstration of power and aren't as pretty. All customizable variables are located in <a href="sass/constants.scss">sass/constants.scss</a> and <a href="sass/syntax/colors.scss">sass/syntax/colors.scss</a>.
 					</p>
 				</section>
+
 				<section id="Modular_system">
 					<h2>Modular system</h2>
 					<p>
-					Bonkstrap's styles are organized into modules, most of which roughly correspond with the element groupings at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN's HTML elements reference</a>. These groupings are also used in the documentation on Bonkstrap's <a href="#Default_styles">default styles</a>.
+					Bonkstrap's styles are organized into modules, most of which roughly correspond with the element groupings at <a target="_blank" rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN's HTML elements reference</a>. These groupings are also used in the documentation on Bonkstrap's <a href="styles.html">default styles</a>.
 					</p>
 				</section>
-				<section id="Default_styles">
-					<h2>Default styles</h2>
-					<p>
-					</p>
-					<section id="Roots">
-						<h3>Roots</h3>
-						<p>The document root (<code>html</code>) and sectioning root (<code>body</code>) have their margins and paddings reset to 0 on all sides by the <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Meyer reset</a>. Beyond that, the sectioning root is configured with useful background and foreground colors, font family and size, and a word wrap setting.</p>
-					</section>
-					<section id="Content_sectioning">
-						<h3>Content sectioning</h3>
-						<p>
-						There are a handful of content sectioning elements. Most of these aren't very interesting to look at; they're more meaningful under the hood.
-						</p>
-						<h4><code>address</code></h4>
-						<address>
-							Kate of the Southern Isles<br />
-							<a href="mailto:kate@contoso.com">kate@contoso.com</a><br>
-							<a href="tel:+19118675309">(911) 867-5309</a>
-						</address>
-						<h4><code>article</code></h4>
-						<p>
-						An article is a chunk of information that can stand alone and be moved from one document to another and still make sense. It is possible to have several articles in the same page. Each of these pages contains a single article; for examples of article styling, look no further than anywhere on this site.
-						</p>
-						<h4><code>aside</code></h4>
-						<aside><p>The <code>hgroup</code> element was removed from the W3C HTML5 spec, but remains in the WHATWG HTML spec. Moreover, no browsers implement its semantics, so it's pretty much useless. (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup#Usage_notes">MDN</a>)</p></aside>
-						<h4><code>section</code>, <code>header</code>, and <code>footer</code></h4>
-						<p>
-						There's not much to look at here. Notice that the <code>section</code> is indented slightly from the surrounding content. The <code>header</code> and <code>footer</code> tags are more for semantics than for display, so they don't really show up. Styling a footer is also very context-dependent, and footers can show up in all sorts of places, so it makes more sense to write styles for them as their use cases are discovered.
-						</p>
-						<section>
-							<header><h5>A sample section</h5></header>
-							<p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.</p>
-							<footer>&copy; 2020 Seinfeld probably. What a guy.</footer>
-						</section>
-						<h4>Headings</h4>
-						<p>
-						These headings are grouped by an <code>hgroup</code>. Perhaps that shouldn't affect styling at all, since it's kinda worthless. Fake element.
-						</p>
-						<hgroup>
-							<h1>&lt;h1&gt; &ndash; Heading level 1</h1>
-							<h2>&lt;h2&gt; &ndash; Heading level 2</h1>
-							<h3>&lt;h3&gt; &ndash; Heading level 3</h1>
-							<h4>&lt;h4&gt; &ndash; Heading level 4</h1>
-							<h5>&lt;h5&gt; &ndash; Heading level 5</h1>
-							<h6>&lt;h6&gt; &ndash; Heading level 6</h1>
-						</hgroup>
-						<h4><code>main</code> and <code>nav</code></h4>
-						<p>
-						This large area is a <code>main</code> tag. The bars at the top and right, or the menu on mobile, are <code>nav</code> tags. The navigational area at the top of the page contains site-wide links. The navigational area to the right (sidebar or menu) contains intra-page links for navigating within the current document. Please appreciate them.
-						</p>
-					</section>
-					<section id="Text_content">
-						<h3>Text content</h3>
-						<p>
-						Text content elements are particularly important for accessibility and SEO.
-						</p>
-						<h4>Paragraph: <code>p</code></h4>
-						<p>
-						All the "regular text" you see on this page is wrapped in <code>p</code> tags. It is what it is.
-						</p>
-						<h4><code>blockquote</code></h4>
-						<blockquote cite="https://www.imdb.com/title/tt1245907/characters/nm0825998"><p>You've got a 33.3% chance of winning. But I, I've got a 66 and two third chance of winning, cause Kurt Angle KNOWS he can't beat me, and he's not even gonna try. So Samoa Joe, you take your 33 and a third chance, minus my 25% chance, and you've got an eight and a third chance of winning, at Sacrifice. But then you take my 75 per chance chance of winning, if we was to go one on one, and then add 66 and two thirds... per cents, I got a 141 and two thirds chance of winning, at Sacrifice. The numbers don't lie, and they spell disaster for you!</p></blockquote>
-						<h4><code>div</code></h4>
-						<div>🦀 divs are cancelled 🦀</div>
-						<h4>Figures: <code>figure</code> and <code>figcaption</code></h4>
 
-						<h4>Horizontal rule: <code>hr</code></h4>
-						<hr />
-						<h4>Preformatted text: <code>pre</code></h4>
-						<h4>Ordered and unordered lists: <code>ol</code>, <code>ul</code>, and <code>li</code></h4>
-						<h4>Description list: <code>dl</code>, <code>dt</code>, and <code>dd</code></h4>
-					</section>
+				<section id="Placeholder_selectors">
+					<h2>Placeholder selectors ("shared<br class="below-40rem" />/extended properties")</h2>
+					<p>
+					Bonkstrap makes use of <a target="_blank" rel="noreferrer noopener" href="https://sass-lang.com/documentation/style-rules/placeholder-selectors">placeholder selectors</a> internally. For example, anywhere that a monospace font is used, a <code>%mono</code> meta-style is extended, which is particularly useful for adjusting the relative size of the monospace font to match the surrounding text more smoothly. Moreover, anywhere that a <code>%mono</code>-extending element contains an <code>%italic</code>-extending element (that is, whenever we've got italics inside our monospace), we add a small amount of <code>margin-right</code> to keep from bumping into whatever comes after it. [After constraining the monospace font to a particular face rather than the system's choice, these modifications are no longer necessary. However, since the library was designed using these placeholder selectors, updating the relevant styles everywhere was trivial.]
+					</p>
 				</section>
+
 				<section id="Theme_colors">
 					<h2>Theme colors</h2>
 					<p>
+					Almost all colors used in Bonkstrap are derived from three variables in the file <a href="sass/constants.scss">constants.scss</a>: <code><var>$fg</var></code>, <code><var>$bg</var></code>, and <code><var>$accent</var></code>, which are the foreground (text), background, and undiluted (bright) accent colors. Several variants and combinations derived from these may be overridden individually; see <a href="sass/constants.scss">constants.scss</a> for a complete list. However, the algorithms that determine the variant colors are designed to hold up well in the general case, for both light and dark themes. Choose a bright accent color; it will be diluted automatically where a bright color would be inappropriately distracting.
 					</p>
 				</section>
+
 				<section id="Vendor_prefix_mixin">
 					<h2>Vendor prefix mixin</h2>
 					<p>
+					There's a mixin for adding arbitrary vendor prefixes to blocks of styles. It works like this:
 					</p>
-				</section>
-				<section id="Use_of_shared_properties">
-					<h2>Use of shared properties</h2>
+					<pre><code><span class="syntax-scss-selector">.bonk-static</span> <span class="syntax-scss-bracket">{</span>
+	<span class="syntax-scss-directive">@include</span> <span class="syntax-scss-variable">prefix</span><span class="syntax-scss-bracket">((</span><span class="syntax-scss-property">transform</span><span class="syntax-scss-delimiter">:</span> <span class="syntax-scss-variable">rotate</span><span class="syntax-scss-bracket">(</span><span class="syntax-scss-number">30deg</span><span class="syntax-scss-bracket">)),</span> <span class="syntax-scss-value">webkit</span> <span class="syntax-scss-value">moz</span><span class="syntax-scss-bracket">)</span><span class="syntax-scss-delimiter">;</span>
+<span class="syntax-scss-bracket">}</span></code></pre>
 					<p>
+					This will generate rules for the <code>transform</code>, <code>-webkit-transform</code>, and <code>-moz-transform</code> properties. You can specify multiple comma-separated rules and space-separated prefixes to your heart's content.
 					</p>
 				</section>
+
 				<nav>
 					<input type="checkbox" id="article-nav-toggle-Sass"/>
-					<label for="article-nav-toggle-Sass"></label>
+					<label for="article-nav-toggle-Sass">Navigate within this article: Sass</label>
 					<ul>
 						<li><a href="#Configuring_Bonkstraps_behavior_with_Sass">Configuring Bonkstrap's behavior with Sass</a>
 							<ul>
-								<li><a href="#Sass_compiling">Sass (compiling)</a></li>
+								<li><a href="#Compiling">Compiling</a></li>
 								<li><a href="#Modular_system">Modular system</a></li>
-								<li><a href="#Default_styles">Default styles</a>
-									<ul>
-										<li><a href="#Hyperlinks">Hyperlinks</a></li>
-										<li><a href="#Tables">Tables</a></li>
-										<li><a href="#Articles_sections_and_paragraphs">Articles, sections, and paragraphs</a></li>
-										<li><a href="#Headings">Headings</a></li>
-										<li><a href="#Forms">Forms</a></li>
-										<li><a href="#Code">Code</a></li>
-										<li><a href="#Images">Images</a></li>
-										<li><a href="#Nav_bars_and_menus">Nav bars and menus</a></li>
-									</ul>
-								</li>
+								<li><a href="#Placeholder_selectors">Placeholder selectors</a></li>
 								<li><a href="#Theme_colors">Theme colors</a></li>
 								<li><a href="#Vendor_prefix_mixin">Vendor prefix mixin</a></li>
-								<li><a href="#Use_of_shared_properties">Use of shared properties</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -151,9 +98,10 @@
 		</main>
 		<nav>
 			<ul>
-				<li><img src="images/logo.svg" /></li>
+				<li><img src="images/logo.svg" alt="Bonkstrap logo" /></li>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="sass.html">Sass</a></li>
+				<li><a href="styles.html">Styles</a></li>
 			</ul>
 		</nav>
 	</body>

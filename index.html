@@ -9,52 +9,41 @@
 	<body>
 		<main>
 			<article>
+
 				<section id="Bonkstrap">
 					<h1>Bonkstrap</h1>
 					<p>
 					Bonkstrap is a CSS framework to ease the design of responsive web sites. It is written in <a href="https://sass-lang.com/">SCSS</a> and divided into <a href="sass.html#modules">modules</a>. Bonkstrap also employs <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Eric Meyer's CSS reset</a> to mask vendor-default styles, helping to produce consistent appearances across browsers.
 					</p>
 				</section>
+
 				<section id="Responsive_design">
 					<h2>Responsive design</h2>
 					<p>
-					Bonkstrap offers a column-based system to organize content. An item in a column layout can specify how many columns to span and in which column to begin, using the classes <code>col-<em>n</em>w</code> for a width of <em>n</em> columns and <code>col-<em>m</em></code> to have the leftmost end of the item in column <em>m</em>. Columns will wrap around on narrower screens. Nested column systems will automatically tint their backgrounds to help distinguish them.
+					Bonkstrap offers a column-based system to organize content. An item in a column layout can specify how many columns to span and in which column to begin, using the classes <code>col-<em>n</em>w</code> for a width of <em>n</em> columns and <code>col-<em>m</em></code> to have the leftmost end of the item in column <em>m</em>. Columns will wrap around on narrower screens. Nested column systems will automatically tint their backgrounds to help distinguish them. There is also a <code>plain</code> class available to prevent tinting, which may be useful in footers, for example.
 					</p>
+
 					<div class="grid-row">
-						<div class="cell col-1w">
-							<code>.col-1w</code>
-						</div>
-						<div class="cell col-1w col-3">
-							<code>.col-1w.col-3</code>
-						</div>
-						<div class="cell col-1w col-5">
-							<code>.col-1w.col-5</code>
-						</div>
+						<div class="cell col-1w"      > <code>.col-1w      </code> </div>
+						<div class="cell col-1w col-3"> <code>.col-1w.col-3</code> </div>
+						<div class="cell col-1w col-5"> <code>.col-1w.col-5</code> </div>
 					</div>
+
 					<div class="grid-row">
-						<div class="cell col-2w col-2">
-							<code>.col-2w.col-2</code>
-						</div>
-						<div class="cell col-2w col-5">
-							<code>.col-2w.col-5</code>
-						</div>
+						<div class="cell col-2w col-2"> <code>.col-2w.col-2</code> </div>
+						<div class="cell col-2w col-5"> <code>.col-2w.col-5</code> </div>
 					</div>
+
 					<div class="grid-row">
-						<div class="cell col-3w">
-							<code>.col-3w</code>
-						</div>
-						<div class="cell col-3w">
-							<code>.col-3w</code>
-						</div>
+						<div class="cell col-3w"> <code>.col-3w</code> </div>
+						<div class="cell col-3w"> <code>.col-3w</code> </div>
 					</div>
+
 					<div class="grid-row">
-						<div class="cell col-2w">
-							<code>.col-2w</code>
-						</div>
-						<div class="cell col-4w">
-							<code>.col-4w</code>
-						</div>
+						<div class="cell col-2w"> <code>.col-2w</code> </div>
+						<div class="cell col-4w"> <code>.col-4w</code> </div>
 					</div>
+
 					<div class="grid-row">
 						<div class="cell col-5w">
 							<code>.col-5w</code>
@@ -64,51 +53,64 @@
 								<div class="cell col-2w">columns (2w)</div>
 							</div>
 						</div>
-						<div class="cell col-1w">
-							<code>.col-1w</code>
-						</div>
+						<div class="cell col-1w"> <code>.col-1w</code> </div>
 					</div>
+
 					<div class="grid-row">
-						<div class="cell col-6w">
-							<code>.col-6w</code>
-						</div>
+						<div class="cell col-6w"> <code>.col-6w</code> </div>
 					</div>
-					<div class="grid-row">
-						<div class="cell col-1w">
-							First
-						</div>
-						<div class="cell col-1w">
-							Second
-						</div>
-						<div class="cell col-1w">
-							Third
-						</div>
-						<div class="cell col-1w">
-							Fourth
-						</div>
-						<div class="cell col-1w">
-							Fifth
-						</div>
-						<div class="cell col-1w">
-							Sixth
-						</div>
+
+					<div class="grid-row plain">
+						<div class="cell col-1w"> First  </div>
+						<div class="cell col-1w"> Second </div>
+						<div class="cell col-1w"> Third  </div>
+						<div class="cell col-1w"> Fourth </div>
+						<div class="cell col-1w"> Fifth  </div>
+						<div class="cell col-1w"> Sixth  </div>
+					</div>
 				</section>
+
 				<section id="CSS_reset">
 					<h2>CSS reset</h2>
 					<p>
 					The <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">Meyer reset</a> works to undo all or most of the default styles that browsers apply. This leaves us with a clean slate on which to design everything else. Because changing the contents of the reset could affect how Bonkstrap's styles are interpreted, we treat it as an integral part of the framework and compile it in with the rest of the Sass code, as opposed to linking it separately.
 					</p>
 				</section>
+
 				<section id="CSS_classes">
 					<h2>CSS classes</h2>
 					<p>
+					Bonkstrap offers a handful of CSS classes for convenience, including several for responsiveness.
+					</p>
+
+					<ul>
+						<li><code>.{above|below}-{<var>n</var>}[r]em</code>: If the viewport is not above/below <var>n</var> em/rem wide, then hide the element with <code>display: none</code>. For example, there's a line break in the heading of <a href="CSS_transitions_transforms">CSS transitions/transforms</a> that is marked with <code>.below-40rem</code>, so the line will only break when the window is narrower than 40rem. These classes are available for multiples of 10 up through 100.</li>
+						<li><code>.[{max|min}-]{width|height}-{<var>n</var>}{em|rem|pct}</code>: Sets the corresponding style rule on the selected element. For example, the image in the <a href="styles.html#Figures">demo figure</a> has <code>.max-width-20rem</code> applied to keep it from growing ridiculously large on wider screens. These are available for multiples of 5 up through 50 for em and rem, and up through 100 for percent.</li>
+						<li>The classes described in <a href=#Responsive_design">Responsive design</a> allow rapid design of grid-based systems.</li>
+						<li><code>form.easy</code>: Apply <a href="styles.html#Forms">simple styles</a> to form elements automatically. This is opt-in so that users may easily choose to design their own forms.</li>
+						<li><code>.well</code>: <div class="well">Place content in a Bootstrap-style well.</div></li>
+						<li><code>.alert</code>:
+							<ul>
+								<li><details class="alert"><summary>just a regular neutral alert</summary>here's more content lol, this one has a details/summary as its content</details></div></li>
+								<li><div class="alert good"><code>.good</code></div></li>
+								<li><div class="alert warn"><code>.warn</code></div></li>
+								<li><div class="alert bad" ><code>.bad</code></div></li>
+							</ul>
+						</li>
+					</ul>
+
+					<p>
+					However, the number of classes included is designed to be lower rather than higher. There is no way a framework can accurately predict what every site designer will envision; there will always be some need to tweak what's there, or to write new CSS. Bonkstrap focuses on styling markup simply and without all the Big Class hassle, so that designers can work with their own custom classes with less clutter, or design a simple and elegant site with almost no class fiddling at all.
 					</p>
 				</section>
+
 				<section id="CSS_transitions_transforms">
 					<h2>CSS transitions<br class="below-40rem" />/transforms</h2>
 					<p>
+					Bonkstrap is built around the philosophy that good design is simple. In the extreme, adding too many CSS transitions to a page will result in every movement of the mouse causing something to move and grab the user's attention. This is undesirable. There are few places in a hypertext document where it makes sense to catch the user's eye like this. As such, Bonkstrap keeps transitions to a minimum, but does demonstrate one for the purpose of the assignment: the items in the nav menu on the left move out to the side when hovered over. The transition is subtle and quick, and helps the user see where they're about to click rather than distracting them from the content of the page. Information about configuring this transition can be found on the <a href="sass.html">Sass page</a>.
 					</p>
 				</section>
+
 				<nav>
 					<input type="checkbox" id="article-nav-toggle-Bonkstrap"/>
 					<label for="article-nav-toggle-Bonkstrap"></label>
@@ -127,9 +129,10 @@
 		</main>
 		<nav>
 			<ul>
-				<li><img src="images/logo.svg" /></li>
+				<li><img src="images/logo.svg" alt="Bonkstrap logo" /></li>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="sass.html">Sass</a></li>
+				<li><a href="styles.html">Styles</a></li>
 			</ul>
 		</nav>
 	</body>

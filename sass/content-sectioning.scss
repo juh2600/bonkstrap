@@ -54,7 +54,6 @@ $borgar-plate-radius: 0.5rem;
 // Article nav settings
 $fade-depth: 1rem; // gradient length above borgar and sidebar navs
 $sidebar-width: 15rem;
-$transition: 0.15s ease-in-out;
 $always-display-breakpoint: 80rem; // above this width, always show
 // sidebar nav
 
@@ -194,7 +193,7 @@ article {
 					display: block;
 					padding: 0.3rem 0.75rem 0.3rem 1rem;
 					color: c.$fg;
-					transition: padding-right $transition;
+					transition: padding-right c.$ui-transition;
 					&:hover {
 						background-color: c.$off-bg-tint;
 						border-right: 2px solid c.$accent;

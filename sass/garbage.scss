@@ -1,0 +1,43 @@
+@use 'constants' as c;
+@use 'sass:color';
+
+
+@mixin well($bg, $fg: darken($bg, 65%)) {
+	padding: 1rem;
+	border-radius: 0.5rem;
+	background-color: $bg;
+	color: $fg;
+	box-shadow: inset 0px 0px 1px 1px $fg;
+}
+
+.well {
+	@include well(c.$off-bg-tint-double);
+	color: c.$fg;
+}
+
+.alert {
+	@include          well(c.$bg-neutral, c.$fg-neutral);
+
+	&.good { @include well(c.$bg-good   , c.$fg-good); }
+	&.warn { @include well(c.$bg-warn   , c.$fg-warn); }
+	&.bad  { @include well(c.$bg-bad    , c.$fg-bad ); }
+}
+
+// paraphrased from
+// https://css-tricks.com/snippets/sass/mixin-prefix-properties/#advanced-version
+// lhs has to be stringyfyed because rules i guess, but rhs is a value so it's ok
+// i don't really understand why it has to be written this way, but i understand what it's saying
+@mixin prefix($rules, $prefixes: ()) {
+	@each $lhs, $rhs in $rules {
+		@each $prefix in $prefixes {
+			-#{$prefix}-#{$lhs}: $rhs;
+		}
+		#{$lhs}: $rhs;
+	}
+}
+
+// demo that it works/compiles
+.bonk {
+	@include prefix((transform: rotate(30deg)), webkit moz);
+}
+// other people can use this i guess, but i don't think i do anything that would be improved by it

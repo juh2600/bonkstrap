@@ -37,12 +37,29 @@ cite {
 	@extend %italic;
 }
 
-pre code {
-	tab-size: 2;
+code {
+	@extend %mono;
 }
 
+em {
+	@extend %italic;
+}
+
+pre code {
+	tab-size: 2;
+	font-size: 1rem;
+}
+
+/*
 p code {
 	font-size: larger;
+}
+*/
+
+p {
+	%mono {
+		font-size: larger;
+	}
 }
 
 dfn, em, i {
@@ -86,19 +103,4 @@ var {
 	&.vector, &.matrix, &.tensor
 	{ @extend %bold; }
 	&.tensor { font-family: sans-serif; }
-}
-
-
-//// by the end, there should be nothing below this line? i think?
-// TODO make sure every combination of monospace italics has a margin-right
-
-pre, code {
-	font-family: monospace;
-	em {
-		margin-right: 0.1em;
-	}
-}
-
-em {
-	font-style: italic;
 }

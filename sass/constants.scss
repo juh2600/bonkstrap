@@ -6,8 +6,8 @@
 
 // these are the three main theme colors
 // white on black with blue
-$bg: #202020 !default;
-$fg: #eeeeee !default;
+$bg    : #202020 !default;
+$fg    : #eeeeee !default;
 $accent: #0091ff !default;
 /*/
 // alternate color scheme, just as a demo
@@ -19,8 +19,11 @@ $accent: #ff0091 !default;
 
 // everything else is derived from the above
 $off-bg-tint: color.adjust($fg, $alpha: -0.95) !default;
+$off-bg-tint-double: color.adjust($fg, $alpha: -0.9) !default;
 $off-fg-tint: color.adjust($bg, $alpha: -0.95) !default;
+$off-fg-tint-double: color.adjust($bg, $alpha: -0.9) !default;
 $accent-tint: color.adjust($accent, $alpha:-0.95) !default;
+$accent-tint-double: color.adjust($accent, $alpha:-0.9) !default;
 $off-bg: color.mix($bg, $fg, 95%) !default;
 $off-fg: color.mix($fg, $bg, 95%) !default;
 $accented-bg: color.mix($accent, $bg, 50%) !default;
@@ -32,7 +35,28 @@ $body-font-size: 1.25em !default;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-$columns: 6;
-$breakpoint-two-column: 40em;
-$breakpoint-three-column: 50em;
-$breakpoint-full-column: 60em;
+$columns: 6 !default;
+$breakpoint-two-column  : 40em !default;
+$breakpoint-three-column: 50em !default;
+$breakpoint-full-column : 60em !default;
+
+// rainbow colors
+$red   : #ff0091 !default;
+$orange: #ff9100 !default;
+$yellow: #f6f531 !default;
+$green : #91ff00 !default;
+$blue  : #0091ff !default;
+$purple: #9100ff !default;
+
+// alert colors
+$bg-neutral: lighten($blue  , 40%) !default;
+$bg-good   : lighten($green , 40%) !default;
+$bg-warn   : lighten($yellow, 35%) !default;
+$bg-bad    : lighten($red   , 40%) !default;
+$fg-neutral: darken($bg-neutral, 65%) !default;
+$fg-good   : darken($bg-good   , 70%) !default;
+$fg-warn   : darken($bg-warn   , 75%) !default;
+$fg-bad    : darken($bg-bad    , 65%) !default;
+
+// transitions
+$ui-transition: 0.15s ease-in-out !default;

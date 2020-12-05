@@ -1,18 +1,13 @@
-@use 'reset';
-@use 'constants' // uncomment the below to override color scheme
-//with (
-//	$fg: #222,
-//	$bg: #eee,
-//	$accent: #ff0091
-//)
-;
-@use 'bounds';
-@use 'roots';
-@use 'content-sectioning';
-@use 'text-content';
-@use 'inline-text';
-@use 'table';
-@use 'form';
-@use 'interactive';
-@use 'syntax-html';
-@use 'responsive';
+@forward 'reset';
+@forward 'constants';
+@forward 'bounds';
+@forward 'roots';
+@forward 'content-sectioning';
+@forward 'text-content';
+@forward 'inline-text';
+@forward 'table';
+@forward 'form';
+@forward 'interactive';
+@forward 'syntax/all';
+@forward 'responsive';
+@forward 'garbage';

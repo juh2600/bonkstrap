@@ -1,0 +1,11 @@
+// Demonstrates viability of Bonkstrap as a customizable library
+@use 'main' with (
+	$fg: #222,
+	$bg: #eee,
+	$accent: #ff0091,
+	$bracket: darkblue,
+	$tag: darkgreen,
+	$key: darkred,
+	$value: darkmagenta,
+	$ui-transition: 0.5s linear // this is ugly but gets the point across
+);

@@ -1,7 +1,10 @@
 @use 'constants' as c;
 
 :root {
-	font-size: c.$body-font-size;
+	font-size: c.$narrow-body-font-size;
+	@media all and (min-width: c.$narrow-body-threshold) {
+		font-size: c.$body-font-size;
+	}
 }
 
 body {

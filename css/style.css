@@ -1023,7 +1023,12 @@ table {
 }
 
 :root {
-  font-size: 1.25em;
+  font-size: 4mm;
+}
+@media all and (min-width: 40rem) {
+  :root {
+    font-size: 5.25mm;
+  }
 }
 
 body {

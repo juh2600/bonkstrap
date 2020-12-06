@@ -110,6 +110,31 @@
 					</p>
 				</section>
 
+				<section id="Navigation_bars">
+					<h2>Navigation bars</h2>
+					<p>
+					Bonkstrap styles navigation areas for individual articles and for the whole site. Neither requires any classes; the article navigation area does require an <code>input</code> and a <code>label</code>. Beyond that, as long as the <code>nav</code> tags and their children appear in the expected format, everything should just work. The general structure of a Bonkstrap-compatible navigation area looks like this:
+					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">nav</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">input</span> <span class="syntax-html-attribute-key">type</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">checkbox</span><span class="syntax-html-quotation">"</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">article-nav-toggle-Bonkstrap</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">/&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">label</span> <span class="syntax-html-attribute-key">for</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">article-nav-toggle-Bonkstrap</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Navigate within this article: Bonkstrap<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">label</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+		<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">#Bonkstrap</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Bonkstrap<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span>
+			<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+				<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">#Responsive_design</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Responsive design<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+				<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">#CSS_reset</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>CSS reset<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+				<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">#CSS_classes</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>CSS classes<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+				<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">a</span> <span class="syntax-html-attribute-key">href</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">#CSS_transitions_transforms</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>CSS transitions/transforms<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">a</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+			<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+		<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">li</span><span class="syntax-html-bracket">&gt;</span>
+	<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">ul</span><span class="syntax-html-bracket">&gt;</span>
+<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">nav</span><span class="syntax-html-bracket">&gt;</span>
+</code></pre>
+					<p>
+					Nested lists may be used, as demonstrated in the navigational area for the <a href="styles.html">styles documentation</a>. The above is an example of an article's <code>nav</code> tag structure; to adapt this for sitewide navigation, simply remove the <code>input</code> and <code>label</code> tags (the hamburger) and prefix all anchor <code>href</code> attributes with the appropriate page name. Place an article's <code>nav</code> tag as the last child of the article, after all sections. Place the sitewide <code>nav</code> tag immediately after the page's <code>main</code> tag. For examples, examine the source of any page on this site.
+					</p>
+				</section>
+
 				<nav>
 					<input type="checkbox" id="article-nav-toggle-Bonkstrap"/>
 					<label for="article-nav-toggle-Bonkstrap">Navigate within this article: Bonkstrap</label>
@@ -120,6 +145,7 @@
 								<li><a href="#CSS_reset">CSS reset</a></li>
 								<li><a href="#CSS_classes">CSS classes</a></li>
 								<li><a href="#CSS_transitions_transforms">CSS transitions/transforms</a></li>
+								<li><a href="#Navigation_bars">Navigation bars</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -136,6 +162,7 @@
 						<li><a href="index.html#CSS_reset">CSS reset</a></li>
 						<li><a href="index.html#CSS_classes">CSS classes</a></li>
 						<li><a href="index.html#CSS_transitions_transforms">CSS transitions/transforms</a></li>
+						<li><a href="index.html#Navigation_bars">Navigation bars</a></li>
 					</ul>
 				</li>
 

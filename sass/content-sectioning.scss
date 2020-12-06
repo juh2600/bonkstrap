@@ -223,15 +223,17 @@ article {
 			top: -$fade-depth;
 			margin-top: -$fade-depth;
 
-			// for desktop layout
-			@media all and (min-width: $always-display-breakpoint) {
 				$bruh-idk: 0.5rem + $fade-depth; // i think the 0.5rem is the
 				// spacing between the top item
 				// and the sitewide nav bar
-				padding-top: $bruh-idk;
 				height: 100vh;
-				height: calc(100vh - #{$top-width + $bruh-idk});
+				height: calc(100vh - #{$top-width + $fade-depth + $borgar-height});
 				overflow-x: hidden;
+
+			// for desktop layout
+			@media all and (min-width: $always-display-breakpoint) {
+				padding-top: $bruh-idk;
+				height: calc(100vh - #{$top-width + $bruh-idk});
 				background: c.$off-bg;
 				border-top: 0.25rem solid c.$off-bg-tint;
 			}

@@ -60,6 +60,8 @@ $always-display-breakpoint: 80rem; // above this width, always show
 // Main (sitewide) nav settings
 $top-width: 3rem;
 $top-padding: 1rem;
+$show-only-top-level-nav: 25rem;
+$show-only-two-levels-nav: 50rem; //c.$narrow-body-threshold;
 
 // Borgar icon defns
 %borgar-icon {
@@ -101,33 +103,74 @@ main {
 		height: $top-width;
 		background-color: c.$off-bg-tint;
 		box-shadow: 0px 0.125rem 0.125rem c.$bg;
-		> ul {
+
+		ul { // all lists
+			ul { // all sublists
+				position: absolute;
+				display: none;
+				width: max-content;
+				background: c.$off-bg;
+				li { // all sublists' items
+					line-height: 2em;
+					border-left: 3px solid c.$accented-bg;
+					&:hover { border-left: 3px solid c.$accent; }
+				}
+				a { // all sublists' anchors
+					padding: 0 $top-padding;
+				}
+			}
+		}
+		li { // all list items
+			position: relative;
+			&:hover {
+				background-color: c.$off-bg-tint;
+				@media all and (min-width: $show-only-two-levels-nav) {
+					> ul { // all sublists
+						display: block;
+					}
+				}
+			}
+		}
+		a { // all anchors
+			font: inherit;
+			color: inherit;
+			display: block; // block block block block block
+			&:hover { background-color: c.$off-bg-tint; }
+		}
+
+		> ul { // top level list
 			display: flex;
 			flex-direction: row;
 			box-sizing: border-box;
-			> li {
+			> li { // top level list items
 				padding: $top-padding;
-
-				// support labels in preparation for drop-downs
-				// mostly to remind me that they'll go here, i guess
-				a, label {
-					font: inherit;
-					color: inherit;
-					display: block; // block block block block block
+				> a { // top level anchors
 					height: 100%;
 					// this is what we call a pro gamer move
 					padding: $top-padding;
 					margin: -$top-padding;
-					&:hover {
-						background-color: c.$off-bg-tint;
-						border-bottom: 3px solid c.$accent;
-					}
+					&:hover { border-bottom: 3px solid c.$accent; } // only visible if there's no nested list to display
 				}
-				img {
+				> img { // top level images
 					// i wrote this with the logo in mind; i wonder
 					// if it'll be useful or detractive anywhere else
 					height: $top-width - $top-padding;
 					margin: -$top-padding/2;
+				}
+
+				&:hover > ul { // second level list
+					@media all and (min-width: $show-only-top-level-nav) {
+						display: block;
+					}
+				}
+				> ul { // second level list
+					top: 100%;
+					left: 0;
+
+					ul { // third and higher lists
+						left: 100%;
+						top: 0;
+					}
 				}
 			}
 		}

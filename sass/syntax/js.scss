@@ -1,0 +1,8 @@
+@forward 'colors';
+@use 'colors' as c;
+
+.syntax-js-object             { color: c.$variable; }
+.syntax-js-operator           { color: c.$bracket ; }
+.syntax-js-bracket            { color: c.$bracket ; }
+.syntax-js-string             { color: c.$string  ; }
+.syntax-js-number             { color: c.$number  ; }

@@ -26,6 +26,8 @@ $accent-tint: color.adjust($accent, $alpha:-0.95) !default;
 $accent-tint-double: color.adjust($accent, $alpha:-0.9) !default;
 $off-bg: color.mix($bg, $fg, 95%) !default;
 $off-fg: color.mix($fg, $bg, 95%) !default;
+$off-bg-double: color.mix($bg, $fg, 90%) !default;
+$off-fg-double: color.mix($fg, $bg, 90%) !default;
 $accented-bg: color.mix($accent, $bg, 50%) !default;
 $accented-fg: color.mix($accent, $fg, 50%) !default;
 

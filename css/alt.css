@@ -1059,7 +1059,8 @@ article > nav > ul > li ul a {
   font-weight: normal;
 }
 
-th, a, abbr {
+dialog.bonk--auto-dialog > h1.bonk--auto-dialog-header,
+dialog.bonk--auto-dialog > details.bonk--auto-dialog-details > summary, th, a, abbr {
   font-weight: 500;
 }
 
@@ -1528,6 +1529,12 @@ form.easy fieldset legend {
   padding: 0 0.3rem;
 }
 
+button.thicc {
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
 details summary {
   line-height: 1.5em;
 }
@@ -1600,6 +1607,26 @@ details:not(.well):not(.alert) {
 
 .syntax-scss-delimiter {
   color: darkblue;
+}
+
+.syntax-js-object {
+  color: white;
+}
+
+.syntax-js-operator {
+  color: darkblue;
+}
+
+.syntax-js-bracket {
+  color: darkblue;
+}
+
+.syntax-js-string {
+  color: magenta;
+}
+
+.syntax-js-number {
+  color: magenta;
 }
 
 .grid-row {
@@ -1859,6 +1886,92 @@ details:not(.well):not(.alert) {
 .bonk-dynamic:hover {
   transform: rotate(1080deg);
   transform-origin: 0% 0%;
+}
+
+dialog.bonk--auto-dialog {
+  background-color: #eee;
+  color: #222;
+  border: 3px solid #ff0091;
+  min-width: 4rem;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-areas: "header close" "content content";
+  grid-template-columns: 1fr 2rem;
+  grid-template-rows: minmax(max-content, 2rem) 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 0.5rem;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  height: auto;
+  width: auto;
+}
+dialog.bonk--auto-dialog::backdrop {
+  background-color: rgba(34, 34, 34, 0.1);
+}
+@media all and (min-width: 40rem) and (min-height: 40rem) {
+  dialog.bonk--auto-dialog {
+    width: fit-content;
+    max-width: 80%;
+    max-height: 85%;
+    bottom: auto;
+  }
+}
+dialog.bonk--auto-dialog > * {
+  grid-area: content;
+}
+dialog.bonk--auto-dialog > h1.bonk--auto-dialog-header,
+dialog.bonk--auto-dialog > details.bonk--auto-dialog-details {
+  grid-area: header;
+}
+dialog.bonk--auto-dialog > h1.bonk--auto-dialog-header,
+dialog.bonk--auto-dialog > details.bonk--auto-dialog-details > summary {
+  font-size: 1.25rem;
+}
+dialog.bonk--auto-dialog > details.bonk--auto-dialog-details {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+dialog.bonk--auto-dialog > button.bonk--auto-dialog-close {
+  grid-area: close;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+}
+
+.bonk-slideshow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.bonk-slideshow .bonk--slideshow-item {
+  min-height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+.bonk-slideshow .bonk--slideshow-item-hidden {
+  display: none;
+}
+.bonk-slideshow .bonk--slideshow-btn-next, .bonk-slideshow .bonk--slideshow-btn-prev {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  color: #ff0091;
+  font-size: 2rem;
+}
+.bonk-slideshow .bonk--slideshow-btn-next:focus, .bonk-slideshow .bonk--slideshow-btn-prev:focus {
+  outline: none;
+}
+.bonk-slideshow .bonk--slideshow-btn-next {
+  text-align: right;
+  padding-right: 2rem;
+}
+.bonk-slideshow .bonk--slideshow-btn-prev {
+  text-align: left;
+  padding-left: 2rem;
 }
 
 /*# sourceMappingURL=alt.css.map */

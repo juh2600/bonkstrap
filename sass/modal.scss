@@ -1,5 +1,6 @@
 @use 'constants' as c;
 @use 'util';
+@use 'garbage';
 
 $close-button-size: 2rem;
 
@@ -23,6 +24,7 @@ dialog.bonk--auto-dialog {
 	height: auto;
 	width: auto;
 	@media all and (min-width: c.$narrow-body-threshold) and (min-height: c.$narrow-body-threshold) {
+		width: -moz-fit-content;
 		width: fit-content;
 		max-width: 80%;
 		max-height: 85%;
@@ -50,7 +52,7 @@ dialog.bonk--auto-dialog {
 	> button.bonk--auto-dialog-close {
 		grid-area: close;
 		width: $close-button-size;
-		height: $close-button-size;
+		//height: $close-button-size;
 		font-size: 1.5rem;
 	}
 }

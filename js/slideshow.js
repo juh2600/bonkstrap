@@ -1,8 +1,9 @@
 if (typeof Bonkstrap == 'undefined') Bonkstrap = {};
+if (typeof Bonkstrap.classes == 'undefined') Bonkstrap.classes = {};
 
 Bonkstrap.slideshows = []; // keep a list of them
 
-class Slideshow {
+Bonkstrap.classes.Slideshow = class {
 	constructor(root) {
 		this.root = root;
 		this.imgs = [];
@@ -87,7 +88,7 @@ class Slideshow {
 }
 
 Bonkstrap.createSlideshow = (root) => {
-	Bonkstrap.slideshows.push(new Slideshow(root));
+	Bonkstrap.slideshows.push(new Bonkstrap.classes.Slideshow(root));
 };
 
 document.addEventListener('DOMContentLoaded', () => {

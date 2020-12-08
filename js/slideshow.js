@@ -91,6 +91,6 @@ Bonkstrap.createSlideshow = (root) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-	for (let slideshowRoot of document.getElementsByClassName('bonk-slideshow')) Bonkstrap.createSlideshow(slideshowRoot);
+	for (let slideshowRoot of document.querySelectorAll('[data-bonk-slideshow]')) Bonkstrap.createSlideshow(slideshowRoot);
 	for (let show of Bonkstrap.slideshows) show.advance();
 });

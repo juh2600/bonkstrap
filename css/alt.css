@@ -1071,7 +1071,7 @@ dialog.bonk--auto-dialog > details.bonk--auto-dialog-details > summary, th, a, a
   font-weight: 500;
 }
 
-.bonk-slideshow .bonk--slideshow-btn-next, .bonk-slideshow .bonk--slideshow-btn-prev, strong, var.vector, var.matrix, var.tensor {
+[data-bonk-slideshow] .bonk--slideshow-btn-next, [data-bonk-slideshow] .bonk--slideshow-btn-prev, strong, var.vector, var.matrix, var.tensor {
   font-weight: bold;
 }
 
@@ -1948,18 +1948,18 @@ dialog.bonk--auto-dialog > button.bonk--auto-dialog-close {
   font-size: 1.5rem;
 }
 
-.bonk-slideshow {
+[data-bonk-slideshow] {
   position: relative;
 }
-.bonk-slideshow .bonk--slideshow-item {
+[data-bonk-slideshow] .bonk--slideshow-item {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.bonk-slideshow .bonk--slideshow-item-hidden {
+[data-bonk-slideshow] .bonk--slideshow-item-hidden {
   display: none;
 }
-.bonk-slideshow .bonk--slideshow-btn-ctr {
+[data-bonk-slideshow] .bonk--slideshow-btn-ctr {
   position: absolute;
   top: 0;
   left: 0;
@@ -1969,7 +1969,7 @@ dialog.bonk--auto-dialog > button.bonk--auto-dialog-close {
   grid-template-columns: 40% 40%;
   grid-column-gap: 20%;
 }
-.bonk-slideshow .bonk--slideshow-btn-next, .bonk-slideshow .bonk--slideshow-btn-prev {
+[data-bonk-slideshow] .bonk--slideshow-btn-next, [data-bonk-slideshow] .bonk--slideshow-btn-prev {
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -1979,26 +1979,26 @@ dialog.bonk--auto-dialog > button.bonk--auto-dialog-close {
   color: #ff0091;
   font-size: 2rem;
 }
-.bonk-slideshow .bonk--slideshow-btn-next:focus, .bonk-slideshow .bonk--slideshow-btn-prev:focus {
+[data-bonk-slideshow] .bonk--slideshow-btn-next:focus, [data-bonk-slideshow] .bonk--slideshow-btn-prev:focus {
   outline: none;
 }
-.bonk-slideshow .bonk--slideshow-btn-prev {
+[data-bonk-slideshow] .bonk--slideshow-btn-prev {
   text-align: left;
 }
-.bonk-slideshow .bonk--slideshow-btn-prev .bonk--slideshow-btn-semicircle {
+[data-bonk-slideshow] .bonk--slideshow-btn-prev .bonk--slideshow-btn-semicircle {
   clip-path: circle(3rem at 0% 50%);
 }
-.bonk-slideshow .bonk--slideshow-btn-next {
+[data-bonk-slideshow] .bonk--slideshow-btn-next {
   text-align: right;
 }
-.bonk-slideshow .bonk--slideshow-btn-next .bonk--slideshow-btn-semicircle {
+[data-bonk-slideshow] .bonk--slideshow-btn-next .bonk--slideshow-btn-semicircle {
   clip-path: circle(3rem at 100% 50%);
 }
-.bonk-slideshow .bonk--slideshow-btn-semicircle {
+[data-bonk-slideshow] .bonk--slideshow-btn-semicircle {
   background: #eee;
   padding: 3rem 0.5rem;
 }
-.bonk-slideshow .bonk--slideshow-counter-ctr {
+[data-bonk-slideshow] .bonk--slideshow-counter-ctr {
   position: absolute;
   bottom: 0.5rem;
   display: flex;
@@ -2006,7 +2006,7 @@ dialog.bonk--auto-dialog > button.bonk--auto-dialog-close {
   width: 100%;
   justify-content: center;
 }
-.bonk-slideshow .bonk--slideshow-counter-ctr .bonk--slideshow-counter-dot {
+[data-bonk-slideshow] .bonk--slideshow-counter-ctr .bonk--slideshow-counter-dot {
   height: 0.75rem;
   width: 0.75rem;
   background: #eee;
@@ -2015,10 +2015,10 @@ dialog.bonk--auto-dialog > button.bonk--auto-dialog-close {
   margin: 0 0.25rem;
   cursor: pointer;
 }
-.bonk-slideshow .bonk--slideshow-counter-ctr .bonk--slideshow-counter-dot:hover {
+[data-bonk-slideshow] .bonk--slideshow-counter-ctr .bonk--slideshow-counter-dot:hover {
   background: #f777c0;
 }
-.bonk-slideshow .bonk--slideshow-counter-ctr .bonk--slideshow-counter-dot.bonk--slideshow-counter-current {
+[data-bonk-slideshow] .bonk--slideshow-counter-ctr .bonk--slideshow-counter-dot.bonk--slideshow-counter-current {
   background: #ff0091;
 }
 

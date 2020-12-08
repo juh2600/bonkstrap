@@ -2,7 +2,7 @@
 @use 'util';
 @use 'bounds';
 
-.bonk-slideshow {
+[data-bonk-slideshow] {
 	position: relative;
 
 	.bonk--slideshow-item {

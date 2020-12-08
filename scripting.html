@@ -9,6 +9,8 @@
 		<meta name="theme-color" content="rgb(32,32,32)" />
 		<script src="js/modal.js"></script>
 		<script src="js/slideshow.js"></script>
+		<script src="js/motd.js"></script>
+		<script src="scripting/motd.js"></script>
 		<script src="scripting/scripting.js"></script>
 	</head>
 	<body>
@@ -51,7 +53,7 @@
 				<section id="Slideshow">
 					<h2>Slideshow</h2>
 					<p>
-					An image slideshow is a collection of images that scroll to display one at a time. To create a slideshow, wrap a series of <code>img</code> tags in a container, and give that container the <code>data-bonk-slideshow</code> attribute. It is recommended to assign the container a fixed height as well, but this is a matter of preference.
+					An image slideshow is a collection of images that scroll to display one at a time. To create a slideshow, wrap a series of <code>img</code> tags in a container, and give that container the <code>data-bonk-slideshow</code> attribute. It is recommended to assign the container a fixed height as well, but this is a matter of preference. So long as you specify a height, Bonkstrap does a stand-up job of handling very differently-sized images in the same slideshow. The frog below is much larger than the watermelon lady, and buff Barney is in a portrait aspect ratio.
 					</p>
 					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">div</span> <span class="syntax-html-attribute-key">data-bonk-slideshow class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">height-20rem</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>
 	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">img</span> <span class="syntax-html-attribute-key">src</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">images/scripting/frog.jpg</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">/&gt;</span>
@@ -60,6 +62,7 @@
 	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">img</span> <span class="syntax-html-attribute-key">src</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">images/scripting/watermelone.jpeg</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">/&gt;</span>
 	<span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">img</span> <span class="syntax-html-attribute-key">src</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">images/scripting/orang-man-attak.jpg</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">/&gt;</span>
 <span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">div</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+
 					<div data-bonk-slideshow class="height-20rem">
 						<img src="images/scripting/frog.jpg" />
 						<img src="images/scripting/bernie.jpg" />
@@ -72,7 +75,14 @@
 				<section id="MOTD">
 					<h2>Message of the Day</h2>
 					<p>
+					The "message of the day" is a concept dating back at least as far as 1984 (see <a href="https://multicians.org/mtbs/mtb694.html">Multics documentation</a>). When users logged into a system, they would be presented with a sitewide but administrator-configurable message, which was more efficient than sending mass emails.
 					</p>
+					<p>
+					Bonkstrap supports the automatic filling of identified elements with arbitrary content returned from a (possibly asynchronous) function call or expression&mdash;think MOTD but in the general case. To mark an element for this treatment, give it the <code>data-bonk-motd</code> attribute, and assign to it a string to evaluate to obtain the desired content. Any functions or variables referenced should be defined by the time <code>DOMContentLoaded</code> is fired. Anything that was in the element will be removed and replaced with the new content when it arrives. If the evaluation throws an error, the content will not be updated. MOTD elements may be refreshed at any time by calling <code>Bonkstrap.updateMOTDs()</code>, or individually via something like <code>Bonkstrap.motdRecpts[<var>n</var>].update()</code>, where <code><var>n</var></code> is the index of the desired MOTD element. <code>Bonkstrap.motdRecpts</code> is a regular array of <code>Bonkstrap.classes.MOTDRecipient</code>s. If you wish to dive further, you are welcome to do so by exploring <a href="js/motd.js">the source</a>. It's not that bad, I promise.
+					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">div</span> <span class="syntax-html-attribute-key">data-bonk-motd</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">simAPICall()</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Content visible immediately at <span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span>DOMContentLoaded<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">code</span><span class="syntax-html-bracket">&gt;</span><span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">div</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+
+					<div data-bonk-motd="simAPICall()">Content visible immediately at <code>DOMContentLoaded</code></div>
 				</section>
 
 				<section id="TODO_1">

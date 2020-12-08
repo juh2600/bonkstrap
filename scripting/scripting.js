@@ -10,5 +10,7 @@ const demoModals = [
 	() => Bonkstrap.createModalRaw(map_embed)
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-});
+// Returns a different quote each day, cycling through in order
+const simAPICall = async () => {
+	return motds[Math.floor(Date.now() / 1000 / 60 / 60 / 24) % motds.length];
+}

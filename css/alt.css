@@ -8,6 +8,13 @@ $accent: #ff0091 !default;
 /**/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+button {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-family: inherit;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1912,6 +1919,7 @@ dialog.bonk--auto-dialog::backdrop {
 }
 @media all and (min-width: 40rem) and (min-height: 40rem) {
   dialog.bonk--auto-dialog {
+    width: -moz-fit-content;
     width: fit-content;
     max-width: 80%;
     max-height: 85%;
@@ -1937,7 +1945,6 @@ dialog.bonk--auto-dialog > details.bonk--auto-dialog-details {
 dialog.bonk--auto-dialog > button.bonk--auto-dialog-close {
   grid-area: close;
   width: 2rem;
-  height: 2rem;
   font-size: 1.5rem;
 }
 
@@ -1963,6 +1970,7 @@ dialog.bonk--auto-dialog > button.bonk--auto-dialog-close {
   grid-column-gap: 20%;
 }
 .bonk-slideshow .bonk--slideshow-btn-next, .bonk-slideshow .bonk--slideshow-btn-prev {
+  display: inline-block;
   height: 100%;
   width: 100%;
   background: transparent;

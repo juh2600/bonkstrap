@@ -12,14 +12,12 @@ Bonkstrap.classes.MOTDRecipient = class {
 	}
 
 	update() {
-		console.log('Updating...', this);
-		console.log('calling ' + this.node.dataset.bonkMotd);
 		const wrapper = async () => { return eval(this.node.dataset.bonkMotd); };
 		wrapper().then(content => {
 			this.node.innerHTML = content;
 		}).catch(console.error);
 	}
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
 	for (let motdRecpt of document.querySelectorAll('[data-bonk-motd]'))

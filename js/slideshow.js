@@ -47,14 +47,12 @@ Bonkstrap.classes.Slideshow = class {
 	set index(i) { // main switching logic
 		// i is new
 		// this.index is old
-		console.log(`Switching from ${this.index} to ${i}`);
 		if (!this.imgs) return;
 		
 		// clamp new index to [0, length)
 		let max = this.imgs.length;
 		while (i < 0) i += max;
 		i %= max;
-		console.log(`Adjusted: Switching from ${this.index} to ${i}`);
 
 		// don't not move
 		if (i == this.index) return;
@@ -85,7 +83,7 @@ Bonkstrap.classes.Slideshow = class {
 	get name() {
 		return this.root.id;
 	}
-}
+};
 
 Bonkstrap.createSlideshow = (root) => {
 	Bonkstrap.slideshows.push(new Bonkstrap.classes.Slideshow(root));

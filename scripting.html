@@ -10,6 +10,7 @@
 		<script src="js/modal.js"></script>
 		<script src="js/slideshow.js"></script>
 		<script src="js/motd.js"></script>
+		<script src="js/nav.js"></script>
 		<script src="scripting/motd.js"></script>
 		<script src="scripting/scripting.js"></script>
 	</head>
@@ -17,12 +18,12 @@
 		<main>
 			<article id="Scripting">
 
-				<section>
+				<header>
 					<h1>Scripting</h1>
-					<p>
-					Bonkstrap has added some <a href="js/">JavaScript APIs</a> for adding functionality to your page that can't (or shouldn't) be done in just CSS. Functionality is divided into separate files, so each page can just include scripts that it needs. All modules (they aren't real modules though :( ) are bundled into a single object in the global namespace, <code><var>Bonkstrap</var></code>.
-					</p>
-				</section>
+				</header>
+				<p>
+				Bonkstrap has added some <a href="js/">JavaScript APIs</a> for adding functionality to your page that can't (or shouldn't) be done in just CSS. Functionality is divided into separate files, so each page can just include scripts that it needs. All modules (they aren't real modules though :( ) are bundled into a single object in the global namespace, <code><var>Bonkstrap</var></code>.
+				</p>
 
 				<section id="Modals">
 					<h2>Modals</h2>
@@ -85,9 +86,10 @@
 					<div data-bonk-motd="simAPICall()">Content visible immediately at <code>DOMContentLoaded</code></div>
 				</section>
 
-				<section id="TODO_1">
-					<h2>TODO 1</h2>
+				<section id="Navigation_generation">
+					<h2>Navigation generation</h2>
 					<p>
+					Bonkstrap offers a JavaScript module for auto-generating article-level <code>nav</code> structures compatible with its own stylesheets. Just add the script to the page, and <code>nav</code> tags will automatically be added to articles that don't already have one. This article demonstrates the concept. However, I must warn authors against using this feature: Leaving the navigational area to be constructed by the browser will leave browsers without JavaScript crippled, unable to efficiently navigate the page. This is especially problematic for users of screen readers. Build the page on the server side and ship it in one piece.
 					</p>
 				</section>
 
@@ -97,21 +99,6 @@
 					</p>
 				</section>
 
-				<nav>
-					<input type="checkbox" id="article-nav-toggle-Bonkstrap"/>
-					<label for="article-nav-toggle-Bonkstrap">Navigate within this article: Bonkstrap</label>
-					<ul>
-						<li><a href="#Bonkstrap">Bonkstrap</a>
-							<ul>
-								<li><a href="#Responsive_design">Responsive design</a></li>
-								<li><a href="#CSS_reset">CSS reset</a></li>
-								<li><a href="#CSS_classes">CSS classes</a></li>
-								<li><a href="#CSS_transitions_transforms">CSS transitions/transforms</a></li>
-								<li><a href="#Navigation_bars">Navigation bars</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
 			</article>
 		</main>
 		<nav>
@@ -200,6 +187,16 @@
 							</ul>
 						</li>
 						<li><a href="styles.html#Conclusion"                           >Conclusion</a></li>
+					</ul>
+				</li>
+
+				<li><a href="scripting.html">Scripting</a>
+					<ul>
+						<li><a href="scripting.html#Modals">Modals</a></li>
+						<li><a href="scripting.html#Slideshow">Slideshow</a></li>
+						<li><a href="scripting.html#MOTD">Message of the Day</a></li>
+						<li><a href="scripting.html#Navigation_generation">Navigation generation</a></li>
+						<li><a href="scripting.html#TODO_2">TODO 2</a></li>
 					</ul>
 				</li>
 

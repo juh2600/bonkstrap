@@ -2,12 +2,12 @@
 @use 'sass:color';
 
 
-@mixin well($bg, $fg: darken($bg, 65%)) {
+@mixin well($bg, $fg: color.adjust(darken($bg, 65%), $alpha: 1)) {
 	padding: 1rem;
 	border-radius: 0.5rem;
 	background-color: $bg;
 	color: $fg;
-	box-shadow: inset 0px 0px 1px 1px $fg;
+	box-shadow: inset 0px 0px 2px 1px $fg;
 }
 
 .well {

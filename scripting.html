@@ -11,6 +11,7 @@
 		<script src="js/slideshow.js"></script>
 		<script src="js/motd.js"></script>
 		<script src="js/nav.js"></script>
+		<script src="js/context.js"></script>
 		<script src="scripting/motd.js"></script>
 		<script src="scripting/scripting.js"></script>
 	</head>
@@ -96,10 +97,47 @@
 					</p>
 				</section>
 
-				<section id="TODO_2">
-					<h2>TODO 2</h2>
+				<section id="Custom_context_menus">
+					<h2>Custom context menus</h2>
 					<p>
+					Real framework energy now, bois! That's right, we got arrays of functions for a usually-overkill feature.
 					</p>
+					<p>
+					Bonkstrap allows you to create custom context menus (right-click menus).
+					</p>
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">well</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Right-click on me to see a regular menu!<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+					<p class="well">Right-click on me to see a regular menu!</p>
+
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">well</span><span class="syntax-html-quotation">"</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">custom-menu-demo</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Right-click on me to see a custom menu!<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+					<pre><code>
+<span class="syntax-js-keyword">const</span> <span class="syntax-js-object">ctxDemo</span> <span class="syntax-js-operator">=</span> <span class="syntax-js-keyword">new</span> <span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">classes</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxTest</span><span class="syntax-js-bracket">(</span>
+	<span class="syntax-js-object">e</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-object">e</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">target</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">id</span> <span class="syntax-js-operator">==</span> <span class="syntax-js-string">'custom-menu-demo'</span>
+<span class="syntax-js-operator">,</span> <span class="syntax-js-object">e</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-bracket">[</span>
+		<span class="syntax-js-keyword">new</span> <span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">classes</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxItem</span><span class="syntax-js-bracket">(</span><span class="syntax-js-string">'Alert me uwu'</span><span class="syntax-js-operator">,</span> <span class="syntax-js-bracket">(</span><span class="syntax-js-object">itemClick</span><span class="syntax-js-operator">,</span> <span class="syntax-js-object">ctxClick</span><span class="syntax-js-bracket">)</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-bracket">{</span> <span class="syntax-js-object">alert</span><span class="syntax-js-bracket">(</span><span class="syntax-js-string">'get alerted lol'</span><span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span> <span class="syntax-js-bracket">}</span><span class="syntax-js-bracket">)</span>
+	<span class="syntax-js-operator">,</span> <span class="syntax-js-keyword">new</span> <span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">classes</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxItem</span><span class="syntax-js-bracket">(</span><span class="syntax-js-string">'Alert me some more'</span><span class="syntax-js-operator">,</span> <span class="syntax-js-bracket">(</span><span class="syntax-js-object">itemClick</span><span class="syntax-js-operator">,</span> <span class="syntax-js-object">ctxClick</span><span class="syntax-js-bracket">)</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-bracket">{</span> <span class="syntax-js-object">alert</span><span class="syntax-js-bracket">(</span><span class="syntax-js-string">'get alerted for a second time lol'</span><span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span> <span class="syntax-js-bracket">}</span><span class="syntax-js-bracket">)</span>
+	<span class="syntax-js-bracket">]</span>
+<span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span>
+
+<span class="syntax-js-keyword">const</span> <span class="syntax-js-object">ctxDemo2</span> <span class="syntax-js-operator">=</span> <span class="syntax-js-keyword">new</span> <span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">classes</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxTest</span><span class="syntax-js-bracket">(</span>
+	<span class="syntax-js-object">e</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-object">e</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">target</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">id</span> <span class="syntax-js-operator">==</span> <span class="syntax-js-string">'custom-menu-demo'</span>
+<span class="syntax-js-operator">,</span> <span class="syntax-js-object">e</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-bracket">[</span> <span class="syntax-js-keyword">new</span> <span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">classes</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxItem</span><span class="syntax-js-bracket">(</span><span class="syntax-js-string">'Below the line'</span><span class="syntax-js-operator">,</span> <span class="syntax-js-bracket">(</span><span class="syntax-js-object">itemClick</span><span class="syntax-js-operator">,</span> <span class="syntax-js-object">ctxClick</span><span class="syntax-js-bracket">)</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-bracket">{</span> <span class="syntax-js-object">alert</span><span class="syntax-js-bracket">(</span><span class="syntax-js-string">'get alerted from below the line lol'</span><span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span> <span class="syntax-js-bracket">}</span><span class="syntax-js-bracket">)</span> <span class="syntax-js-bracket">]</span>
+<span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span>
+
+<span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxTests</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">push</span><span class="syntax-js-bracket">(</span><span class="syntax-js-object">ctxDemo</span><span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span>
+<span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxTests</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">push</span><span class="syntax-js-bracket">(</span><span class="syntax-js-object">ctxDemo2</span><span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span>
+					</code></pre>
+					<p class="well" id="custom-menu-demo">Right-click on me to see a custom menu!</p>
+
+					<pre><code><span class="syntax-html-bracket">&lt;</span><span class="syntax-html-tag">p</span> <span class="syntax-html-attribute-key">class</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">well</span><span class="syntax-html-quotation">"</span> <span class="syntax-html-attribute-key">id</span><span class="syntax-html-attribute-equals">=</span><span class="syntax-html-quotation">"</span><span class="syntax-html-attribute-value">suppress-menu-demo</span><span class="syntax-html-quotation">"</span><span class="syntax-html-bracket">&gt;</span>Right-click on me to see absolutely nothing happen!<span class="syntax-html-bracket">&lt;/</span><span class="syntax-html-tag">p</span><span class="syntax-html-bracket">&gt;</span></code></pre>
+					<pre><code>
+<span class="syntax-js-keyword">const</span> <span class="syntax-js-object">ctxSuppressDemo</span> <span class="syntax-js-operator">=</span> <span class="syntax-js-keyword">new</span> <span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">classes</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxTest</span><span class="syntax-js-bracket">(</span>
+	<span class="syntax-js-object">e</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-object">e</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">target</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">id</span> <span class="syntax-js-operator">==</span> <span class="syntax-js-string">'suppress-menu-demo'</span>
+<span class="syntax-js-operator">,</span> <span class="syntax-js-object">e</span> <span class="syntax-js-operator">=&gt;</span> <span class="syntax-js-bracket">[</span><span class="syntax-js-bracket">]</span>
+<span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span>
+
+<span class="syntax-js-object">Bonkstrap</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">ctxTests</span><span class="syntax-js-operator">.</span><span class="syntax-js-object">push</span><span class="syntax-js-bracket">(</span><span class="syntax-js-object">ctxSuppressDemo</span><span class="syntax-js-bracket">)</span><span class="syntax-js-operator">;</span>
+					</code></pre>
+					<p class="well" id="suppress-menu-demo">Right-click on me to see absolutely nothing happen!</p>
 				</section>
 
 			</article>
@@ -199,7 +237,7 @@
 						<li><a href="scripting.html#Slideshow">Slideshow</a></li>
 						<li><a href="scripting.html#MOTD">Message of the Day</a></li>
 						<li><a href="scripting.html#Navigation_generation">Navigation generation</a></li>
-						<li><a href="scripting.html#TODO_2">TODO 2</a></li>
+						<li><a href="scripting.html#Custom_context_menus">Custom context menus</a></li>
 					</ul>
 				</li>
 

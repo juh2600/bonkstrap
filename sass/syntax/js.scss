@@ -1,6 +1,7 @@
 @forward 'colors';
 @use 'colors' as c;
 
+.syntax-js-keyword            { color: c.$keyword ; }
 .syntax-js-object             { color: c.$variable; }
 .syntax-js-operator           { color: c.$bracket ; }
 .syntax-js-bracket            { color: c.$bracket ; }

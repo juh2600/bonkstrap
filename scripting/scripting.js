@@ -13,4 +13,24 @@ const demoModals = [
 // Returns a different quote each day, cycling through in order
 const simAPICall = async () => {
 	return motds[Math.floor(Date.now() / 1000 / 60 / 60 / 24) % motds.length];
-}
+};
+
+const ctxDemo = new Bonkstrap.classes.ctxTest(
+	e => e.target.id == 'custom-menu-demo'
+, e => [
+		new Bonkstrap.classes.ctxItem('Alert me uwu', (itemClick, ctxClick) => { alert('get alerted lol'); })
+	, new Bonkstrap.classes.ctxItem('Alert me some more', (itemClick, ctxClick) => { alert('get alerted for a second time lol'); })
+	]
+);
+const ctxDemo2 = new Bonkstrap.classes.ctxTest(
+	e => e.target.id == 'custom-menu-demo'
+, e => [ new Bonkstrap.classes.ctxItem('Below the line', (itemClick, ctxClick) => { alert('get alerted from below the line lol'); }) ]
+);
+const ctxSuppressDemo = new Bonkstrap.classes.ctxTest(
+	e => e.target.id == 'suppress-menu-demo'
+, e => []
+);
+
+Bonkstrap.ctxTests.push(ctxDemo);
+Bonkstrap.ctxTests.push(ctxDemo2);
+Bonkstrap.ctxTests.push(ctxSuppressDemo);

@@ -1,0 +1,29 @@
+@use 'constants' as c;
+
+#bonk--ctxClickCatcher {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#bonk--ctxMenu {
+	position: fixed;
+	background: c.$off-bg;
+	padding: 0.5rem 0;
+	border-radius: 0.25rem;
+	ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0.25rem 0.75rem;
+			min-width: 10em;
+			&:hover {
+				background: c.$off-bg-tint;
+			}
+		}
+	}
+}

@@ -1,27 +1,37 @@
 // try not to auto-format this file
-@for $i from 1 through 10 {
-	.max-height-#{$i*5}rem { max-height: $i * 5rem; }
-	 .max-width-#{$i*5}rem {  max-width: $i * 5rem; }
-	.min-height-#{$i*5}rem { min-height: $i * 5rem; }
-	 .min-width-#{$i*5}rem {  min-width: $i * 5rem; }
-	.height-#{$i*5}rem { height: $i * 5rem; }
-	 .width-#{$i*5}rem {  width: $i * 5rem; }
+
+@use 'sass:math';
+
+$rem_step: 1;
+$rem_cap: 50;
+$em_step: 1;
+$em_cap: 50;
+$pct_step: 1;
+$pct_cap: 100;
+
+@for $i from 1 through math.div($rem_cap,$rem_step) {
+	.max-height-#{$i*$rem_step}rem { max-height: $i * $rem_step * 1rem; }
+	 .max-width-#{$i*$rem_step}rem {  max-width: $i * $rem_step * 1rem; }
+	.min-height-#{$i*$rem_step}rem { min-height: $i * $rem_step * 1rem; }
+	 .min-width-#{$i*$rem_step}rem {  min-width: $i * $rem_step * 1rem; }
+	    .height-#{$i*$rem_step}rem {     height: $i * $rem_step * 1rem; }
+	     .width-#{$i*$rem_step}rem {      width: $i * $rem_step * 1rem; }
  }
 
-@for $i from 1 through 10 {
-	.max-height-#{$i*5}em { max-height: $i * 5em; }
-	 .max-width-#{$i*5}em {  max-width: $i * 5em; }
-	.min-height-#{$i*5}em { min-height: $i * 5em; }
-	 .min-width-#{$i*5}em {  min-width: $i * 5em; }
-	.height-#{$i*5}em { height: $i * 5em; }
-	 .width-#{$i*5}em {  width: $i * 5em; }
+@for $i from 1 through math.div($em_cap,$em_step) {
+	.max-height-#{$i*$em_step}em { max-height: $i * $em_step * 1em; }
+	 .max-width-#{$i*$em_step}em {  max-width: $i * $em_step * 1em; }
+	.min-height-#{$i*$em_step}em { min-height: $i * $em_step * 1em; }
+	 .min-width-#{$i*$em_step}em {  min-width: $i * $em_step * 1em; }
+	    .height-#{$i*$em_step}em {     height: $i * $em_step * 1em; }
+	     .width-#{$i*$em_step}em {      width: $i * $em_step * 1em; }
  }
 
- @for $i from 1 through 20 {
-	.max-height-#{$i*5}pct { max-height: $i * 5%; }
-	 .max-width-#{$i*5}pct {  max-width: $i * 5%; }
-	.min-height-#{$i*5}pct { min-height: $i * 5%; }
-	 .min-width-#{$i*5}pct {  min-width: $i * 5%; }
-	.height-#{$i*5}pct { height: $i * 5%; }
-	 .width-#{$i*5}pct {  width: $i * 5%; }
+ @for $i from 1 through math.div($pct_cap,$pct_step) {
+	.max-height-#{$i*$pct_step}pct { max-height: $i * $pct_step * 1%; }
+	 .max-width-#{$i*$pct_step}pct {  max-width: $i * $pct_step * 1%; }
+	.min-height-#{$i*$pct_step}pct { min-height: $i * $pct_step * 1%; }
+	 .min-width-#{$i*$pct_step}pct {  min-width: $i * $pct_step * 1%; }
+	    .height-#{$i*$pct_step}pct {     height: $i * $pct_step * 1%; }
+	     .width-#{$i*$pct_step}pct {      width: $i * $pct_step * 1%; }
 }

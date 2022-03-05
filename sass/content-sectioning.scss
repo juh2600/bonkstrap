@@ -3,6 +3,7 @@
 @use 'icons';
 @use 'sass:color';
 @use 'sass:map';
+@use 'sass:math';
 
 $heading-padding: 0.4rem;
 
@@ -156,7 +157,7 @@ main {
 					// i wrote this with the logo in mind; i wonder
 					// if it'll be useful or detractive anywhere else
 					height: $top-width - $top-padding;
-					margin: -$top-padding/2;
+					margin: math.div(-$top-padding,2);
 				}
 
 				&:hover > ul { // second level list

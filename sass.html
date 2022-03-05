@@ -30,6 +30,13 @@
 					</p>
 					<pre><code>$ sass bonkstrap.scss ../css/style.css [--watch]</code></pre>
 					<p>
+					Bonkstrap may also be compiled using Docker with BuildKit:
+					</p>
+					<pre><code>$ DOCKER_BUILDKIT=1 docker build -o css .</code></pre>
+					<p>
+					If you intend to configure Bonkstrap (described below) and integrate it into a Docker build, the recommended method is to copy the Dockerfile included here into your project's Dockerfile and copy in your configuration files.
+					</p>
+					<p>
 					You can include the bulk of Bonkstrap into your own Sass project with the <code>@use</code> directive, and you can override several variables to choose your own color scheme and other properties:
 					</p>
 					<pre><code><span class="syntax-scss-directive">@use</span> <span class="syntax-scss-string">'bonkstrap'</span> <span class="syntax-scss-directive">with</span> <span class="syntax-scss-bracket">(</span>

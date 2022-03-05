@@ -1058,7 +1058,7 @@ details:not(.well):not(.alert), blockquote, dd, address, aside {
   padding-left: 1rem;
 }
 
-cite, em, dfn, i, var, article > nav > ul > li ul ul ul, figure::before, dt {
+cite, em, dfn, i, var, figure::before, dt, article > nav > ul > li ul ul ul {
   font-style: italic;
 }
 
